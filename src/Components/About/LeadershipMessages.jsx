@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Quote, GraduationCap, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import rohitMudgal from '../../assets/about/founder2.jpg'
-import mdmessage from '../../assets/about/Director.jpg'
+import rohitMudgal from '../../assets/about/founder3.jpg'
+import mdmessage from '../../assets/about/Director3.jpg'
 
 const leadershipData = [
   {
@@ -16,6 +16,8 @@ const leadershipData = [
     iconBg: "bg-[#92e0b3]/20",
     isReversed: false,
     hasBorder: true,
+    avatarBg: "from-emerald-50 via-emerald-100/40 to-emerald-200/20",
+    spotlightBg: "bg-emerald-300",
     paragraphs: [
       "It brings me immense joy and pride to welcome you to Divine Institute. As the founder of this institution, I envisioned a place where education transcends boundaries, where the pursuit of knowledge knows no limitations, and where your dreams can flourish.",
       "Our journey began with a simple yet profound belief: that education should be accessible to all, regardless of where you are or what you do. Divine Institute was founded on the principle that education should empower you to achieve your goals, whether you're in the workforce, raising a family, or facing any other life commitments.",
@@ -32,11 +34,13 @@ const leadershipData = [
     name: "Shweta Mudgal",
     role: "Director Of Divine Institute",
     image: mdmessage,
-    themeColor: "#B71C1C",
-    imageAccent: "#B71C1C",
-    iconBg: "bg-red-100",
+    themeColor: "#59c28a",
+    imageAccent: "#92e0b3",
+    iconBg: "bg-[#92e0b3]/20",
     isReversed: true,
     hasBorder: false,
+    avatarBg: "from-emerald-50 via-emerald-100/40 to-emerald-200/20",
+    spotlightBg: "bg-emerald-300",
     paragraphs: [
       "Welcome to Divine Institute, a place where education and ambition come together to shape a brighter future.",
       "At Divine Institute, our mission is to provide accessible and high-quality education to those who aspire to learn and grow, even while juggling the demands of a full-time job and other responsibilities. We understand the challenges you face and are committed to making your educational journey a smooth and rewarding one.",
@@ -52,10 +56,10 @@ const leadershipData = [
 // Reusable child component for clean, professional layout and state isolation
 const LeadershipRow = ({ data }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const { title, name, role, image, paragraphs, themeColor, imageAccent, iconBg, isReversed, hasBorder } = data;
+  const { title, name, role, image, paragraphs, themeColor, imageAccent, iconBg, isReversed, hasBorder, avatarBg, spotlightBg } = data;
 
   return (
-    <div className={`grid lg:grid-cols-12 gap-12 lg:gap-16 items-start ${hasBorder ? 'mb-24 pb-12 border-b border-slate-200/60' : ''}`}>
+    <div className={`grid lg:grid-cols-12 gap-12 lg:gap-16 items-center ${hasBorder ? 'mb-24 pb-12 border-b border-slate-200/60' : ''}`}>
 
       {/* Image Column */}
       <div className={`lg:col-span-4 relative group ${isReversed ? 'order-1 lg:order-2' : ''}`}>
@@ -63,14 +67,28 @@ const LeadershipRow = ({ data }) => {
           className="absolute inset-0 rounded-[2rem] rotate-3 opacity-10 group-hover:rotate-6 transition-transform duration-500"
           style={{ backgroundColor: imageAccent }}
         ></div>
-        <div className="relative bg-white p-5 rounded-[2rem] shadow-xl border border-slate-100">
-          <div className="rounded-2xl overflow-hidden aspect-[4/5] bg-slate-100 mb-6 relative">
+        <div className="relative bg-white p-5 rounded-[2rem] shadow-xl border border-slate-100/80 transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-1">
+          <div className="relative w-full h-[280px] flex items-end justify-center mb-6 overflow-visible">
+
+            {/* The Frame Background (shorter than the parent, sits at the bottom) */}
+            <div className={`absolute bottom-0 w-full h-[220px] rounded-[1.5rem] bg-gradient-to-b ${avatarBg} border border-slate-100/50 shadow-inner z-0`}></div>
+
+            {/* Spotlight backdrop glow inside the frame */}
+            <div
+              className={`absolute w-28 h-28 rounded-full blur-xl opacity-60 bottom-4 transition-transform duration-700 group-hover:scale-110 z-0 ${spotlightBg}`}
+            ></div>
+
+            {/* Dashed background circle decoration */}
+            <div
+              className="absolute w-36 h-36 rounded-full border border-dashed opacity-20 bottom-2 transition-transform duration-1000 group-hover:rotate-45 z-0"
+              style={{ borderColor: themeColor }}
+            ></div>
+
             <img
               src={image}
               alt={name}
-              className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+              className="absolute bottom-0 w-auto h-[400px] object-contain z-10 transition-all duration-500 ease-out  group-hover:-translate-y-1 origin-bottom pointer-events-none"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent"></div>
           </div>
           <div className="text-center">
             <h3 className="text-2xl font-bold text-slate-950 font-serif">{name}</h3>
@@ -86,9 +104,7 @@ const LeadershipRow = ({ data }) => {
 
       {/* Text Column */}
       <div className={`lg:col-span-8 space-y-6 relative ${isReversed ? 'order-2 lg:order-1' : ''}`}>
-        <div className="absolute -top-10 -left-6 text-slate-200/50 hidden md:block select-none">
-          <Quote className="w-20 h-20 fill-current" />
-        </div>
+
 
         <div className="flex items-center gap-3 mb-2">
           <div className={`w-10 h-10 rounded-xl ${iconBg} flex items-center justify-center`} style={{ color: themeColor }}>
@@ -149,7 +165,7 @@ const LeadershipMessages = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header */}
-        <div className="text-center mb-16 lg:mb-24">
+        <div className="text-center mb-16 lg:mb-34">
           <div className="inline-block px-5 py-2 rounded-full bg-white shadow-sm border border-slate-200 text-slate-800 font-bold text-xs tracking-widest uppercase mb-4">
             <span className="text-[#59c28a]">✦</span> Leadership Voice
           </div>
