@@ -20,7 +20,7 @@ const AboutHero = () => {
                         </h2>
 
                         {/* Text Extracted from Screenshot */}
-                        <div className="space-y-5 text-slate-600 text-sm md:text-base leading-relaxed mb-8">
+                        <div className="space-y-5 text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
                             <p>
                                 The Divine Institute of Business Management Studies offers Business and Management programs for working class professionals. By joining The Divine Institute, you become part of a unique learning culture that prepares you for experiences in the real business world. Our distance learning education programs offer the opportunity to study a comprehensive curriculum in business management and receive a higher professional qualification in business management with a specialty major. The Divine Institute is evolving as per the industry requirements for well educated and talented professionals.
                             </p>

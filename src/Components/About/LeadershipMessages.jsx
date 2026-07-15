@@ -113,7 +113,7 @@ const LeadershipRow = ({ data }) => {
           <h4 className="text-2xl font-extrabold text-slate-900 font-serif">{title}</h4>
         </div>
 
-        <div className="text-slate-600 text-sm md:text-base leading-relaxed">
+        <div className="text-slate-600 text-sm sm:text-base leading-relaxed">
           <div className="space-y-4">
             {paragraphs.slice(0, 3).map((p, index) => (
               <p key={index}>{p}</p>
