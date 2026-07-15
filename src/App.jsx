@@ -22,13 +22,12 @@ import Home from './pages/Home'
 import About from './pages/About';
 import Navbar from './Components/Layout/Navber';
 import Footer from './Components/Layout/Footer/Footer';
-
-
-
+import ScrollToTop from './Components/Layout/ScrollToTop';
 
 function App() {
   return (
     <>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/divine/" element={<Home />} />
