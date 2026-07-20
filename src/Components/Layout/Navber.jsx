@@ -10,8 +10,8 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/divine/' },
     { name: 'About Us', path: '/divine/about' },
+    { name: 'Courses', path: '/divine/courses' },
     { name: 'Universities', path: '/divine/#universities' },
-    { name: 'Courses', path: '/divine/#courses' },
     { name: 'Blog', path: '/divine/#blog' },
   ];
 

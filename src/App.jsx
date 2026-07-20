@@ -20,6 +20,8 @@ import UniversitySearch from './Components/Home/UniversitySearch'
 import UniversityWall from './Components/Home/UniversityWall/UniversityWall'
 import Home from './pages/Home'
 import About from './pages/About';
+import CourseListing from './pages/CourseListing';
+import CourseDetail from './pages/CourseDetail';
 import Navbar from './Components/Layout/Navber';
 import Footer from './Components/Layout/Footer/Footer';
 import ScrollToTop from './Components/Layout/ScrollToTop';
@@ -32,6 +34,8 @@ function App() {
       <Routes>
         <Route path="/divine/" element={<Home />} />
         <Route path="/divine/about" element={<About />} />
+        <Route path="/divine/courses" element={<CourseListing />} />
+        <Route path="/divine/course/:slug" element={<CourseDetail />} />
         {/* <Route path="/contact" element={<Contact />} />  */}
       </Routes>
       <Footer />
