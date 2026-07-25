@@ -44,7 +44,7 @@ const CourseListing = () => {
 
         {/* Courses Grid */}
         {filteredCourses.length > 0 ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
             {filteredCourses.map((course) => (
               <CourseCard key={course.id} course={course} />
             ))}
