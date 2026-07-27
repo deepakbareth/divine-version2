@@ -33,11 +33,11 @@ const Navbar = () => {
               <Link
                 key={link.name}
                 to={link.path}
-                className="text-slate-600 hover:text-blue-600 text-xl font-medium transition-colors duration-200 relative group"
+                className="text-slate-600 hover:text-[#59c28a] text-lg font-semibold tracking-wide transition-colors duration-200 relative group"
               >
                 {link.name}
                 {/* Underline Hover Effect */}
-                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-blue-600 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+                <span className="absolute inset-x-0 -bottom-1 h-0.5 bg-[#59c28a] transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
               </Link>
             ))}
           </nav>
@@ -85,7 +85,7 @@ const Navbar = () => {
                   key={link.name}
                   to={link.path}
                   onClick={() => setIsOpen(false)} // Click karne par menu close ho jaye
-                  className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-colors"
+                  className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-[#59c28a] hover:bg-emerald-50/50 rounded-xl transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -94,7 +94,7 @@ const Navbar = () => {
                 <Link
                   to="/divine/#apply"
                   onClick={() => setIsOpen(false)}
-                  className="block w-full text-center bg-[#6abd8d] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#6abd8d] transition-colors shadow-md shadow-blue-600/20"
+                  className="block w-full text-center bg-[#6abd8d] text-white px-6 py-3 rounded-xl font-medium hover:bg-[#6abd8d] transition-colors shadow-md shadow-[#59c28a]/20"
                 >
                   Apply Now
                 </Link>
