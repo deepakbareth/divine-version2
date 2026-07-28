@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -48,7 +49,7 @@ const Footer = () => {
                 { name: 'Instagram', path: 'M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z M21.5 6.51A1.5 1.5 0 1120 5 1.5 1.5 0 0121.5 6.51z M17.34 22H6.66A4.66 4.66 0 012 17.34V6.66A4.66 4.66 0 016.66 2h10.68A4.66 4.66 0 0122 6.66v10.68A4.66 4.66 0 0117.34 22z' },
                 { name: 'LinkedIn', path: 'M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z M4 6a2 2 0 110-4 2 2 0 010 4z' }
               ].map((icon, i) => (
-                <a key={i} href="#" className="bg-[#e6192b] p-2 rounded-full hover:bg-red-700 transition">
+                <a key={i} href="#" onClick={(e) => e.preventDefault()} className="bg-[#e6192b] p-2 rounded-full hover:bg-red-700 transition">
                   <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="currentColor"><path d={icon.path}></path></svg>
                 </a>
               ))}
@@ -61,7 +62,6 @@ const Footer = () => {
               </div>
               <div className="text-xl font-bold tracking-widest mt-1">
                 <a href="tel:+919828477772" className="hover:text-slate-300 transition">+91 98284 77772</a>
-
               </div>
             </div>
           </div>
@@ -71,17 +71,17 @@ const Footer = () => {
             <h3 className="text-lg font-medium border-b border-[#e6192b] pb-2 mb-4">About the Company</h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-4 text-sm text-gray-300">
               <ul className="space-y-4">
-                <li><a href="#" className="hover:text-red-400 transition">About Us</a></li>
-                <li><a href="#" className="hover:text-red-400 transition">Contact Us</a></li>
+                <li><Link to="divine/about" className="hover:text-red-400 transition">About Us</Link></li>
+                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Contact Us</a></li>
                 <li className="flex flex-col items-start gap-1">
-                  <a href="#" className="hover:text-red-400 transition">CS Careers</a>
+                  <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">CS Careers</a>
                   <span className="bg-[#4ade80] text-black text-[9px] font-bold px-1.5 py-0.5 rounded">Yes, We are Hiring</span>
                 </li>
               </ul>
               <ul className="space-y-4">
-                <li><a href="#" className="hover:text-red-400 transition">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-red-400 transition">Terms & Conditions</a></li>
-                <li><a href="#" className="hover:text-red-400 transition">Disclaimer</a></li>
+                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Privacy Policy</a></li>
+                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Terms & Conditions</a></li>
+                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Disclaimer</a></li>
               </ul>
             </div>
           </div>
@@ -91,12 +91,12 @@ const Footer = () => {
             <h3 className="text-lg font-medium border-b border-[#e6192b] pb-2 mb-4">Quick Links</h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-4 text-sm text-gray-300">
               <ul className="space-y-4">
-                <li><a href="#" className="hover:text-red-400 transition">Top Online Universities</a></li>
-                <li><a href="#" className="hover:text-red-400 transition">Blogs</a></li>
+                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Top Online Universities</a></li>
+                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Blogs</a></li>
               </ul>
               <ul className="space-y-4">
-                <li><a href="#" className="hover:text-red-400 transition">Scholarship</a></li>
-                <li><a href="#" className="hover:text-red-400 transition">FAQs</a></li>
+                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Scholarship</a></li>
+                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">FAQs</a></li>
               </ul>
             </div>
           </div>
@@ -111,7 +111,6 @@ const Footer = () => {
         <div
           className="absolute inset-0 opacity-[0.15] bg-center bg-cover bg-no-repeat pointer-events-none"
           style={{ backgroundImage: "url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000&auto=format&fit=crop')" }}
-        // Using a generic city backdrop. It blends with the dark background perfectly.
         ></div>
 
         {/* Gradient fade to ensure text readability */}
@@ -150,11 +149,11 @@ const Footer = () => {
           {/* 4. Legal & Copyright Section (Bottom) */}
           <div className="mt-20 pt-8 border-t border-gray-600/50 text-center text-sm text-gray-300">
             <div className="flex justify-center gap-2 mb-6">
-              <a href="#" className="hover:text-white transition">Disclaimer</a>
+              <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-white transition">Disclaimer</a>
               <span className="text-gray-500">/</span>
-              <a href="#" className="hover:text-white transition">Terms and Conditions</a>
+              <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-white transition">Terms and Conditions</a>
               <span className="text-gray-500">/</span>
-              <a href="#" className="hover:text-white transition">Our Policy</a>
+              <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-white transition">Our Policy</a>
             </div>
 
             <p className="text-gray-400 leading-relaxed text-[13px] max-w-6xl mx-auto mb-6">
@@ -171,6 +170,7 @@ const Footer = () => {
             <a
               href="https://premiumbusinesswebsites.com/"
               target='_blank'
+              rel="noopener noreferrer"
               className="ml-1 font-semibold text-blue-600 hover:underline"
             >
               Premiumbusinesswebsites
@@ -190,7 +190,11 @@ const FooterList = ({ title, links }) => (
     <ul className="space-y-3 text-sm text-gray-300 font-light">
       {links.map((link, idx) => (
         <li key={idx}>
-          <a href="#" className="hover:text-[#e6192b] transition-colors duration-200">
+          <a
+            href="#"
+            onClick={(e) => e.preventDefault()}
+            className="hover:text-[#e6192b] transition-colors duration-200"
+          >
             {link}
           </a>
         </li>
