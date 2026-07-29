@@ -64,33 +64,18 @@ const LeadershipRow = ({ data }) => {
       {/* Image Column */}
       <div className={`lg:col-span-4 relative group ${isReversed ? 'order-1 lg:order-2' : ''}`}>
         <div
-          className="absolute inset-0 rounded-[2rem] rotate-3 opacity-10 group-hover:rotate-6 transition-transform duration-500"
+          className="absolute inset-0 rounded-[2.5rem] rotate-2 opacity-15 group-hover:rotate-4 transition-transform duration-500"
           style={{ backgroundColor: imageAccent }}
         ></div>
-        <div className="relative bg-white p-5 rounded-[2rem] shadow-xl border border-slate-100/80 transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-1">
-          <div className="relative w-full h-[280px] flex items-end justify-center mb-6 overflow-visible">
-
-            {/* The Frame Background (shorter than the parent, sits at the bottom) */}
-            <div className={`absolute bottom-0 w-full h-[220px] rounded-[1.5rem] bg-gradient-to-b ${avatarBg} border border-slate-100/50 shadow-inner z-0`}></div>
-
-            {/* Spotlight backdrop glow inside the frame */}
-            <div
-              className={`absolute w-28 h-28 rounded-full blur-xl opacity-60 bottom-4 transition-transform duration-700 group-hover:scale-110 z-0 ${spotlightBg}`}
-            ></div>
-
-            {/* Dashed background circle decoration */}
-            <div
-              className="absolute w-36 h-36 rounded-full border border-dashed opacity-20 bottom-2 transition-transform duration-1000 group-hover:rotate-45 z-0"
-              style={{ borderColor: themeColor }}
-            ></div>
-
+        <div className="relative bg-white p-4 rounded-[2.5rem] shadow-xl border border-slate-100 transition-all duration-500 group-hover:shadow-2xl">
+          <div className="relative w-full flex items-center justify-center mb-4">
             <img
               src={image}
               alt={name}
-              className="absolute bottom-0 w-auto h-[400px] object-contain z-10 transition-all duration-500 ease-out  group-hover:-translate-y-1 origin-bottom pointer-events-none"
+              className="h-auto max-h-[340px] sm:max-h-[380px] w-auto max-w-full object-contain rounded-xl shadow-sm border border-slate-100"
             />
           </div>
-          <div className="text-center">
+          <div className="text-center pb-2">
             <h3 className="text-2xl font-bold text-slate-950 font-serif">{name}</h3>
             <p
               className="text-sm font-semibold uppercase tracking-wider mt-1"
