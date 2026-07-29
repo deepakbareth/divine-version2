@@ -25,20 +25,6 @@ export const universitiesData = [
     mode: "100% Online Learning"
   },
   {
-    id: "manipal-online",
-    slug: "manipal-online",
-    name: "Online Manipal (Manipal University Jaipur)",
-    logo: manipalLogo,
-    badge: "UGC & AICTE Approved",
-    naacGrade: "NAAC A+ Grade",
-    location: "Jaipur, Rajasthan",
-    description: "Online Manipal provides flexible online learning opportunities through career-focused undergraduate and postgraduate programs. Students can build practical knowledge while balancing their education with personal and professional commitments.",
-    approvals: ["UGC-DEB", "AICTE", "NAAC A+", "NIRF Top Ranked"],
-    popularCourses: ["Online MBA", "Online MCA", "Online B.Com", "Online BBA"],
-    establishedYear: "2011",
-    mode: "Online & Virtual E-Classes"
-  },
-  {
     id: "gla-university",
     slug: "gla-university",
     name: "GLA University Online",
@@ -79,6 +65,20 @@ export const universitiesData = [
     popularCourses: ["Executive MBA", "Diploma Courses", "Certificate Programs"],
     establishedYear: "2016",
     mode: "Distance & Flexible Mode"
+  },
+  {
+    id: "manipal-online",
+    slug: "manipal-online",
+    name: "Online Manipal (Manipal University Jaipur)",
+    logo: manipalLogo,
+    badge: "UGC & AICTE Approved",
+    naacGrade: "NAAC A+ Grade",
+    location: "Jaipur, Rajasthan",
+    description: "Online Manipal provides flexible online learning opportunities through career-focused undergraduate and postgraduate programs. Students can build practical knowledge while balancing their education with personal and professional commitments.",
+    approvals: ["UGC-DEB", "AICTE", "NAAC A+", "NIRF Top Ranked"],
+    popularCourses: ["Online MBA", "Online MCA", "Online B.Com", "Online BBA"],
+    establishedYear: "2011",
+    mode: "Online & Virtual E-Classes"
   },
   {
     id: "suresh-gyan-vihar",
