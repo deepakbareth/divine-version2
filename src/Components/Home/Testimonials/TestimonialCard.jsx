@@ -6,7 +6,7 @@ const TestimonialCard = ({ testimonial }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   // Define how many characters to show before truncating
-  const charLimit = 120;
+  const charLimit = 230;
   const feedbackText = testimonial.feedback || "";
   const isLongText = feedbackText.length > charLimit;
 
