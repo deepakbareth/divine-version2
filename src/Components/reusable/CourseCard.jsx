@@ -17,7 +17,7 @@ const CourseCard = ({ course }) => {
 
       <div>
         {/* Title */}
-        <h3 className="text-xl sm:text-2xl font-bold text-slate-900 leading-tight mb-1.5 group-hover:text-[#59c28a] transition-colors">
+        <h3 className="text-xl sm:text-2xl font-bold text-slate-900 leading-tight mb-1.5 transition-colors">
           {title}
         </h3>
 
