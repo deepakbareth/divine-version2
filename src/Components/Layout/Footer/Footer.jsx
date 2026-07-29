@@ -55,15 +55,6 @@ const Footer = () => {
               ))}
             </div>
 
-            {/* Contact Box */}
-            <div className="relative border border-gray-600 rounded-md p-4 mt-4 w-max">
-              <div className="absolute -top-3 left-3 bg-[#e6192b] text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
-                Talk to an Expert
-              </div>
-              <div className="text-xl font-bold tracking-widest mt-1">
-                <a href="tel:+919828477772" className="hover:text-slate-300 transition">+91 98284 77772</a>
-              </div>
-            </div>
           </div>
 
           {/* Column 2: About the Company */}
@@ -98,6 +89,33 @@ const Footer = () => {
                 <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Scholarship</a></li>
                 <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">FAQs</a></li>
               </ul>
+            </div>
+          </div>
+
+          {/* Horizontal Contact & Office Addresses Bar (Covers Full Width) */}
+          <div className="lg:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch pt-6 border-t border-gray-800 mt-4">
+            {/* Phone Box */}
+            <div className="relative border border-gray-600 rounded-md p-4 w-full flex flex-col justify-center">
+              <div className="absolute -top-3 left-3 bg-[#e6192b] text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+                Talk to an Expert
+              </div>
+              <div className="text-sm font-bold tracking-wider mt-1 flex flex-col gap-1">
+                <a href="tel:+919828477772" className="hover:text-slate-300 transition">+91 98284 77772</a>
+                <a href="tel:+919828977772" className="hover:text-slate-300 transition">+91 98289 77772</a>
+                <a href="tel:+919519914855" className="hover:text-slate-300 transition">+91 95199 14855</a>
+              </div>
+            </div>
+
+            {/* Corporate Office */}
+            <div className="text-xs text-gray-400 bg-white/5 p-4 rounded-md border border-gray-800 flex flex-col justify-center">
+              <p className="font-bold text-gray-200 uppercase tracking-wider text-[11px] mb-1">Corporate Office (C-Scheme):</p>
+              <p className="leading-relaxed text-gray-300">712, 7th Floor, Crops Arcade, Malviya Marg, C-Scheme, Jaipur - 302001</p>
+            </div>
+
+            {/* Campus Office */}
+            <div className="text-xs text-gray-400 bg-white/5 p-4 rounded-md border border-gray-800 flex flex-col justify-center">
+              <p className="font-bold text-gray-200 uppercase tracking-wider text-[11px] mb-1">Campus Office (Jagatpura):</p>
+              <p className="leading-relaxed text-gray-300">TA-502, 5th Floor, R-Tech Capital High Street, Apparel Park, Main Mahal Road, Jagatpura, Jaipur</p>
             </div>
           </div>
 

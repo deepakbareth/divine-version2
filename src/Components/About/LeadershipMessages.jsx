@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Quote, GraduationCap, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import rohitMudgal from '../../assets/about/founder3.jpg'
-import mdmessage from '../../assets/about/Director3.jpg'
+import rohitMudgal from '../../assets/about/founder4.jpg'
+import mdmessage from '../../assets/about/director4.jpg'
 
 const leadershipData = [
   {
