@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Send, CheckCircle2 } from 'lucide-react';
 
-const LeadEnquiryForm = ({ 
-  title = "Request Free 1:1 Counselling", 
+const LeadEnquiryForm = ({
+  title = "Request Free 1:1 Counselling",
   subtitle = "Talk to our expert academic advisors & get direct admission guidance.",
   buttonText = "Get Free Counselling",
   courseName = "",
@@ -31,7 +31,7 @@ const LeadEnquiryForm = ({
 
   return (
     <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl relative overflow-hidden">
-      
+
       {/* Top Gradient Line Accent */}
       <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#59c28a] to-[#92e0b3]"></div>
 
