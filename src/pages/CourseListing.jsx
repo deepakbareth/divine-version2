@@ -51,7 +51,7 @@ const CourseListing = () => {
           </div>
         ) : (
           <div className="text-center py-16 bg-white rounded-3xl border border-slate-200 mb-16">
-            <h3 className="text-xl font-bold text-slate-800 font-serif">No courses found in this category.</h3>
+            <h3 className="text-xl font-bold text-slate-800">No courses found in this category.</h3>
             <p className="text-slate-500 text-sm mt-2">Please select another category or request a custom course consultation.</p>
           </div>
         )}

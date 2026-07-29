@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Send, CheckCircle2 } from 'lucide-react';
 
 const LeadEnquiryForm = ({ 
   title = "Request Free 1:1 Counselling", 
   subtitle = "Talk to our expert academic advisors & get direct admission guidance.",
   buttonText = "Get Free Counselling",
-  courseName = ""
+  courseName = "",
+  fieldLabel = "Course Interested"
 }) => {
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
@@ -15,6 +16,12 @@ const LeadEnquiryForm = ({
     course: courseName || 'Online MBA',
     message: ''
   });
+
+  useEffect(() => {
+    if (courseName) {
+      setFormData((prev) => ({ ...prev, course: courseName }));
+    }
+  }, [courseName]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -93,7 +100,7 @@ const LeadEnquiryForm = ({
           </div>
 
           <div>
-            <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Course Interested</label>
+            <label className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">{fieldLabel}</label>
             <input
               type="text"
               value={formData.course}

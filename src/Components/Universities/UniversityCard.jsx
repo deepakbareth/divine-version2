@@ -9,7 +9,7 @@ const UniversityCard = ({ university, onOpenModal }) => {
       <div>
         {/* Top Logo & Badges Area */}
         <div className="flex items-center justify-between gap-4 mb-5 pb-4 border-b border-slate-100">
-          <div className="w-38  bg-slate-50 rounded-xl p-2 border border-slate-100 flex items-center justify-center shrink-0">
+          <div className="w-36 bg-slate-50 rounded-xl p-2 border border-slate-100 flex items-center justify-center shrink-0">
             <img
               src={logo}
               alt={name}
@@ -38,7 +38,7 @@ const UniversityCard = ({ university, onOpenModal }) => {
         </div>
 
         {/* University Name & Location */}
-        <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#59c28a] transition-colors leading-snug mb-1 font-serif">
+        <h3 className="text-xl font-bold text-slate-900 transition-colors leading-snug mb-1">
           {name}
         </h3>
 

@@ -66,7 +66,7 @@ const UniversityListing = () => {
         ) : (
           <div className="text-center py-16 bg-white rounded-3xl border border-slate-200 mb-16">
             <Building2 className="w-12 h-12 text-slate-300 mx-auto mb-3" />
-            <h3 className="text-xl font-bold text-slate-800 font-serif">No universities found matching your search.</h3>
+            <h3 className="text-xl font-bold text-slate-800">No universities found matching your search.</h3>
             <p className="text-slate-500 text-sm mt-2">Try clearing your search query or selecting another approval filter.</p>
           </div>
         )}
@@ -96,6 +96,8 @@ const UniversityListing = () => {
               title={`Inquire About ${activeUniversityName}`}
               subtitle="Fill your details below to receive the official university fee structure and approval prospectus."
               buttonText="Request University Prospectus"
+              courseName={activeUniversityName}
+              fieldLabel="Target University"
             />
           </div>
         </div>
