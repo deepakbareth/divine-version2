@@ -32,7 +32,7 @@ const BlogCard = ({ blog }) => {
         {/* Card Body Content */}
         <div className="p-6">
           {/* Title */}
-          <h3 className="text-xl font-bold text-[#002147] leading-snug group-hover:text-[#59c28a] transition-colors mb-3">
+          <h3 className="text-xl font-bold text-[#002147] leading-snug  transition-colors mb-3">
             <Link to={`/divine/blog/${slug}`}>{title}</Link>
           </h3>
 
