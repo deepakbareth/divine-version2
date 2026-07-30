@@ -67,7 +67,7 @@ const GalleryLightbox = ({
       {itemsList.length > 1 && (
         <button
           onClick={onNext}
-          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-[#59c28a] text-white flex items-center justify-center border border-white/20 transition-all cursor-pointer z-10 shadow-lg"
+          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full bg-white/10 hover:bg-[#59c28a] text-white flex items-center justify-center border border-white/20 transition-all cursor-pointer z-20 shadow-xl"
           title="Next Image"
         >
           <ChevronRight className="w-6 h-6" />

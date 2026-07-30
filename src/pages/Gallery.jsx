@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import SectionHeader from '../Components/reusable/SectionHeader';
-import LeadEnquiryForm from '../Components/reusable/LeadEnquiryForm';
 import GalleryLightbox from '../Components/Gallery/GalleryLightbox';
 
 // Direct Image Imports
@@ -80,6 +79,8 @@ const Gallery = () => {
               <img
                 src={item.image}
                 alt={`Gallery photo ${item.id}`}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
               />
             </div>
