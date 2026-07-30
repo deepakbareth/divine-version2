@@ -44,7 +44,7 @@ const BlogDetail = () => {
         </div>
 
         {/* Main Article Container */}
-        <article className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-xl mb-16 max-w-4xl mx-auto">
+        <article className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-xl mb-16 max-w-7xl mx-auto">
 
           {/* Cover Image with Date Badge Overlay */}
           <div className="relative rounded-2xl overflow-hidden mb-8 border border-slate-100 shadow-md">

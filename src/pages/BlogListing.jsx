@@ -13,7 +13,7 @@ const BlogListing = () => {
         <SectionHeader
           badgeText="Official Articles & News"
           title="Divine Institute"
-          titleHighlight="Latest Blogs"
+          titleHighlight="Blogs"
           description="Read authentic articles, career advice, and educational updates from Divine Institute of Management Studies."
         />
 
