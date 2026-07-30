@@ -2,8 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { blogsData } from '../Data/blogsData';
 import BlogCard from '../Components/Blog/BlogCard';
-import LeadEnquiryForm from '../Components/reusable/LeadEnquiryForm';
-import { Calendar, Clock, User, ArrowLeft, Tag, BookOpen } from 'lucide-react';
+import { User, Tag, MessageCircle, ArrowLeft, BookOpen } from 'lucide-react';
 
 const BlogDetail = () => {
   const { slug } = useParams();
@@ -45,69 +44,83 @@ const BlogDetail = () => {
         </div>
 
         {/* Main Article Container */}
-        <article className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-xl mb-16">
+        <article className="bg-white p-6 sm:p-10 rounded-3xl border border-slate-200/80 shadow-xl mb-16 max-w-4xl mx-auto">
 
-          {/* Category Badge & Metadata */}
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
-            <span className="px-3.5 py-1 rounded-full bg-[#59c28a]/10 text-[#3ba16a] font-bold text-xs uppercase tracking-wider border border-[#59c28a]/20">
-              {blog.categoryName}
-            </span>
-            <div className="flex items-center gap-4 text-xs font-semibold text-slate-400">
-              <span className="flex items-center gap-1">
-                <Calendar className="w-3.5 h-3.5 text-[#59c28a]" />
-                {blog.date}
-              </span>
-              <span className="flex items-center gap-1">
-                <Clock className="w-3.5 h-3.5 text-[#59c28a]" />
-                {blog.readTime}
-              </span>
-            </div>
-          </div>
-
-          {/* Title */}
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 leading-tight mb-6 font-serif">
-            {blog.title}
-          </h1>
-
-          {/* Author Bar */}
-          <div className="flex items-center gap-3 pb-6 mb-8 border-b border-slate-100">
-            <div className="w-10 h-10 rounded-full bg-[#59c28a]/10 text-[#59c28a] flex items-center justify-center font-bold text-sm">
-              <User className="w-5 h-5" />
-            </div>
-            <div>
-              <p className="text-sm font-bold text-slate-900">{blog.author}</p>
-              <p className="text-xs text-slate-500 font-medium">{blog.authorRole}</p>
-            </div>
-          </div>
-
-          {/* Cover Image */}
-          <div className="rounded-2xl overflow-hidden mb-8 border border-slate-100 shadow-md">
+          {/* Cover Image with Date Badge Overlay */}
+          <div className="relative rounded-2xl overflow-hidden mb-8 border border-slate-100 shadow-md">
             <img
               src={blog.coverImage}
               alt={blog.title}
               className="w-full h-auto max-h-[440px] object-cover"
             />
+            {/* Date Badge Overlay (Blue Top, Yellow Bottom) */}
+            <div className="absolute top-4 left-4 z-10 flex flex-col shadow-lg rounded-md overflow-hidden text-center min-w-[64px]">
+              <div className="bg-[#002147] text-white font-extrabold text-xs px-2.5 py-1.5 uppercase tracking-wide">
+                {blog.dateDayMonth}
+              </div>
+              <div className="bg-amber-400 text-slate-950 font-black text-xs px-2.5 py-1">
+                {blog.dateYear}
+              </div>
+            </div>
           </div>
+
+          {/* Title */}
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#002147] leading-tight mb-4 font-sans">
+            {blog.title}
+          </h1>
+
+          {/* Metadata Row: Author | Category | Comments */}
+          <div className="flex flex-wrap items-center gap-4 text-xs text-slate-400 font-medium mb-3">
+            <span className="flex items-center gap-1.5">
+              <User className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+              <span>{blog.author}</span>
+            </span>
+
+            <span className="flex items-center gap-1.5">
+              <Tag className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+              <span>{blog.categoryName}</span>
+            </span>
+
+            <span className="flex items-center gap-1.5">
+              <MessageCircle className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+              <span>{blog.commentsCount}</span>
+            </span>
+          </div>
+
+          {/* Yellow Line Accent Under Metadata */}
+          <div className="w-12 h-0.5 bg-amber-400 rounded-full mb-8"></div>
+
+          {/* Custom Styled Quote Callout Box */}
+          <style>{`
+            .blog-article-content blockquote {
+              background-color: #f8f9fa;
+              padding: 1.5rem 2rem;
+              margin: 2rem 0;
+              border-radius: 0.75rem;
+              font-style: italic;
+              color: #334155;
+              position: relative;
+              border: none;
+              quotes: none;
+            }
+            .blog-article-content blockquote::before {
+              content: "“";
+              color: #f59e0b;
+              font-size: 2.25rem;
+              font-family: Georgia, serif;
+              line-height: 1;
+              display: inline-block;
+              margin-right: 0.5rem;
+              float: left;
+              margin-top: -0.2rem;
+            }
+          `}</style>
 
           {/* Article Body Content */}
           <div
-            className="prose prose-slate max-w-none text-slate-700 leading-relaxed text-sm sm:text-base space-y-4 font-normal"
+            className="blog-article-content prose prose-slate max-w-none text-slate-700 leading-relaxed text-sm sm:text-base space-y-4 font-normal"
             dangerouslySetInnerHTML={{ __html: blog.content }}
           />
-
-          {/* Tags Bar */}
-          {blog.tags && (
-            <div className="mt-10 pt-6 border-t border-slate-100 flex flex-wrap items-center gap-2">
-              <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mr-2 flex items-center gap-1">
-                <Tag className="w-3.5 h-3.5" /> Tags:
-              </span>
-              {blog.tags.map((tag, idx) => (
-                <span key={idx} className="bg-slate-100 text-slate-600 px-3 py-1 rounded-lg text-xs font-medium">
-                  #{tag}
-                </span>
-              ))}
-            </div>
-          )}
 
         </article>
 
@@ -122,7 +135,6 @@ const BlogDetail = () => {
             </div>
           </div>
         )}
-
 
       </div>
     </div>
