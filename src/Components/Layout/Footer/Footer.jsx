@@ -86,7 +86,7 @@ const Footer = () => {
                 <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Blogs</a></li>
               </ul>
               <ul className="space-y-4">
-                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Scholarship</a></li>
+                <li><Link to="/divine/gallery" className="hover:text-red-400 transition">Photo Gallery</Link></li>
                 <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">FAQs</a></li>
               </ul>
             </div>

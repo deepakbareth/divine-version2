@@ -23,6 +23,7 @@ import About from './pages/About';
 import CourseListing from './pages/CourseListing';
 import CourseDetail from './pages/CourseDetail';
 import UniversityListing from './pages/UniversityListing';
+import Gallery from './pages/Gallery';
 import Navbar from './Components/Layout/Navber';
 import Footer from './Components/Layout/Footer/Footer';
 import ScrollToTop from './Components/Layout/ScrollToTop';
@@ -38,6 +39,7 @@ function App() {
         <Route path="/divine/courses" element={<CourseListing />} />
         <Route path="/divine/course/:slug" element={<CourseDetail />} />
         <Route path="/divine/universities" element={<UniversityListing />} />
+        <Route path="/divine/gallery" element={<Gallery />} />
         {/* <Route path="/contact" element={<Contact />} />  */}
       </Routes>
       <Footer />
