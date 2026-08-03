@@ -29,7 +29,7 @@ const Footer = () => {
       />
 
       {/* 1. Floating CTA Banner (Top) */}
-      <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[95%] max-w-7xl pb-4 md:pb-0">
+      <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[95%] max-w-7xl pb-4 md:pb-0 z-30">
         <div className="bg-[#1a2b4c] rounded-xl flex flex-col md:flex-row items-center justify-between p-8 md:px-12 md:py-10 shadow-2xl relative overflow-hidden">
           {/* Subtle background wave patterns (simulated with CSS gradients) */}
           <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent pointer-events-none"></div>
