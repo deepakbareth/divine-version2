@@ -100,8 +100,8 @@ const Footer = () => {
                 </li>
               </ul>
               <ul className="space-y-4">
-                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Privacy Policy</a></li>
-                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Terms & Conditions</a></li>
+                <li><a href="/divine/privacy-policy" className="hover:text-red-400 transition">Privacy Policy</a></li>
+                <li><a href="/divine/terms-conditions" className="hover:text-red-400 transition">Terms & Conditions</a></li>
                 <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Disclaimer</a></li>
               </ul>
             </div>
@@ -231,7 +231,7 @@ const Footer = () => {
   );
 };
 
-// Helper component for rendering the mega directory lists to keep code clean
+// Helper component for rendering the mega directory lists to keep code clean 
 const FooterList = ({ title, links }) => (
   <div>
     <h4 className="text-[15px] font-medium border-b border-[#e6192b] pb-2 mb-4 inline-block w-full">{title}</h4>

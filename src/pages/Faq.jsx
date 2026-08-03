@@ -58,7 +58,7 @@ const Faq = () => {
         subtitle="Have a question that is not answered below? Connect directly with our senior admission advisor."
       />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header (Matching Website SectionHeader Theme) */}
         <FaqHero />

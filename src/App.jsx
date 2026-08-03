@@ -11,6 +11,8 @@ import BlogListing from './pages/BlogListing';
 import BlogDetail from './pages/BlogDetail';
 import Contact from './pages/Contact';
 import Faq from './pages/Faq';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
 
 import Navbar from './Components/Layout/Navber';
 import Footer from './Components/Layout/Footer/Footer';
@@ -32,6 +34,9 @@ function App() {
         <Route path="/divine/blog/:slug" element={<BlogDetail />} />
         <Route path="/divine/contact-us" element={<Contact />} />
         <Route path="/divine/faqs" element={<Faq />} />
+        <Route path="/divine/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/divine/terms-conditions" element={<TermsConditions />} />
+        <Route path="/divine/terms-and-conditions" element={<TermsConditions />} />
       </Routes>
       <Footer />
     </>
