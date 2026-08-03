@@ -26,6 +26,7 @@ import UniversityListing from './pages/UniversityListing';
 import Gallery from './pages/Gallery';
 import BlogListing from './pages/BlogListing';
 import BlogDetail from './pages/BlogDetail';
+import Contact from './pages/Contact';
 import Navbar from './Components/Layout/Navber';
 import Footer from './Components/Layout/Footer/Footer';
 import ScrollToTop from './Components/Layout/ScrollToTop';
@@ -44,7 +45,7 @@ function App() {
         <Route path="/divine/gallery" element={<Gallery />} />
         <Route path="/divine/blogs" element={<BlogListing />} />
         <Route path="/divine/blog/:slug" element={<BlogDetail />} />
-        {/* <Route path="/contact" element={<Contact />} />  */}
+        <Route path="/divine/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>
