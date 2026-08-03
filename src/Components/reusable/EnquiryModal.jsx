@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { X, CheckCircle, Phone, Send, Download, Calendar, UserCheck } from 'lucide-react';
+import brochurePdf from '../../assets/home/Brochure.pdf';
 
 const EnquiryModal = ({ isOpen, onClose, title = "Get Free Academic Counselling", subtitle = "Fill in your details below and our senior education experts will connect with you shortly." }) => {
   const [formData, setFormData] = useState({
@@ -13,10 +14,23 @@ const EnquiryModal = ({ isOpen, onClose, title = "Get Free Academic Counselling"
 
   if (!isOpen) return null;
 
+  const isBrochure = title.toLowerCase().includes('brochure');
+  const isSchedule = title.toLowerCase().includes('schedule');
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!formData.fullName || !formData.mobile) return;
     setIsSubmitted(true);
+
+    // Automatic download of actual Brochure.pdf when brochure form is submitted
+    if (isBrochure) {
+      const link = document.createElement('a');
+      link.href = brochurePdf;
+      link.download = 'Divine_Institute_Brochure.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   };
 
   const handleResetAndClose = () => {
@@ -31,9 +45,6 @@ const EnquiryModal = ({ isOpen, onClose, title = "Get Free Academic Counselling"
     if (title.toLowerCase().includes('talk')) return <Phone className="w-6 h-6 text-emerald-400" />;
     return <UserCheck className="w-6 h-6 text-[#59c28a]" />;
   };
-
-  const isBrochure = title.toLowerCase().includes('brochure');
-  const isSchedule = title.toLowerCase().includes('schedule');
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-sm animate-fadeIn">
@@ -82,6 +93,16 @@ const EnquiryModal = ({ isOpen, onClose, title = "Get Free Academic Counselling"
                   <span>Call Us: <a href="tel:9828477772" className="font-bold text-[#002147] hover:underline">9828477772</a> / <a href="tel:9828977772" className="font-bold text-[#002147] hover:underline">9828977772</a></span>
                 </div>
               </div>
+
+              {isBrochure && (
+                <a
+                  href={brochurePdf}
+                  download="Divine_Institute_Brochure.pdf"
+                  className="mb-4 inline-flex items-center justify-center gap-2 w-full bg-[#59c28a] hover:bg-[#48b078] text-slate-950 font-extrabold py-3 px-6 rounded-xl transition-all shadow-md text-xs uppercase tracking-wider"
+                >
+                  <Download className="w-4 h-4" /> Click to Download Brochure PDF Again
+                </a>
+              )}
 
               <button
                 onClick={handleResetAndClose}
