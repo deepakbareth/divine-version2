@@ -235,15 +235,10 @@ const Footer = () => {
 const FooterList = ({ title, links }) => (
   <div>
     <h4 className="text-[15px] font-medium border-b border-[#e6192b] pb-2 mb-4 inline-block w-full">{title}</h4>
-    <ul className="space-y-3 text-sm text-gray-300 font-light">
+    <ul className="space-y-2.5 text-sm text-gray-300 font-light select-none">
       {links.map((link, idx) => (
-        <li key={idx}>
-          <Link
-            to="/divine/courses"
-            className="hover:text-[#e6192b] transition-colors duration-200"
-          >
-            {link}
-          </Link>
+        <li key={idx} className="text-gray-400 cursor-default">
+          {link}
         </li>
       ))}
     </ul>
