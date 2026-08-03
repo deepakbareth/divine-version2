@@ -30,7 +30,7 @@ function App() {
         <Route path="/divine/gallery" element={<Gallery />} />
         <Route path="/divine/blogs" element={<BlogListing />} />
         <Route path="/divine/blog/:slug" element={<BlogDetail />} />
-        <Route path="/divine/contact" element={<Contact />} />
+        <Route path="/divine/contact-us" element={<Contact />} />
         <Route path="/divine/faqs" element={<Faq />} />
       </Routes>
       <Footer />

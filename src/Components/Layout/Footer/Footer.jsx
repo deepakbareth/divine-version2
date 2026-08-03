@@ -93,7 +93,7 @@ const Footer = () => {
             <div className="grid grid-cols-2 gap-x-4 gap-y-4 text-sm text-gray-300">
               <ul className="space-y-4">
                 <li><Link to="divine/about" className="hover:text-red-400 transition">About Us</Link></li>
-                <li><a href="/divine/contact" className="hover:text-red-400 transition">Contact Us</a></li>
+                <li><a href="/divine/contact-us" className="hover:text-red-400 transition">Contact Us</a></li>
                 <li className="flex flex-col items-start gap-1">
                   <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">CS Careers</a>
                   <span className="bg-[#4ade80] text-black text-[9px] font-bold px-1.5 py-0.5 rounded">Yes, We are Hiring</span>

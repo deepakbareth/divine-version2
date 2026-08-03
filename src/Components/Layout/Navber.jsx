@@ -15,7 +15,7 @@ const Navbar = () => {
     { name: 'Universities', path: '/divine/universities' },
     { name: 'Gallery', path: '/divine/gallery' },
     { name: 'Blog', path: '/divine/blogs' },
-    { name: 'Contact Us', path: '/divine/contact' },
+    { name: 'Contact Us', path: '/divine/contact-us' },
   ];
 
   return (
