@@ -46,7 +46,7 @@ const Footer = () => {
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
               Schedule Your Call
             </button>
-            
+
             <button
               onClick={() => openModal("Connect Now with Academic Advisor", "Speak directly with our counseling desk for instant guidance and admissions help.")}
               className="flex items-center justify-center gap-2 bg-[#e6192b] hover:bg-red-700 text-white px-6 py-3 rounded-md transition-all font-medium cursor-pointer"
@@ -92,8 +92,8 @@ const Footer = () => {
             <h3 className="text-lg font-medium border-b border-[#e6192b] pb-2 mb-4">About the Company</h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-4 text-sm text-gray-300">
               <ul className="space-y-4">
-                <li><Link to="/divine/about" className="hover:text-red-400 transition">About Us</Link></li>
-                <li><Link to="/divine/contact" className="hover:text-red-400 transition">Contact Us</Link></li>
+                <li><Link to="divine/about" className="hover:text-red-400 transition">About Us</Link></li>
+                <li><a href="/divine/contact" className="hover:text-red-400 transition">Contact Us</a></li>
                 <li className="flex flex-col items-start gap-1">
                   <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">CS Careers</a>
                   <span className="bg-[#4ade80] text-black text-[9px] font-bold px-1.5 py-0.5 rounded">Yes, We are Hiring</span>
@@ -112,7 +112,7 @@ const Footer = () => {
             <h3 className="text-lg font-medium border-b border-[#e6192b] pb-2 mb-4">Quick Links</h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-4 text-sm text-gray-300">
               <ul className="space-y-4">
-                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Top Online Universities</a></li>
+                <li><a href="/divine/universities" className="hover:text-red-400 transition">Top Online Universities</a></li>
                 <li><Link to="/divine/blogs" className="hover:text-red-400 transition">Blogs</Link></li>
               </ul>
               <ul className="space-y-4">
