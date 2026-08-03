@@ -171,7 +171,7 @@ const Footer = () => {
             {/* Col 1 */}
             <div className="space-y-10">
               <FooterList title="Popular PG Programs" links={["Online MBA", "Online MCA", "Dual MBA", "Online BBA + MBA", "1-Year Online MBA"]} />
-              <FooterList title="Trending Online Universities" links={["Amity Online University", "NMIMS CDOE", "Online Manipal", "Jain University Online", "Sharda Online University", "Chandigarh Online University", "LPU Online", "DY Patil Vidyapeeth Online"]} />
+              <FooterList title="Trending Online Universities" links={["Amity Online University", "NMIMS CDOE", "Online Manipal", "Jain University Online", "OP Jindal Global University", "Sharda Online University", "Chandigarh Online University", "LPU Online", "DY Patil Vidyapeeth Online"]} />
             </div>
 
             {/* Col 2 */}

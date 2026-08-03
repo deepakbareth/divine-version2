@@ -205,6 +205,20 @@ export const universitiesData = [
     popularCourses: ["Online MBA", "Online BBA", "Executive Programs"],
     establishedYear: "2003",
     mode: "Online Learning"
+  },
+  {
+    id: "op-jindal-online",
+    slug: "op-jindal-online",
+    name: "OP Jindal Global University Online",
+    logo: "https://logo.clearbit.com/jgu.edu.in",
+    badge: "UGC-DEB Approved",
+    naacGrade: "NAAC A Grade",
+    location: "Sonipat, Haryana",
+    description: "OP Jindal Global University Online offers world-class online degree and executive management programs designed to impart global leadership skills, research acumen, and multidisciplinary knowledge.",
+    approvals: ["UGC-DEB", "AICTE", "NAAC A", "QS World Ranked"],
+    popularCourses: ["Online MBA", "Online MA", "Executive PG Diplomas", "Online BBA"],
+    establishedYear: "2009",
+    mode: "Online Learning Portal"
   }
 ];
 
