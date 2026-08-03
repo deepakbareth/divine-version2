@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import Faq from './pages/Faq';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsConditions from './pages/TermsConditions';
+import Disclaimer from './pages/Disclaimer';
 
 import Navbar from './Components/Layout/Navber';
 import Footer from './Components/Layout/Footer/Footer';
@@ -37,6 +38,7 @@ function App() {
         <Route path="/divine/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/divine/terms-conditions" element={<TermsConditions />} />
         <Route path="/divine/terms-and-conditions" element={<TermsConditions />} />
+        <Route path="/divine/disclaimer" element={<Disclaimer />} />
       </Routes>
       <Footer />
     </>

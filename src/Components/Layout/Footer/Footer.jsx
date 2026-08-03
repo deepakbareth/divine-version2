@@ -102,7 +102,7 @@ const Footer = () => {
               <ul className="space-y-4">
                 <li><a href="/divine/privacy-policy" className="hover:text-red-400 transition">Privacy Policy</a></li>
                 <li><a href="/divine/terms-conditions" className="hover:text-red-400 transition">Terms & Conditions</a></li>
-                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">Disclaimer</a></li>
+                <li><a href="/divine/disclaimer" className="hover:text-red-400 transition">Disclaimer</a></li>
               </ul>
             </div>
           </div>
@@ -122,7 +122,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Horizontal Contact & Office Addresses Bar (Covers Full Width) */}
+          {/* Horizontal Contact & Office Addresses Bar (Covers Full Width)  */}
           <div className="lg:col-span-12 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch pt-6 border-t border-gray-800 mt-4">
             {/* Phone Box */}
             <div className="relative border border-gray-600 rounded-md p-4 w-full flex flex-col justify-center">
