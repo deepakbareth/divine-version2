@@ -2,15 +2,23 @@ import React from 'react';
 
 const FaqHero = () => {
   return (
-    <div className="text-center mb-10">
-      <span className="text-xs font-bold uppercase tracking-widest text-[#002147] bg-[#002147]/5 px-3.5 py-1.5 rounded-full inline-block mb-3">
-        Help & Support Center
-      </span>
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight font-serif">
-        Frequently Asked Questions
+    <div className="text-center mb-12 md:mb-16">
+      {/* Official Website Badge */}
+      <div className="inline-block px-4 py-1.5 rounded-full bg-white border border-slate-200 text-slate-800 font-bold text-xs tracking-widest uppercase mb-4 shadow-sm">
+        <span className="text-[#59c28a] mr-1.5">✦</span> Help & Support Center
+      </div>
+
+      {/* Official Website Heading with Serif & Gradient Highlight */}
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-serif leading-tight">
+        Frequently Asked{' '}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#59c28a] to-[#92e0b3]">
+          Questions
+        </span>
       </h1>
-      <p className="mt-3 text-slate-500 text-sm sm:text-base max-w-xl mx-auto font-light leading-relaxed">
-        Find clear answers to common questions about UGC-approved online degrees, admissions, fees, EMI, and exams.
+
+      {/* Subtitle */}
+      <p className="text-slate-600 mt-4 max-w-2xl text-sm sm:text-base leading-relaxed font-light mx-auto">
+        Find authentic answers regarding UGC-DEB recognition, partner universities, flexible admissions, zero-cost EMI, and online examinations.
       </p>
     </div>
   );

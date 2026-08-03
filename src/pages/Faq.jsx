@@ -3,7 +3,6 @@ import EnquiryModal from '../Components/reusable/EnquiryModal';
 import FaqHero from '../Components/Faq/FaqHero';
 import FaqCategories from '../Components/Faq/FaqCategories';
 import FaqList from '../Components/Faq/FaqList';
-import FaqContactCta from '../Components/Faq/FaqContactCta';
 import { faqsData } from '../Data/faqsData';
 
 const Faq = () => {
@@ -43,8 +42,8 @@ const Faq = () => {
   }, []);
 
   return (
-    <div className="bg-[#f8fafc] min-h-screen pt-28 pb-20 font-sans text-slate-800">
-
+    <div className="bg-slate-50 min-h-screen py-24 lg:py-28 font-sans text-slate-800">
+      
       {/* Structured FAQ Schema */}
       <script
         type="application/ld+json"
@@ -59,9 +58,9 @@ const Faq = () => {
         subtitle="Have a question that is not answered below? Connect directly with our senior admission advisor."
       />
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
-
-        {/* Header (No Search Bar) */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header (Matching Website SectionHeader Theme) */}
         <FaqHero />
 
         {/* Category Tabs */}
@@ -71,13 +70,12 @@ const Faq = () => {
           onSelectCategory={() => setOpenIndex(0)}
         />
 
-        {/* Accordion FAQ List */}
+        {/* Accordion FAQ List (Matching Website FaqAccordion Theme) */}
         <FaqList
           faqs={filteredFaqs}
           openIndex={openIndex}
           toggleAccordion={toggleAccordion}
         />
-
 
       </div>
     </div>
