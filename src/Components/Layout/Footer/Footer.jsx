@@ -112,12 +112,12 @@ const Footer = () => {
             <h3 className="text-lg font-medium border-b border-[#e6192b] pb-2 mb-4">Quick Links</h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-4 text-sm text-gray-300">
               <ul className="space-y-4">
-                <li><a href="/divine/universities" className="hover:text-red-400 transition">Top Online Universities</a></li>
+                <li><Link to="/divine/universities" className="hover:text-red-400 transition">Top Online Universities</Link></li>
                 <li><Link to="/divine/blogs" className="hover:text-red-400 transition">Blogs</Link></li>
               </ul>
               <ul className="space-y-4">
                 <li><Link to="/divine/gallery" className="hover:text-red-400 transition">Photo Gallery</Link></li>
-                <li><a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">FAQs</a></li>
+                <li><Link to="/divine/faqs" className="hover:text-red-400 transition">FAQs</Link></li>
               </ul>
             </div>
           </div>
