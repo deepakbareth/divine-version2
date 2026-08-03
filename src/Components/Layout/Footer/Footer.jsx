@@ -92,17 +92,17 @@ const Footer = () => {
             <h3 className="text-lg font-medium border-b border-[#e6192b] pb-2 mb-4">About the Company</h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-4 text-sm text-gray-300">
               <ul className="space-y-4">
-                <li><Link to="divine/about" className="hover:text-red-400 transition">About Us</Link></li>
-                <li><a href="/divine/contact-us" className="hover:text-red-400 transition">Contact Us</a></li>
+                <li><Link to="/divine/about" className="hover:text-red-400 transition">About Us</Link></li>
+                <li><Link to="/divine/contact-us" className="hover:text-red-400 transition">Contact Us</Link></li>
                 <li className="flex flex-col items-start gap-1">
                   <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">CS Careers</a>
                   <span className="bg-[#4ade80] text-black text-[9px] font-bold px-1.5 py-0.5 rounded">Yes, We are Hiring</span>
                 </li>
               </ul>
               <ul className="space-y-4">
-                <li><a href="/divine/privacy-policy" className="hover:text-red-400 transition">Privacy Policy</a></li>
-                <li><a href="/divine/terms-conditions" className="hover:text-red-400 transition">Terms & Conditions</a></li>
-                <li><a href="/divine/disclaimer" className="hover:text-red-400 transition">Disclaimer</a></li>
+                <li><Link to="/divine/privacy-policy" className="hover:text-red-400 transition">Privacy Policy</Link></li>
+                <li><Link to="/divine/terms-conditions" className="hover:text-red-400 transition">Terms & Conditions</Link></li>
+                <li><Link to="/divine/disclaimer" className="hover:text-red-400 transition">Disclaimer</Link></li>
               </ul>
             </div>
           </div>
@@ -196,12 +196,12 @@ const Footer = () => {
 
           {/* 4. Legal & Copyright Section (Bottom) */}
           <div className="mt-20 pt-8 border-t border-gray-600/50 text-center text-sm text-gray-300">
-            <div className="flex justify-center gap-2 mb-6">
-              <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-white transition">Disclaimer</a>
+            <div className="flex justify-center items-center flex-wrap gap-3 mb-6 text-xs sm:text-sm">
+              <Link to="/divine/disclaimer" className="hover:text-white transition">Disclaimer</Link>
               <span className="text-gray-500">/</span>
-              <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-white transition">Terms and Conditions</a>
+              <Link to="/divine/terms-conditions" className="hover:text-white transition">Terms & Conditions</Link>
               <span className="text-gray-500">/</span>
-              <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-white transition">Our Policy</a>
+              <Link to="/divine/privacy-policy" className="hover:text-white transition">Privacy Policy</Link>
             </div>
 
             <p className="text-gray-400 leading-relaxed text-[13px] max-w-6xl mx-auto mb-6">
@@ -238,13 +238,12 @@ const FooterList = ({ title, links }) => (
     <ul className="space-y-3 text-sm text-gray-300 font-light">
       {links.map((link, idx) => (
         <li key={idx}>
-          <a
-            href="#"
-            onClick={(e) => e.preventDefault()}
+          <Link
+            to="/divine/courses"
             className="hover:text-[#e6192b] transition-colors duration-200"
           >
             {link}
-          </a>
+          </Link>
         </li>
       ))}
     </ul>

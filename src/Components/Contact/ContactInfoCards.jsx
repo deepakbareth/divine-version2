@@ -57,7 +57,7 @@ const ContactInfoCards = () => {
         </div>
         <h4 className="text-xs font-extrabold text-slate-400 uppercase tracking-wider mb-1">Email & Hours</h4>
         <p className="text-slate-900 font-bold text-sm truncate">
-          <a href="mailto:info@divineinstitute.com" className="hover:text-[#002147] transition-colors">info@divineinstitute.com</a>
+          <a href="mailto:info@divineinstitute.co.in" className="hover:text-[#002147] transition-colors">info@divineinstitute.co.in</a>
         </p>
         <div className="mt-2 text-xs text-slate-500 flex items-center gap-1">
           <Clock className="w-3.5 h-3.5 text-purple-600 shrink-0" />
