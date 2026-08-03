@@ -84,14 +84,6 @@ const CourseHero = ({ course, onOpenForm }) => {
           >
             Apply for Admission
           </button>
-
-          <button
-            // onClick={onOpenForm}
-            className="px-6 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-sm tracking-wider uppercase transition-colors border border-white/15 flex items-center gap-2 cursor-pointer"
-          >
-            <Download className="w-4 h-4" />
-            <span>Download Syllabus</span>
-          </button>
         </div>
 
       </div>
