@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import EnquiryModal from '../../reusable/EnquiryModal';
 
 const Footer = () => {
+  const [modalConfig, setModalConfig] = useState({
+    isOpen: false,
+    title: '',
+    subtitle: ''
+  });
+
+  const openModal = (title, subtitle) => {
+    setModalConfig({ isOpen: true, title, subtitle });
+  };
+
+  const closeModal = () => {
+    setModalConfig({ ...modalConfig, isOpen: false });
+  };
+
   return (
     <footer className="bg-[#1a1a1a] text-white font-sans relative pt-24 mt-20">
+
+      {/* Global Enquiry Modal Popup */}
+      <EnquiryModal
+        isOpen={modalConfig.isOpen}
+        onClose={closeModal}
+        title={modalConfig.title}
+        subtitle={modalConfig.subtitle}
+      />
 
       {/* 1. Floating CTA Banner (Top) */}
       <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[95%] max-w-7xl pb-4 md:pb-0">
@@ -16,11 +39,18 @@ const Footer = () => {
           </h2>
 
           <div className="flex flex-col sm:flex-row gap-4 z-10">
-            <button className="flex items-center justify-center gap-2 border border-white/70 hover:bg-white hover:text-[#1a2b4c] text-white px-6 py-3 rounded-md transition-all font-medium">
+            <button
+              onClick={() => openModal("Schedule Your Call Now", "Pick a preferred time and our senior advisor will call you for 1-on-1 counseling.")}
+              className="flex items-center justify-center gap-2 border border-white/70 hover:bg-white hover:text-[#1a2b4c] text-white px-6 py-3 rounded-md transition-all font-medium cursor-pointer"
+            >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
               Schedule Your Call
             </button>
-            <button className="flex items-center justify-center gap-2 bg-[#e6192b] hover:bg-red-700 text-white px-6 py-3 rounded-md transition-all font-medium">
+            
+            <button
+              onClick={() => openModal("Connect Now with Academic Advisor", "Speak directly with our counseling desk for instant guidance and admissions help.")}
+              className="flex items-center justify-center gap-2 bg-[#e6192b] hover:bg-red-700 text-white px-6 py-3 rounded-md transition-all font-medium cursor-pointer"
+            >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
               Let's Talk Now
             </button>

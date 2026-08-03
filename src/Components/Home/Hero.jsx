@@ -1,6 +1,21 @@
 import React, { useState } from 'react';
+import EnquiryModal from '../reusable/EnquiryModal';
 
 const Hero = () => {
+    const [modalConfig, setModalConfig] = useState({
+        isOpen: false,
+        title: '',
+        subtitle: ''
+    });
+
+    const openModal = (title, subtitle) => {
+        setModalConfig({ isOpen: true, title, subtitle });
+    };
+
+    const closeModal = () => {
+        setModalConfig({ ...modalConfig, isOpen: false });
+    };
+
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -28,10 +43,15 @@ const Hero = () => {
         { value: '100', label: 'Counsellors', suffix: '+' },
     ];
 
-
-
     return (
         <div className=" pt-24 lg:pt-28 font-sans">
+            {/* Global Enquiry Modal Popup */}
+            <EnquiryModal
+                isOpen={modalConfig.isOpen}
+                onClose={closeModal}
+                title={modalConfig.title}
+                subtitle={modalConfig.subtitle}
+            />
             {/* --- MAIN HERO SECTION --- */}
             <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid lg:grid-cols-12 gap-12 items-center">
@@ -60,13 +80,22 @@ const Hero = () => {
 
                         {/* Clear CTAs (Document Point 4) */}
                         <div className="flex flex-wrap gap-4 pt-2">
-                            <button className="bg-gradient-to-r from-red-700 to-red-600 text-white px-8 py-3.5 cursor-pointer rounded-xl font-bold shadow-lg shadow-red-700/30 hover:-translate-y-0.5 transition-all">
+                            <button
+                                onClick={() => openModal("Get Free Academic Counselling", "Connect with senior advisors for expert course selection and degree guidance.")}
+                                className="bg-gradient-to-r from-red-700 to-red-600 text-white px-8 py-3.5 cursor-pointer rounded-xl font-bold shadow-lg shadow-red-700/30 hover:-translate-y-0.5 transition-all"
+                            >
                                 Get Free Counselling
                             </button>
-                            <button className="bg-white text-slate-800 border-2 border-slate-200 px-8 py-3.5 cursor-pointer rounded-xl font-bold hover:border-red-700 hover:text-red-700 transition-all flex items-center gap-2">
+                            <button
+                                onClick={() => openModal("Connect Now with Academic Advisor", "Speak directly with our counseling desk for instant guidance.")}
+                                className="bg-white text-slate-800 border-2 border-slate-200 px-8 py-3.5 cursor-pointer rounded-xl font-bold hover:border-red-700 hover:text-red-700 transition-all flex items-center gap-2"
+                            >
                                 <span>📞</span> Talk to Expert
                             </button>
-                            <button className="text-red-700 font-semibold px-4 py-3.5 hover:underline cursor-pointer flex items-center gap-2">
+                            <button
+                                onClick={() => openModal("Download Free University Prospectus & Fee Brochure", "Get complete fee structures and university approval copies sent to your phone.")}
+                                className="text-red-700 font-semibold px-4 py-3.5 hover:underline cursor-pointer flex items-center gap-2"
+                            >
                                 <span>📥</span> Download Brochure
                             </button>
                         </div>

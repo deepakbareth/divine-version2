@@ -3,10 +3,10 @@ import { ChevronLeft, ChevronRight, Phone, Download, UserCheck } from 'lucide-re
 import b1 from '../../assets/home/b1.jpg'
 import b2 from '../../assets/home/b2.jpg'
 import b3 from '../../assets/home/b3.jpg'
-
+import EnquiryModal from '../reusable/EnquiryModal';
 
 // --- INLINE SLIDE COMPONENT (Only Background & Text) ---
-const Slide = ({ slide, isActive }) => {
+const Slide = ({ slide, isActive, onOpenModal }) => {
   return (
     <div
       className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out ${isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'
@@ -23,7 +23,6 @@ const Slide = ({ slide, isActive }) => {
       <div className="absolute inset-0 bg-slate-900/80 lg:bg-gradient-to-r lg:from-slate-900/15 lg:via-slate-900/10 lg:to-transparent"></div>
 
       {/* Slide Text Content - Aligned perfectly with max-w-7xl */}
-      {/* UPDATE: items-start pt-24 on mobile, items-center on desktop */}
       <div className="absolute inset-0 flex items-start pt-24 sm:pt-32 lg:pt-0 lg:items-center pointer-events-none">
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="w-full lg:w-[55%] xl:w-[50%] transform transition-transform duration-700 delay-100 translate-y-0 pointer-events-auto">
@@ -45,15 +44,17 @@ const Slide = ({ slide, isActive }) => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-3 lg:gap-4">
-              <button className="bg-[#6abd8d] hover:bg-[#7bc89d] text-slate-900 px-4 py-2.5 lg:px-6 lg:py-3.5 rounded-xl font-bold transition-all duration-300 shadow-lg shadow-[#6abd8d]/20 hover:shadow-[#6abd8d]/40 transform hover:-translate-y-0.5 flex items-center gap-2 text-xs sm:text-sm md:text-base">
+              <button
+                onClick={() => onOpenModal("Get Free Academic Counselling", "Connect directly with senior advisors for expert course selection and degree guidance.")}
+                className="bg-[#6abd8d] hover:bg-[#7bc89d] text-slate-900 px-4 py-2.5 lg:px-6 lg:py-3.5 rounded-xl font-bold transition-all duration-300 shadow-lg shadow-[#6abd8d]/20 hover:shadow-[#6abd8d]/40 transform hover:-translate-y-0.5 flex items-center gap-2 text-xs sm:text-sm md:text-base cursor-pointer"
+              >
                 <UserCheck className="w-4 h-4 lg:w-5 lg:h-5" /> Get Free Counselling
               </button>
 
-              {/* <button className="bg-white text-slate-900 hover:bg-slate-50 px-4 py-2.5 lg:px-6 lg:py-3.5 rounded-xl font-bold transition-all duration-300 flex items-center gap-2 text-xs sm:text-sm md:text-base shadow-lg transform hover:-translate-y-0.5">
-                <Phone className="w-4 h-4 lg:w-5 lg:h-5 text-[#6abd8d]" /> Talk to Expert
-              </button> */}
-
-              <button className="border border-white/40 hover:border-white hover:bg-white/10 text-white px-4 py-2.5 lg:px-6 lg:py-3.5 rounded-xl font-bold transition-all duration-300 items-center gap-2 text-xs sm:text-sm md:text-base backdrop-blur-sm  ">
+              <button
+                onClick={() => onOpenModal("Download Free University Prospectus & Fee Brochure", "Get complete fee structures, course brochures, and UGC approval copies sent directly to your mobile.")}
+                className="border border-white/40 hover:border-white hover:bg-white/10 text-white px-4 py-2.5 lg:px-6 lg:py-3.5 rounded-xl font-bold transition-all duration-300 flex items-center gap-2 text-xs sm:text-sm md:text-base backdrop-blur-sm cursor-pointer"
+              >
                 <Download className="w-4 h-4 lg:w-5 lg:h-5 hidden sm-flex" /> Download Brochure
               </button>
             </div>
@@ -70,6 +71,19 @@ const Slide = ({ slide, isActive }) => {
 const BannerHero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [modalConfig, setModalConfig] = useState({
+    isOpen: false,
+    title: '',
+    subtitle: ''
+  });
+
+  const openModal = (title, subtitle) => {
+    setModalConfig({ isOpen: true, title, subtitle });
+  };
+
+  const closeModal = () => {
+    setModalConfig({ ...modalConfig, isOpen: false });
+  };
 
   // Form State
   const [formData, setFormData] = useState({
@@ -118,6 +132,14 @@ const BannerHero = () => {
     // UPDATE: min-h adjusted for mobile to prevent form cutting off
     <div className="relative w-full h-auto mt-5 min-h-[950px] sm:min-h-[850px] lg:min-h-[700px] lg:h-[800px] xl:h-[85vh] bg-slate-900 overflow-hidden font-sans group">
 
+      {/* Global Enquiry Modal Popup */}
+      <EnquiryModal
+        isOpen={modalConfig.isOpen}
+        onClose={closeModal}
+        title={modalConfig.title}
+        subtitle={modalConfig.subtitle}
+      />
+
       {/* 1. SLIDER BACKGROUNDS */}
       <div
         className="absolute inset-0 w-full h-full"
@@ -125,7 +147,7 @@ const BannerHero = () => {
         onMouseLeave={() => setIsPaused(false)}
       >
         {slidesData.map((slide, index) => (
-          <Slide key={slide.id} slide={slide} isActive={currentSlide === index} />
+          <Slide key={slide.id} slide={slide} isActive={currentSlide === index} onOpenModal={openModal} />
         ))}
       </div>
 
