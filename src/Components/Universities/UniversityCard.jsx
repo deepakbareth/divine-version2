@@ -24,9 +24,15 @@ const UniversityCard = ({ university, onOpenModal }) => {
             </div>
           </div>
 
-          <div className="flex flex-col items-end gap-1">
-            <span className="px-3 py-1 rounded-full bg-[#e2f2fe] text-[#0066b2] font-bold text-[11px] uppercase tracking-wider">
-              {badge}
+          <div className="flex flex-col items-end gap-1.5">
+            <span className={`px-2.5 py-1 rounded-full font-bold text-[10px] tracking-wide uppercase ${
+              university.category === 'online'
+                ? 'bg-blue-50 text-blue-700 border border-blue-200/80'
+                : university.category === 'distance'
+                ? 'bg-purple-50 text-purple-700 border border-purple-200/80'
+                : 'bg-amber-50 text-amber-800 border border-amber-300'
+            }`}>
+              {university.mode || badge}
             </span>
             {naacGrade && (
               <span className="px-2.5 py-0.5 rounded-md bg-emerald-50 text-[#46aa75] font-semibold text-[10px] flex items-center gap-1 border border-emerald-100">

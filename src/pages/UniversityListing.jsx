@@ -19,8 +19,9 @@ const UniversityListing = () => {
       uni.description.toLowerCase().includes(searchQuery.toLowerCase());
 
     if (selectedFilter === 'all') return matchesSearch;
-    if (selectedFilter === 'ugc-deb') return matchesSearch && uni.approvals.some(a => a.includes('UGC'));
-    if (selectedFilter === 'naac-aplus') return matchesSearch && (uni.naacGrade.includes('A+') || uni.naacGrade.includes('A++'));
+    if (selectedFilter === 'online') return matchesSearch && uni.category === 'online';
+    if (selectedFilter === 'distance') return matchesSearch && uni.category === 'distance';
+    if (selectedFilter === 'autonomous') return matchesSearch && uni.category === 'autonomous';
     if (selectedFilter === 'rajasthan') return matchesSearch && uni.location.toLowerCase().includes('rajasthan');
 
     return matchesSearch;

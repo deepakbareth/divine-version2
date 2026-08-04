@@ -30,7 +30,7 @@ const LeadEnquiryForm = ({
   };
 
   return (
-    <div className="bg-white p-6 sm:p-8 rounded-3xl border border-slate-200 shadow-xl relative overflow-hidden">
+    <div className="bg-white p-5 sm:p-5 rounded-3xl border border-slate-200 shadow-xl relative overflow-hidden">
 
       {/* Top Gradient Line Accent */}
       <div className="absolute top-0 inset-x-0 h-1.5 bg-gradient-to-r from-[#59c28a] to-[#92e0b3]"></div>
