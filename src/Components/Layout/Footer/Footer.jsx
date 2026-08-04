@@ -95,7 +95,7 @@ const Footer = () => {
                 <li><Link to="/divine/about" className="hover:text-red-400 transition">About Us</Link></li>
                 <li><Link to="/divine/contact-us" className="hover:text-red-400 transition">Contact Us</Link></li>
                 <li className="flex flex-col items-start gap-1">
-                  <a href="#" onClick={(e) => e.preventDefault()} className="hover:text-red-400 transition">CS Careers</a>
+                  <Link to="/divine/careers" className="hover:text-red-400 transition">CS Careers</Link>
                   <span className="bg-[#4ade80] text-black text-[9px] font-bold px-1.5 py-0.5 rounded">Yes, We are Hiring</span>
                 </li>
               </ul>
