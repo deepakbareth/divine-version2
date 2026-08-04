@@ -103,7 +103,7 @@ const BannerHero = () => {
       id: 1,
       image: b1,
       title: "Need Career\nGuidance?\nWe Are Here To Help",
-      subtitle: "Compare 50+ universities, understand fee structures, and let our expert counsellors guide you to a successful future.",
+      subtitle: "Compare top UGC-approved universities, understand fee structures, and let our expert counsellors guide you to a successful future.",
     },
     {
       id: 2,

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ShieldCheck, Mail, Phone, MapPin, ArrowLeft } from 'lucide-react';
+import { ShieldCheck, Mail, Phone, MapPin, ArrowLeft, Lock, FileText, CheckCircle2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const PrivacyPolicy = () => {
@@ -21,144 +21,152 @@ const PrivacyPolicy = () => {
           </Link>
         </div>
 
-        {/* Simple Document Header */}
-        <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-sm mb-8">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 text-xs font-bold uppercase tracking-wider mb-4">
-            <ShieldCheck className="w-4 h-4 text-[#59c28a]" /> Legal & Compliance
+        {/* Document Header */}
+        <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm mb-8">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-[#3ba36f] text-xs font-bold uppercase tracking-wider mb-4">
+            <ShieldCheck className="w-4 h-4 text-[#59c28a]" /> Legal & Data Protection Compliance
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 font-serif leading-tight">
             Privacy Policy
           </h1>
-          <p className="text-slate-500 text-xs sm:text-sm mt-2">
+          <p className="text-slate-500 text-xs sm:text-sm mt-2 font-medium">
             Last Updated: August 2026 | Effective Date: August 1, 2026
           </p>
           <div className="mt-4 pt-4 border-t border-slate-100 text-slate-600 text-sm sm:text-base leading-relaxed font-light">
-            Divine Institute of Management Studies (<strong>"Divine Institute"</strong>, <strong>"DIMS"</strong>, <strong>"we"</strong>, <strong>"us"</strong>, or <strong>"our"</strong>) is committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your data when you visit our website, submit admission inquiries, or use our academic counseling services.
+            Divine Institute of Management Studies (<strong>"Divine Institute"</strong>, <strong>"DIMS"</strong>, <strong>"we"</strong>, <strong>"us"</strong>, or <strong>"our"</strong>) is deeply dedicated to upholding user trust, confidentiality, and data privacy. This Privacy Policy outlines how we collect, handle, utilize, store, and safeguard your personal and academic information when you access our portal, submit admission inquiries, or engage in our free educational counseling services.
           </div>
         </div>
 
         {/* Policy Content Sections */}
-        <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-10 shadow-sm space-y-8 text-slate-700 text-sm sm:text-base leading-relaxed font-normal">
+        <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm space-y-8 text-slate-700 text-sm sm:text-base leading-relaxed">
 
           {/* Section 1 */}
           <section>
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3">
-              1. Information We Collect
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3 flex items-center gap-2">
+              <span className="w-7 h-7 rounded-lg bg-slate-100 text-slate-900 text-xs flex items-center justify-center font-mono">01</span>
+              <span>Information We Collect from Prospective Students</span>
             </h2>
             <p className="mb-3 text-slate-600 font-light">
-              We collect information that you voluntarily provide to us when you fill out an admission form, request course details, book a free counseling session, or contact our support desk:
+              We collect information that you voluntarily furnish to our academic counseling desk when you request course syllabi, verify university fee structures, apply for admission assistance, or request a call back:
             </p>
-            <ul className="list-disc list-inside space-y-1.5 text-slate-600 font-light pl-2">
-              <li><strong>Contact Information:</strong> Full name, email address, mobile/phone number, WhatsApp number, and residential city/state.</li>
-              <li><strong>Academic Details:</strong> Highest educational qualification, passing year, marks/percentage, preferred program (e.g., Online MBA, MCA, BBA), and preferred university.</li>
-              <li><strong>Verification Documents:</strong> Academic mark sheets, government ID proofs (Aadhaar, Passport, or Voter ID), photographs, and signatures provided solely for facilitating university admission eligibility checks.</li>
-              <li><strong>Technical Data:</strong> Browser type, IP address, device information, and pages visited collected through standard web logs and cookies.</li>
+            <ul className="list-disc list-inside space-y-2 text-slate-600 font-light pl-2">
+              <li><strong>Personal & Contact Data:</strong> Full legal name, date of birth, mobile number, WhatsApp contact, email address, and permanent/current city and state.</li>
+              <li><strong>Educational History:</strong> Highest qualification completed (10th, 12th, Bachelor's degree), year of passing, marks percentage/CGPA, academic stream, and preferred program of study (e.g., Online MBA, MCA, BBA, BCA, Distance MA).</li>
+              <li><strong>Academic Verification Documents:</strong> Mark sheets, degree certificates, transfer/provisional certificates, valid government identity proofs (Aadhaar Card, Passport, or Voter ID), photographs, and signature copies provided strictly for processing eligibility checks with partner universities.</li>
+              <li><strong>Technical Browsing Data:</strong> IP address, device type, browser details, operating system, and engagement patterns recorded via standard secure web server logs.</li>
             </ul>
           </section>
 
           {/* Section 2 */}
           <section>
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3">
-              2. How We Use Your Information
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3 flex items-center gap-2">
+              <span className="w-7 h-7 rounded-lg bg-slate-100 text-slate-900 text-xs flex items-center justify-center font-mono">02</span>
+              <span>Purpose & How We Use Your Data</span>
             </h2>
             <p className="mb-3 text-slate-600 font-light">
-              The information we collect is used strictly for legitimate educational counseling and admission fulfillment purposes, including:
+              Your data is collected and processed exclusively for legitimate educational guidance and admission facilitation purposes:
             </p>
-            <ul className="list-disc list-inside space-y-1.5 text-slate-600 font-light pl-2">
-              <li>Connecting you with a senior academic advisor for personalized course and university guidance.</li>
-              <li>Verifying eligibility criteria and assisting in application form submission to UGC-DEB approved partner universities.</li>
-              <li>Sending important admission updates, enrollment credentials, exam schedules, and fee receipts via SMS, WhatsApp, or email.</li>
-              <li>Assisting eligible students in processing Zero-Cost EMI applications through authorized education financing partners.</li>
-              <li>Improving our website experience, counselor responsiveness, and customer support.</li>
+            <ul className="list-disc list-inside space-y-2 text-slate-600 font-light pl-2">
+              <li>Assigning a dedicated senior academic advisor to guide you through university comparisons, course accreditations, and career paths.</li>
+              <li>Facilitating university enrollment paperwork and digital document verification with your chosen UGC-approved partner university (e.g., NMIMS, Amity, Manipal, OP Jindal, GLA, Chandigarh University, Jain University, VGU, SGVU, LPU, etc.).</li>
+              <li>Sending critical notifications regarding admission status, university enrollment IDs, examination deadlines, and LMS login links via SMS, WhatsApp, and email.</li>
+              <li>Assisting eligible students with 0% interest Zero-Cost EMI loan documentation through approved education NBFC lending partners.</li>
+              <li>Enhancing website performance, user experience, and counselor response time.</li>
             </ul>
           </section>
 
           {/* Section 3 */}
           <section>
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3">
-              3. Information Sharing & Disclosure
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3 flex items-center gap-2">
+              <span className="w-7 h-7 rounded-lg bg-slate-100 text-slate-900 text-xs flex items-center justify-center font-mono">03</span>
+              <span>Strict Non-Disclosure & Information Sharing Policy</span>
             </h2>
             <p className="mb-3 text-slate-600 font-light">
-              We respect your trust. <strong>We do not sell, rent, or trade your personal data to third-party marketing companies.</strong> We only share necessary data under the following circumstances:
+              <strong>We strictly DO NOT sell, trade, rent, or commercialize your personal contact details to external marketing agencies or data brokers.</strong> Information is shared solely under controlled circumstances:
             </p>
-            <ul className="list-disc list-inside space-y-1.5 text-slate-600 font-light pl-2">
-              <li><strong>Partner Universities:</strong> With the specific UGC-recognized university you choose to apply to, solely for the purpose of university registration and enrollment.</li>
-              <li><strong>Education Loan Partners:</strong> With approved financial service providers (e.g., GrayQuest, LiquiLoans) if you explicitly apply for a monthly zero-cost EMI plan.</li>
-              <li><strong>Legal Compliance:</strong> When required by applicable Indian laws, judicial orders, or government authorities.</li>
+            <ul className="list-disc list-inside space-y-2 text-slate-600 font-light pl-2">
+              <li><strong>Chosen Partner University:</strong> Shared exclusively with the authorized admission board of the university you elect to apply to for formal student registration and degree enrollment.</li>
+              <li><strong>Education Financing Partners:</strong> Shared only upon your explicit request if you apply for Zero-Cost monthly installment plans through authorized lenders (such as GrayQuest, LiquiLoans, Eduvanz).</li>
+              <li><strong>Statutory & Legal Requirements:</strong> When mandated by applicable Indian laws, judicial summons, or regulatory authorities.</li>
             </ul>
           </section>
 
           {/* Section 4 */}
           <section>
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3">
-              4. Data Security & Storage
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3 flex items-center gap-2">
+              <span className="w-7 h-7 rounded-lg bg-slate-100 text-slate-900 text-xs flex items-center justify-center font-mono">04</span>
+              <span>Data Protection, Encryption & Storage</span>
             </h2>
             <p className="text-slate-600 font-light">
-              We implement industry-standard administrative, technical, and physical security measures to protect your personal information against unauthorized access, loss, alteration, or misuse. All sensitive data transmitted via our web forms is encrypted using Secure Sockets Layer (SSL) technology.
+              We employ robust 256-bit SSL encryption, restricted access protocols, and firewall-protected databases to protect your sensitive personal and academic data against unauthorized access, loss, or misuse. Our operational procedures adhere strictly to the guidelines of the <strong>Information Technology Act, 2000</strong> and the <strong>Digital Personal Data Protection (DPDP) Act, India</strong>.
             </p>
           </section>
 
           {/* Section 5 */}
           <section>
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3">
-              5. Cookies & Tracking Technologies
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3 flex items-center gap-2">
+              <span className="w-7 h-7 rounded-lg bg-slate-100 text-slate-900 text-xs flex items-center justify-center font-mono">05</span>
+              <span>Cookies & Analytics</span>
             </h2>
             <p className="text-slate-600 font-light">
-              Our website may use standard cookies and analytics tools to understand visitor traffic, remember preferences, and enhance browsing performance. You have the option to disable cookies through your web browser settings at any time.
+              Our website may utilize standard session cookies to analyze web traffic, remember navigation preferences, and enhance browsing speed. You retain complete authority to modify cookie settings or disable them entirely via your web browser settings without impacting core website accessibility.
             </p>
           </section>
 
           {/* Section 6 */}
           <section>
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3">
-              6. Your Rights & Data Choices
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3 flex items-center gap-2">
+              <span className="w-7 h-7 rounded-lg bg-slate-100 text-slate-900 text-xs flex items-center justify-center font-mono">06</span>
+              <span>Your Rights as a Student</span>
             </h2>
             <p className="mb-3 text-slate-600 font-light">
-              As a prospective student or user, you have the right to:
+              As an applicant or visitor, you have complete sovereignty over your information:
             </p>
-            <ul className="list-disc list-inside space-y-1.5 text-slate-600 font-light pl-2">
-              <li>Request access to or review the personal details submitted to our counselors.</li>
-              <li>Request correction or updating of any inaccurate contact information.</li>
-              <li>Opt-out of informational counseling communications, WhatsApp updates, or promotional emails at any time by contacting our support team.</li>
+            <ul className="list-disc list-inside space-y-2 text-slate-600 font-light pl-2">
+              <li><strong>Right to Access & Rectification:</strong> You may request a review or update of your submitted contact details and documents at any time.</li>
+              <li><strong>Right to Opt-Out:</strong> You can unsubscribe from informational WhatsApp broadcasts or promotional emails by sending an opt-out request to our helpline.</li>
+              <li><strong>Right to Data Erasure:</strong> Prospective students whose admissions are not processed may request the complete deletion of their uploaded verification documents from our local inquiry systems.</li>
             </ul>
           </section>
 
           {/* Section 7 */}
           <section>
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3">
-              7. Updates to This Privacy Policy
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3 flex items-center gap-2">
+              <span className="w-7 h-7 rounded-lg bg-slate-100 text-slate-900 text-xs flex items-center justify-center font-mono">07</span>
+              <span>Policy Amendments</span>
             </h2>
             <p className="text-slate-600 font-light">
-              Divine Institute reserves the right to update or modify this Privacy Policy as required by changes in regulatory standards or organizational practices. Any changes will be posted on this page with an updated revision date.
+              Divine Institute reserves the right to periodically amend or update this Privacy Policy to reflect changing statutory standards or enhanced institutional practices. Revisions will be published on this URL with an updated timestamp.
             </p>
           </section>
 
-          {/* Section 8: Contact & Grievance */}
+          {/* Section 8: Grievance Officer & Contact Information */}
           <section className="pt-6 border-t border-slate-100">
-            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3">
-              8. Grievance Officer & Contact Information
+            <h2 className="text-lg sm:text-xl font-bold text-slate-900 font-serif mb-3 flex items-center gap-2">
+              <span className="w-7 h-7 rounded-lg bg-slate-100 text-slate-900 text-xs flex items-center justify-center font-mono">08</span>
+              <span>Grievance Officer & Data Protection Helpdesk</span>
             </h2>
             <p className="text-slate-600 font-light mb-4">
-              If you have any questions, concerns, or grievances regarding this Privacy Policy or your data, please contact our Grievance Desk:
+              For any privacy inquiries, data rectification requests, or grievances, please reach out to our designated Data Protection & Grievance Desk:
             </p>
 
-            <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-2 text-xs sm:text-sm text-slate-700">
-              <div className="font-bold text-slate-900">Divine Institute of Management Studies (DIMS)</div>
-              <div className="flex items-start gap-2">
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-3 text-xs sm:text-sm text-slate-700">
+              <div className="font-bold text-slate-900 text-base font-serif">Divine Institute of Management Studies (DIMS)</div>
+              <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#59c28a] shrink-0 mt-0.5" />
                 <span><strong>Corporate Office:</strong> 712, 7th Floor, Crops Arcade, Malviya Marg, C-Scheme, Jaipur, Rajasthan - 302001</span>
               </div>
-              <div className="flex items-start gap-2">
+              <div className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#59c28a] shrink-0 mt-0.5" />
-                <span><strong>Campus Center:</strong> TA-502, 5th Floor, R-Tech Capital High Street, Apparel Park, Main Mahal Road, Jagatpura, Jaipur</span>
+                <span><strong>Campus Branch:</strong> TA-502, 5th Floor, R-Tech Capital High Street, Apparel Park, Main Mahal Road, Jagatpura, Jaipur</span>
               </div>
-              <div className="flex items-center gap-2 pt-1">
+              <div className="flex items-center gap-2.5 pt-1">
                 <Phone className="w-4 h-4 text-[#59c28a] shrink-0" />
-                <span><strong>Helplines:</strong> +91 98284 77772 / +91 98289 77772 / +91 95199 14855</span>
+                <span><strong>Helplines:</strong> +91 98284 77772 &nbsp;|&nbsp; +91 98289 77772 &nbsp;|&nbsp; +91 95199 14855</span>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-[#59c28a] shrink-0" />
-                <span><strong>Email:</strong> info@divineinstitute.co.in</span>
+                <span><strong>Email:</strong> <a href="mailto:info@divineinstitute.co.in" className="text-emerald-700 font-semibold hover:underline">info@divineinstitute.co.in</a></span>
               </div>
             </div>
           </section>

@@ -15,7 +15,7 @@ const CounsellingProcess = () => {
       id: "02",
       icon: Compass,
       title: "Unbiased Matching",
-      desc: "We screen and compare programs across 50+ partner online universities to shortlist the top matches, keeping recommendations 100% objective.",
+      desc: "We screen and compare programs across top UGC-approved partner universities to shortlist the best matches, keeping recommendations 100% objective.",
       themeColor: "text-blue-500",
       bgAccent: "bg-blue-50"
     },

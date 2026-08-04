@@ -1,118 +1,136 @@
 export const faqCategories = [
   { id: 'all', label: 'All Questions', icon: 'Sparkles' },
   { id: 'validity', label: 'UGC & Degree Validity', icon: 'ShieldCheck' },
+  { id: 'modes', label: 'Online vs Distance vs Autonomous', icon: 'BookOpen' },
   { id: 'admissions', label: 'Admissions & Eligibility', icon: 'GraduationCap' },
   { id: 'fees', label: 'Fees & Zero-Cost EMI', icon: 'CreditCard' },
-  { id: 'exams', label: 'Online Exams & LMS', icon: 'Laptop' },
+  { id: 'exams', label: 'Exams & LMS Learning', icon: 'Laptop' },
   { id: 'placements', label: 'Placements & Career', icon: 'Briefcase' },
   { id: 'divine', label: 'About Divine Institute', icon: 'Building2' }
 ];
 
 export const faqsData = [
-  // UGC & Degree Validity
+  // 1. UGC & Degree Validity
   {
     category: 'validity',
-    q: 'Are online degrees provided by Divine Institute partner universities recognized by UGC-DEB?',
-    a: 'Yes, absolutely. All our partner universities (like Manipal, Amity, Chandigarh University, GLA, etc.) are 100% approved by UGC-DEB (University Grants Commission - Distance Education Bureau) and accredited by NAAC (A/A+ grade). The degrees awarded are completely legitimate and legally equivalent to regular on-campus degrees as per UGC notifications.'
+    q: 'Are online & distance degrees facilitated by Divine Institute recognized by UGC-DEB?',
+    a: 'Yes, 100%. All partner universities represented by Divine Institute (such as NMIMS, Amity, OP Jindal, Manipal, GLA, DY Patil, Sharda, Chandigarh University, Jain University, VGU, SGVU, LPU, and ISBM) are officially approved by the University Grants Commission - Distance Education Bureau (UGC-DEB) and accredited by NAAC (A / A+ / A++ Grade) and AICTE. The degrees awarded are completely legitimate and legally recognized across India and abroad.'
   },
   {
     category: 'validity',
-    q: 'Is an online degree valid for Government Jobs, UPSC, SSC, and Higher Studies (Ph.D.)?',
-    a: 'Yes. As per UGC regulations dated September 2022, degrees acquired through UGC-approved Online and Open & Distance Learning (ODL) modes are treated at par with degrees acquired through conventional on-campus modes for government employment, competitive exams (UPSC, SSC, Bank PO), state PSCs, and admissions into higher education like Master\'s or Ph.D. programs.'
+    q: 'Is an online/distance degree valid for Government Jobs, UPSC, SSC, and Higher Studies (Ph.D.)?',
+    a: 'Yes. As per the official UGC Gazette notification dated September 2022, degrees and diplomas acquired through UGC-approved Online and Open & Distance Learning (ODL) modes are treated strictly AT PAR with conventional on-campus degrees for all Central & State Government jobs, UPSC, SSC, Banking exams, State PSCs, and admissions into Master’s or Ph.D. programs.'
   },
   {
     category: 'validity',
-    q: 'Are these online degrees recognized internationally and for WES / Canada immigration?',
-    a: 'Yes. Universities accredited by NAAC with \'A\' grade and approved by UGC/AIU are widely accepted globally. WES (World Education Services) evaluates and approves degrees from these universities for Canada PR, USA study visas, and global employment credentials.'
+    q: 'Are these degrees recognized internationally and for WES / Canada PR evaluation?',
+    a: 'Yes. Degrees from NAAC A/A+ accredited and AIU (Association of Indian Universities) member universities are widely recognized globally. International credential assessment bodies like WES (World Education Services), IQAS, and ICAS evaluate and accept these degrees for Canada Express Entry (PR), USA higher education, and global MNC employment.'
   },
   {
     category: 'validity',
-    q: 'Will the word "Online" be mentioned on my degree certificate?',
-    a: 'According to UGC regulations, the degree certificate clearly states the program name (e.g., Master of Business Administration) along with the university\'s seal and registration number. Some universities may mention the mode of delivery on the transcript/grade card, but the legal standing, validity, and accreditation remain 100% equal to regular campus degrees.'
+    q: 'Will the word "Online" or "Distance" affect the value of my degree certificate?',
+    a: 'No. The degree certificate awarded by the university carries the official university seal, hologram, program title (e.g., Master of Business Administration), and registration number. Under UGC regulations, employers in both government and corporate sectors cannot discriminate between degrees earned via regular, online, or distance modes.'
   },
 
-  // Admissions & Eligibility
+  // 2. Online vs Distance vs Autonomous
+  {
+    category: 'modes',
+    q: 'What is the difference between Online Degrees, Distance Learning, and Autonomous B-School Diplomas?',
+    a: 'Here is the clear breakdown:\n1) Online Programs: 100% digital delivery with live & recorded online lectures, digital e-books, LMS portals, and remote proctored online examinations from home (e.g., NMIMS, Amity, Manipal, OP Jindal, GLA Online, Chandigarh, Jain, DY Patil, Sharda).\n2) Distance Learning (ODL): Self-paced study with physical/digital study material, flexible semester exams at designated centers or online mode (e.g., VGU, Suresh Gyan Vihar University, GLA Distance, LPU, ISBM).\n3) Autonomous B-School: Industry-driven specialized management certificate & diploma programs designed for working professionals seeking practical skill enhancement (e.g., Xaviers Institute of Business Management Studies - XIBMS).'
+  },
+  {
+    category: 'modes',
+    q: 'Which universities are available for Online vs Distance programs through Divine Institute?',
+    a: 'Divine Institute specializes in 15 premier institutions:\n• Online Universities: NMIMS Online, Amity Online, OP Jindal Global, Manipal University Jaipur, GLA University Online, Dr. D.Y. Patil Vidyapeeth, Sharda University Online, Chandigarh University, Jain University.\n• Distance Education: Vivekananda Global University (VGU), Suresh Gyan Vihar University (SGVU), GLA Distance, Lovely Professional University (LPU), ISBM University.\n• Autonomous B-School: Xaviers Institute of Business Management Studies (XIBMS) for specialized distance diplomas & certificates.'
+  },
+  {
+    category: 'modes',
+    q: 'What is XIBMS and how does its Autonomous Diploma work?',
+    a: 'Xaviers Institute of Business Management Studies (XIBMS) is a reputed autonomous management institute offering short-term, fast-track, and executive management diplomas and certificate courses via distance learning. It is tailored specifically for working professionals who require targeted industry certifications and flexible business management credentials.'
+  },
+
+  // 3. Admissions & Eligibility
   {
     category: 'admissions',
     q: 'What is the step-by-step admission process through Divine Institute?',
-    a: 'The admission process is smooth and hassle-free: 1) Free 1-on-1 counseling with our academic advisors to select the right course and university. 2) Document verification (10th, 12th, Graduation mark sheets, ID proof). 3) University application form submission with zero hassle. 4) Fee payment (one-time or easy monthly EMI). 5) University enrollment number and LMS portal login credentials generation within 48-72 hours.'
+    a: 'The admission journey is simple and completely counselor-assisted:\n1) Free 1-on-1 Consultation: Expert guidance to select the best-suited program and university based on your budget, profile, and career goals.\n2) Document Verification: Quick digital verification of your academic records (10th, 12th, Graduation mark sheets, ID proof).\n3) University Application Processing: Seamless submission to the university portal with zero errors.\n4) Direct University Fee Payment: Transparent payment directly to university accounts or Zero-Cost EMI setup.\n5) Enrollment & LMS Access: Issuance of official University Roll Number, Student ID, and LMS credentials within 48 to 72 hours.'
   },
   {
     category: 'admissions',
-    q: 'What documents are required for enrolling in an online degree program?',
-    a: 'Standard required documents include: Class 10th and 12th Mark sheets & Passing Certificates, Graduation Mark sheets & Degree Certificate (for PG / Master\'s programs), Valid Govt ID Proof (Aadhaar Card, Passport, or Voter ID), Passport-size digital photograph, and Signature copy. Our team assists you with digital verification and submission.'
+    q: 'What documents are required to enroll in an online or distance course?',
+    a: 'Standard documents required are:\n• 10th & 12th Mark Sheets and Passing Certificates\n• Graduation Mark Sheets and Provisional/Degree Certificate (for Master’s/PG programs)\n• Valid Government ID Proof (Aadhaar Card / Passport / Voter ID)\n• Recent Passport-size Photograph (Digital copy)\n• Signature on blank white paper\nOur team assists you with digital scanning, compression, and university eligibility compliance.'
   },
   {
     category: 'admissions',
-    q: 'Is there an age limit or entrance exam required for online courses?',
-    a: 'Most UGC-approved online UG and PG programs (like BBA, BCA, MBA, MCA, M.Com, MA) do not have an upper age limit. Admissions are generally merit-based on your previous qualifying examination marks (typically 45-50% aggregate). A few specialized programs may require a basic university aptitude test, for which Divine counselors provide complete guidance.'
+    q: 'Is there any entrance exam or age restriction for admission?',
+    a: 'Most UGC-approved online and distance undergraduate (BBA, BCA, B.Com, BA) and postgraduate (MBA, MCA, M.Com, MA) programs do not have an upper age limit or mandatory entrance test. Admissions are granted on a direct merit basis of your previous qualifying examination (minimum 45%–50% aggregate). A few specialized programs have internal university screening for which we provide complete assistance.'
   },
   {
     category: 'admissions',
-    q: 'Can working professionals apply for online degrees without leaving their jobs?',
-    a: 'Yes! Online degree programs are specifically designed with high flexibility for working executives, entrepreneurs, and defense personnel. You can attend live weekend classes or watch recorded lectures anytime on the university mobile app/LMS.'
+    q: 'Can working professionals complete their degree without leaving their current job?',
+    a: 'Yes, absolutely. Online and distance education is purpose-built for working executives, defense personnel, and entrepreneurs. You can learn 24/7 at your own schedule via recorded lectures, mobile app LMS, and attend live weekend doubt-clearing sessions.'
   },
 
-  // Fees & Zero-Cost EMI
+  // 4. Fees & Zero-Cost EMI
   {
     category: 'fees',
-    q: 'Is there a Zero-Cost EMI or monthly installment payment facility available?',
-    a: 'Yes. Divine Institute facilitates 0% interest monthly EMI options across partner universities through leading education financing partners (like GrayQuest, LiquiLoans, Eduvanz). You can pay your semester fees in 3, 6, 9, or 12 convenient monthly installments without any hidden interest charges.'
+    q: 'Are Zero-Cost EMI and monthly installment options available?',
+    a: 'Yes. Divine Institute facilitates 0% interest monthly installment and Zero-Cost EMI plans across partner universities through authorized education financing partners (such as GrayQuest, LiquiLoans, and Eduvanz). Students can split their semester/annual fee into 3, 6, 9, or 12 easy monthly installments without extra interest.'
   },
   {
     category: 'fees',
-    q: 'Are there any hidden costs or extra charges for counseling through Divine Institute?',
-    a: 'No, absolutely not. Divine Institute provides 100% Free Academic Counselling and career guidance to students. You only pay the official university tuition and examination fees as prescribed by the university without any middleman commission or hidden agency fees.'
+    q: 'Does Divine Institute charge any extra counseling fees from students?',
+    a: 'No! Divine Institute provides 100% Free Educational Counseling and admission facilitation. You only pay the official university tuition and examination fees as prescribed by the partner university. There are zero hidden service fees, agency charges, or commissions.'
   },
   {
     category: 'fees',
-    q: 'Are scholarships or fee concessions available for defense personnel, women, or merit students?',
-    a: 'Yes! Many partner universities offer exclusive scholarships ranging from 10% to 30% for Defense & Paramilitary personnel, differently-abled candidates, government employees, women applicants, and high-merit students. Divine counselors will help you claim maximum eligible fee discounts.'
+    q: 'Are scholarships available for defense personnel, women, or merit students?',
+    a: 'Yes. Several of our partner universities offer special fee concessions and scholarships (ranging from 10% to 30%) for Indian Armed Forces & Paramilitary personnel, defense wards, government employees, differently-abled candidates, women applicants, and high-merit students. Our advisors ensure you claim the highest eligible discount.'
   },
 
-  // Online Exams & LMS
+  // 5. Exams & LMS Learning
   {
     category: 'exams',
     q: 'How are semester examinations conducted in online degree programs?',
-    a: 'Semester exams are conducted in 100% online remote proctored mode. You can comfortably take your term-end exams from your home or office on a laptop/desktop equipped with a webcam and microphone. AI proctoring and human invigilators ensure high integrity.'
+    a: 'For Online programs, semester exams are conducted in 100% remote proctored online format. You can appear for exams from anywhere using a personal laptop or desktop equipped with a webcam and internet connection. Exams are monitored via AI and live human invigilation. For Distance programs, exams are scheduled according to university guidelines.'
   },
   {
     category: 'exams',
     q: 'What if I miss a live lecture due to office or personal commitments?',
-    a: 'Every live lecture is recorded and uploaded to the university Learning Management System (LMS) within 24 hours. You receive lifetime or program-duration access to recorded video lectures, downloadable e-books, PPTs, reading materials, and discussion forums to learn at your own pace.'
+    a: 'All live interactive webinars and lectures are recorded and uploaded to the student Learning Management System (LMS) within 24 hours. You receive continuous access to recorded videos, lecture presentations, case study notes, e-books, and discussion forums throughout your course duration.'
   },
   {
     category: 'exams',
-    q: 'How will I receive study materials and library access?',
-    a: 'Upon admission confirmation, you receive personalized login credentials to the University Student Portal and LMS. This gives you instant 24/7 access to digital course books (e-books), audiobooks, lecture videos, e-library with thousands of journals, and interactive quizzes.'
+    q: 'How do students receive study materials and library access?',
+    a: 'Upon admission confirmation, you receive university student portal login credentials. This provides 24/7 access to digital e-books, audiobooks, lecture videos, interactive practice quizzes, and vast digital library subscriptions with thousands of indexed national and international journals.'
   },
 
-  // Placements & Career
+  // 6. Placements & Career
   {
     category: 'placements',
-    q: 'Do partner universities provide placement assistance and career support?',
-    a: 'Yes. Top online universities have dedicated Career Development Cells that organize Virtual Job Fairs, Resume Building Workshops, AI Mock Interviews, and direct placement drives. Over 500+ corporate recruiters (including Amazon, TCS, Infosys, Deloitte, HDFC, ICICI) recruit graduates from online programs.'
+    q: 'Do partner universities offer placement assistance and career support?',
+    a: 'Yes. Top partner universities have established Career Support and Corporate Resource Centers that organize Virtual Job Fairs, AI Resume Building Workshops, Interview Masterclasses, and direct placement drives. Over 500+ top corporates (including Deloitte, Amazon, TCS, Infosys, ICICI, HDFC) actively recruit graduates from online and distance programs.'
   },
   {
     category: 'placements',
-    q: 'What is the average salary hike reported by students completing an Online MBA?',
-    a: 'Graduates and working professionals completing an Online MBA through our partner universities report an average salary hike of 40% to 65%, along with promotions to managerial and leadership positions across IT, BFSI, Healthcare, Consulting, and Marketing domains.'
+    q: 'What is the expected career and salary impact of completing an Online MBA?',
+    a: 'Working professionals completing an Online MBA from premier institutions report an average salary hike of 40% to 65%, along with internal promotions to managerial, strategic, and leadership roles in IT, BFSI, Healthcare, Consulting, and Marketing domains.'
   },
 
-  // About Divine Institute
+  // 7. About Divine Institute
   {
     category: 'divine',
-    q: 'Why should I take admission through Divine Institute instead of applying directly?',
-    a: 'Divine Institute has over 15+ years of academic excellence guiding 50,000+ students. When you apply through Divine, you get: 1) Unbiased university comparison of 50+ UGC universities. 2) Dedicated personal counselor from admission till degree completion. 3) Priority admission desk & fast-track document clearance. 4) Zero extra cost with maximum scholarship benefits. 5) Local guidance offices in Jaipur (C-Scheme & Jagatpura).'
+    q: 'Why should I take admission through Divine Institute rather than applying directly?',
+    a: 'With 15+ years of trusted counseling experience and 50,000+ guided students, Divine Institute offers:\n• Objective comparison among India\'s top 15 Online, Distance & Autonomous institutions.\n• Dedicated personal counselor assigned to you from admission till degree completion.\n• 100% transparent fee structure with zero additional charges.\n• Assistance in availing maximum university scholarships and 0% interest EMI options.\n• Two physical offices in Jaipur (C-Scheme & Jagatpura) for walk-in support and verified guidance.'
   },
   {
     category: 'divine',
     q: 'Where are the physical offices of Divine Institute located in Jaipur?',
-    a: 'We have two centrally located corporate and campus centers in Jaipur: 1) Corporate Office: 712, 7th Floor, Crops Arcade, Malviya Marg, C-Scheme, Jaipur - 302001. 2) Campus Office: TA-502, 5th Floor, R-Tech Capital High Street, Apparel Park, Main Mahal Road, Jagatpura, Jaipur. You are welcome to visit for in-person counseling Mon-Sat (9:30 AM - 7:00 PM).'
+    a: 'We welcome students and parents to visit our two Jaipur offices for face-to-face academic counseling:\n1) Corporate Office: 712, 7th Floor, Crops Arcade, Malviya Marg, C-Scheme, Jaipur - 302001.\n2) Campus Center: TA-502, 5th Floor, R-Tech Capital High Street, Main Mahal Road, Jagatpura, Jaipur.\nOffice Hours: Monday to Saturday (9:30 AM – 7:00 PM).'
   },
   {
     category: 'divine',
     q: 'How can I connect with a senior counselor for immediate guidance?',
-    a: 'You can directly call our helpline numbers at +91 98284 77772 / +91 98289 77772 / +91 95199 14855, or click the "Apply Now" / "Get Free Counselling" button anywhere on our website to schedule a free 1-on-1 phone or in-person consultation.'
+    a: 'You can directly call our helplines at +91 98284 77772, +91 98289 77772, or +91 95199 14855. You can also email us at info@divineinstitute.co.in or fill out any inquiry form on our website to schedule a free 1-on-1 counseling session.'
   }
 ];

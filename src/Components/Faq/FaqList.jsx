@@ -54,7 +54,7 @@ const FaqList = ({ faqs, openIndex, toggleAccordion }) => {
                   exit={{ height: 0, opacity: 0 }}
                   transition={{ duration: 0.25 }}
                 >
-                  <div className="px-5 sm:px-6 pb-6 pt-1 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 font-light">
+                  <div className="px-5 sm:px-6 pb-6 pt-1 text-slate-600 text-sm sm:text-base leading-relaxed border-t border-slate-100 font-light whitespace-pre-line">
                     {faq.a}
                   </div>
                 </motion.div>
