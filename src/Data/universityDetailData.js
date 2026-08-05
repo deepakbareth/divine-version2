@@ -256,7 +256,102 @@ export const universityDetailData = {
       "Wipro"
     ],
 
-    // FAQs (CollegeSathi Verified)
+    // FAQs (CollegeSathi Verified - Categorized)
+    faqCategories: [
+      {
+        category: "About University",
+        items: [
+          {
+            q: "Is Amity University Online UGC entitled and valid in India?",
+            a: "Yes, Amity University Online is UGC-entitled and recognized by DEB. As per UGC regulations, its degrees are treated at par with regular on-campus degrees and are 100% valid for all Central/State government jobs, UPSC, and corporate promotions across India."
+          },
+          {
+            q: "Is Amity University Online degree recognized internationally?",
+            a: "Yes, Amity Online degrees are recognized across global regions and evaluated by WES (World Education Services), making them fully acceptable for Canada PR, USA educational credentialing, and overseas university admissions."
+          },
+          {
+            q: "How does Amity University Online support flexible learning?",
+            a: "Amity Online offers a digital LMS with live weekend classes, 24/7 recorded video archives, audiobooks, digital e-books, and mobile app access, allowing working professionals to balance study with career."
+          },
+          {
+            q: "Is Amity University Online good for working professionals?",
+            a: "Yes, its flexible schedule, self-paced learning portal, online proctored exams, and career-focused programs make it a suitable and highly practical choice for working professionals."
+          },
+          {
+            q: "What accreditations does Amity University Online have?",
+            a: "Amity Online is backed by UGC-DEB entitlement, NAAC A+ accreditation, AICTE approval, QS Asia Top Online ranking, and WES global recognition that strengthen its academic credibility."
+          },
+          {
+            q: "Can I pursue higher studies after completing a degree from Amity Online?",
+            a: "Yes. Because Amity Online degrees are UGC entitled and NAAC A+ accredited, graduates are fully eligible for any Master's, Ph.D., or international degree program worldwide."
+          }
+        ]
+      },
+      {
+        category: "About Courses",
+        items: [
+          {
+            q: "What courses are offered by Amity University Online?",
+            a: "Amity Online offers UG, PG, and certification programs, including Online MBA, Online BBA, Online MCA, Online BCA, Online M.Sc in Data Science, Online M.Com, Online MA, and specialized industry certifications."
+          },
+          {
+            q: "Which is the best course at Amity University Online?",
+            a: "The best course depends on your career goals, though Online MBA (with 18+ electives), Online MCA (AI & Cloud), and M.Sc in Data Science are among the most opted and highest ROI programs."
+          },
+          {
+            q: "What is the duration of Amity Online UG and PG programs?",
+            a: "UG programs (BBA, BCA, B.Com, BA) typically last 3 years (6 semesters), while most PG programs (MBA, MCA, M.Sc, M.Com, MAJMC) are designed to be completed in 2 years (4 semesters)."
+          },
+          {
+            q: "Are Amity Online courses industry-relevant and updated?",
+            a: "Yes, Amity Online courses are designed in collaboration with corporate leaders and industry experts to align with evolving market trends, AI tools, and practical job requirements."
+          },
+          {
+            q: "Can I switch my specialization in Amity Online programs?",
+            a: "Specialization changes may depend on program policies and semester guidelines. Divine Institute counselors provide full academic support to guide you through any elective transitions."
+          },
+          {
+            q: "Do Amity Online courses include live and recorded classes?",
+            a: "Yes, learners get access to live interactive weekend sessions by expert faculties and 24/7 access to high-definition recorded lectures on the Amity LMS portal."
+          },
+          {
+            q: "Are there any certifications included with Amity Online courses?",
+            a: "Yes, many programs (like Online MBA) include additional value-added certifications from Harvard ManageMentor and specialized skill-building modules."
+          }
+        ]
+      },
+      {
+        category: "About Placements",
+        items: [
+          {
+            q: "Does Amity University Online provide placement assistance?",
+            a: "Yes, Amity Online offers comprehensive placement support through resume building, interview preparation, career guidance, virtual job fairs, and direct hiring access."
+          },
+          {
+            q: "What kind of job opportunities are available after Amity Online courses?",
+            a: "Learners can explore opportunities across business management, IT & cloud software, data analytics, digital marketing, finance & banking, HR, and consulting domains."
+          },
+          {
+            q: "Which companies hire from Amity University Online?",
+            a: "Amity Online learners have access to 450+ reputed recruitment partners, including Microsoft, IBM, Amazon, Deloitte, TCS, ICICI Bank, Accenture, Cognizant, Infosys, and Wipro."
+          },
+          {
+            q: "Does Amity Online guarantee placements?",
+            a: "Amity Online and Divine Institute provide 100% placement assistance, career coaching, and interview opportunities. Final job selection depends on learner performance and company criteria."
+          },
+          {
+            q: "What career support services does Amity Online offer?",
+            a: "Services include dedicated career mentors, personalized portfolio & resume reviews, mock interviews with industry experts, soft skills grooming, and exclusive job portal access."
+          },
+          {
+            q: "Can working professionals benefit from Amity Online placements?",
+            a: "Yes, working professionals can use the career services for executive role upgrades, salary appraisals, lateral domain switching, and leadership transitions."
+          }
+        ]
+      }
+    ],
+
+    // Flat list for fallback / search
     faqs: [
       {
         q: "Is Amity University Online UGC entitled and valid in India?",
@@ -267,20 +362,20 @@ export const universityDetailData = {
         a: "Yes, Amity Online degrees are recognized across global regions and evaluated by WES (World Education Services), making them fully acceptable for Canada PR, USA educational credentialing, and overseas university admissions."
       },
       {
+        q: "Does Amity University Online provide placement assistance?",
+        a: "Yes, Amity Online offers placement support through resume building, interview preparation, career guidance, and hiring access."
+      },
+      {
+        q: "Which companies hire from Amity University Online?",
+        a: "Amity Online learners have access to opportunities with reputed companies, including Microsoft, IBM, Amazon, Deloitte, TCS, ICICI Bank, Accenture, Infosys, and Wipro."
+      },
+      {
         q: "How does Amity University Online support flexible learning?",
-        a: "Amity Online offers a digital LMS with live weekend classes, 24/7 recorded video archives, audiobooks, digital e-books, and mobile app access, allowing working professionals to balance study with career."
+        a: "Amity Online offers a digital LMS with live weekend classes, 24/7 recorded video archives, audiobooks, digital e-books, and mobile app access."
       },
       {
         q: "How are examinations conducted at Amity Online?",
         a: "All semester examinations are conducted in 100% remote online proctored mode with AI and live webcam invigilation. You can take your exams conveniently from home."
-      },
-      {
-        q: "Is EMI available for Amity Online tuition fees?",
-        a: "Yes. Divine Institute facilitates 0% interest monthly installment plans (Zero-Cost EMI) starting as low as ₹4,500/month without any hidden processing charges."
-      },
-      {
-        q: "Can I pursue higher studies after completing a degree from Amity Online?",
-        a: "Yes. Because Amity Online degrees are UGC entitled and NAAC A+ accredited, graduates are eligible for any Master's, Ph.D., or international degree program worldwide."
       }
     ]
   },

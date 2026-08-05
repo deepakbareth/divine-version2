@@ -1,97 +1,53 @@
 import React from 'react';
-import { Award, Globe, MapPin, CheckCircle2, Sparkles, Clock, ShieldCheck } from 'lucide-react';
+import { Award, Globe, MapPin, CheckCircle2, ShieldCheck, Building2 } from 'lucide-react';
 import SectionHeader from '../../reusable/SectionHeader';
 
 const UniversityOverview = ({ university }) => {
-  const { name, aboutTitle, description, mode, naacGrade, location, approvals, highlights } = university;
+  const { name, aboutTitle, description, mode, naacGrade, location, approvals, establishedYear } = university;
 
   return (
-    <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 font-sans space-y-6">
-      
-      <SectionHeader
-        badgeText="About Institution"
-        title="Overview of"
-        titleHighlight={name}
-        centered={false}
-      />
-
-      {/* University Description */}
-      <p className="text-slate-600 text-sm sm:text-base leading-relaxed font-light">
-        {description}
-      </p>
-
-      {/* Institutional Highlights Grid */}
-      {highlights && highlights.length > 0 ? (
-        <div className="pt-4 border-t border-slate-100">
-          <div className="flex items-center gap-2 mb-4">
-            <Sparkles className="w-4 h-4 text-[#2d8f5e]" />
-            <h4 className="text-sm font-bold text-slate-800 font-serif">
-              Key Institutional Highlights
-            </h4>
-          </div>
+    <section className="py-16 bg-slate-50/60 font-sans">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 lg:p-12 space-y-8">
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-            {highlights.map((item, idx) => (
-              <div
-                key={idx}
-                className="p-4 rounded-2xl bg-slate-50 border border-slate-200/70 flex flex-col justify-between"
-              >
-                <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block mb-1">
-                  {item.label}
-                </span>
-                <span className="text-xs sm:text-sm font-bold text-slate-900 leading-snug">
-                  {item.value}
-                </span>
-              </div>
-            ))}
+          <SectionHeader
+            badgeText="About Institution"
+            title="Institutional Profile &"
+            titleHighlight="Academic Legacy"
+            centered={false}
+          />
+
+          {/* Description */}
+          <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed font-light">
+            <p>
+              {description}
+            </p>
           </div>
+
+          {/* Accreditations & Recognitions Grid */}
+          <div className="pt-6 border-t border-slate-100 space-y-4">
+            <h4 className="text-sm font-bold text-slate-800 uppercase tracking-wider font-sans">
+              Statutory Approvals & Accreditations
+            </h4>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+              {(approvals || ["UGC-DEB", "AICTE", "NAAC A+", "WES Recognized"]).map((app, idx) => (
+                <div
+                  key={idx}
+                  className="p-3.5 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center gap-2.5 text-slate-800 text-xs font-bold"
+                >
+                  <CheckCircle2 className="w-4 h-4 text-[#2d8f5e] shrink-0" />
+                  <span className="truncate">{app}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
         </div>
-      ) : (
-        /* Fallback Summary Grid */
-        <div className="grid sm:grid-cols-2 gap-4 pt-4 border-t border-slate-100">
-          <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/70 flex items-start gap-3">
-            <div className="w-9 h-9 rounded-xl bg-emerald-50 text-[#2d8f5e] flex items-center justify-center shrink-0">
-              <Globe className="w-5 h-5" />
-            </div>
-            <div>
-              <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Learning Mode</p>
-              <p className="text-sm font-bold text-slate-800">{mode || "Online / Distance Education"}</p>
-            </div>
-          </div>
 
-          <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/70 flex items-start gap-3">
-            <div className="w-9 h-9 rounded-xl bg-blue-50 text-[#0066b2] flex items-center justify-center shrink-0">
-              <Award className="w-5 h-5" />
-            </div>
-            <div>
-              <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Accreditation</p>
-              <p className="text-sm font-bold text-slate-800">{naacGrade || "UGC-DEB Approved"}</p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/70 flex items-start gap-3">
-            <div className="w-9 h-9 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center shrink-0">
-              <MapPin className="w-5 h-5" />
-            </div>
-            <div>
-              <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Campus Location</p>
-              <p className="text-sm font-bold text-slate-800">{location}</p>
-            </div>
-          </div>
-
-          <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200/70 flex items-start gap-3">
-            <div className="w-9 h-9 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center shrink-0">
-              <CheckCircle2 className="w-5 h-5" />
-            </div>
-            <div>
-              <p className="text-xs font-bold text-slate-500 uppercase tracking-wider">Key Approvals</p>
-              <p className="text-sm font-bold text-slate-800">{approvals?.join(", ") || "UGC-DEB, AICTE"}</p>
-            </div>
-          </div>
-        </div>
-      )}
-
-    </div>
+      </div>
+    </section>
   );
 };
 
