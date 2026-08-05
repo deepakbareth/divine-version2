@@ -6,6 +6,7 @@ import About from './pages/About';
 import CourseListing from './pages/CourseListing';
 import CourseDetail from './pages/CourseDetail';
 import UniversityListing from './pages/UniversityListing';
+import UniversityDetail from './pages/UniversityDetail';
 import Gallery from './pages/Gallery';
 import BlogListing from './pages/BlogListing';
 import BlogDetail from './pages/BlogDetail';
@@ -31,6 +32,7 @@ function App() {
         <Route path="/divine/courses" element={<CourseListing />} />
         <Route path="/divine/course/:slug" element={<CourseDetail />} />
         <Route path="/divine/universities" element={<UniversityListing />} />
+        <Route path="/divine/university/:slug" element={<UniversityDetail />} />
         <Route path="/divine/gallery" element={<Gallery />} />
         <Route path="/divine/blogs" element={<BlogListing />} />
         <Route path="/divine/blog/:slug" element={<BlogDetail />} />

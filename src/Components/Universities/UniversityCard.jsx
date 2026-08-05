@@ -1,15 +1,19 @@
 import React from 'react';
 import { Building2, MapPin, CheckCircle2, Award, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const UniversityCard = ({ university, onOpenModal }) => {
-  const { logo, name, badge, naacGrade, location, description, approvals, popularCourses } = university;
+  const { logo, name, slug, badge, naacGrade, location, description, approvals, popularCourses } = university;
 
   return (
     <div className="bg-white rounded-3xl border border-slate-200/80 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] hover:shadow-xl hover:border-[#59c28a]/40 transition-all duration-300 p-6 flex flex-col justify-between group">
       <div>
         {/* Top Logo & Badges Area */}
         <div className="flex items-center justify-between gap-4 mb-5 pb-4 border-b border-slate-100">
-          <div className="w-36 bg-slate-50 rounded-xl p-2 border border-slate-100 flex items-center justify-center shrink-0">
+          <Link
+            to={`/divine/university/${slug}`}
+            className="w-36 bg-slate-50 rounded-xl p-2 border border-slate-100 flex items-center justify-center shrink-0 hover:opacity-90 transition-opacity"
+          >
             <img
               src={logo}
               alt={name}
@@ -22,7 +26,7 @@ const UniversityCard = ({ university, onOpenModal }) => {
             <div className="hidden w-full h-full items-center justify-center text-slate-400 font-bold text-xs">
               <Building2 className="w-6 h-6 text-slate-400" />
             </div>
-          </div>
+          </Link>
 
           <div className="flex flex-col items-end gap-1.5">
             <span className={`px-2.5 py-1 rounded-full font-bold text-[10px] tracking-wide uppercase ${
@@ -44,8 +48,10 @@ const UniversityCard = ({ university, onOpenModal }) => {
         </div>
 
         {/* University Name & Location */}
-        <h3 className="text-xl font-bold text-slate-900 transition-colors leading-snug mb-1">
-          {name}
+        <h3 className="text-xl font-bold text-slate-900 transition-colors leading-snug mb-1 font-serif">
+          <Link to={`/divine/university/${slug}`} className="hover:text-[#2d8f5e] transition-colors">
+            {name}
+          </Link>
         </h3>
 
         <p className="text-slate-500 text-xs font-semibold flex items-center gap-1 mb-4">
@@ -53,14 +59,14 @@ const UniversityCard = ({ university, onOpenModal }) => {
           <span>{location}</span>
         </p>
 
-        {/* Exact Word Document Description */}
-        <p className="text-slate-600 text-xs leading-relaxed font-normal mb-5 line-clamp-4">
+        {/* Short Description */}
+        <p className="text-slate-600 text-xs leading-relaxed font-normal mb-5 line-clamp-3">
           {description}
         </p>
 
         {/* Approvals List Tags */}
-        <div className="flex flex-wrap gap-1.5 mb-6">
-          {approvals.map((app, idx) => (
+        <div className="flex flex-wrap gap-1.5 mb-5">
+          {approvals?.slice(0, 3).map((app, idx) => (
             <span key={idx} className="bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md text-[10px] font-semibold flex items-center gap-1">
               <CheckCircle2 className="w-3 h-3 text-[#59c28a]" />
               {app}
@@ -69,10 +75,10 @@ const UniversityCard = ({ university, onOpenModal }) => {
         </div>
 
         {/* Popular Programs Offered */}
-        {popularCourses && (
+        {popularCourses && popularCourses.length > 0 && (
           <div className="pt-3 border-t border-slate-100 mb-6">
             <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block mb-2">
-              Key Offered Programs:
+              Offered Programs:
             </span>
             <div className="flex flex-wrap gap-1.5">
               {popularCourses.map((crs, idx) => (
@@ -85,14 +91,24 @@ const UniversityCard = ({ university, onOpenModal }) => {
         )}
       </div>
 
-      {/* Card Action Button */}
-      <button
-        onClick={() => onOpenModal(name)}
-        className="w-full py-3 px-4 rounded-xl bg-slate-900 hover:bg-[#59c28a] text-white font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-2 group/btn cursor-pointer shadow-md"
-      >
-        <span>Request Fee Details</span>
-        <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
-      </button>
+      {/* Card Action Buttons: View Details & Request Fee Details */}
+      <div className="grid grid-cols-2 gap-2 pt-2 border-t border-slate-100">
+        <Link
+          to={`/divine/university/${slug}`}
+          className="py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-[#59c28a] text-white hover:text-slate-950 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 text-center"
+        >
+          <span>Details</span>
+          <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
+
+        <button
+          type="button"
+          onClick={() => onOpenModal(name)}
+          className="py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs uppercase tracking-wider transition-colors flex items-center justify-center gap-1 cursor-pointer text-center"
+        >
+          <span>Fee Details</span>
+        </button>
+      </div>
     </div>
   );
 };

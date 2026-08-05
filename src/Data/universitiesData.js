@@ -3,6 +3,8 @@ import amityLogo from '../assets/universities/amity.jpg';
 import chandigarhLogo from '../assets/universities/chandigarh.jpg';
 import glaLogo from '../assets/universities/gla.jpg';
 import gyanLogo from '../assets/universities/gyan.jpg';
+import opjindalLogo from '../assets/universities/opjindal.jpg';
+import nmimsLogo from '../assets/universities/nmims.jpg';
 import isbmLogo from '../assets/universities/isbm.jpg';
 import manipalLogo from '../assets/universities/manipal.jpg';
 import vivekanandaLogo from '../assets/universities/vivekananda.jpg';
@@ -17,7 +19,7 @@ export const universitiesData = [
     slug: "nmims-cdoe",
     name: "NMIMS CDOE (Narsee Monjee)",
     category: "online",
-    logo: "https://logo.clearbit.com/nmims.edu",
+    logo: nmimsLogo,
     badge: "UGC-DEB Approved",
     naacGrade: "NAAC A+ Grade",
     location: "Mumbai, Maharashtra",
@@ -47,7 +49,7 @@ export const universitiesData = [
     slug: "op-jindal-online",
     name: "OP Jindal Global University Online",
     category: "online",
-    logo: "https://logo.clearbit.com/jgu.edu.in",
+    logo: opjindalLogo,
     badge: "Institute of Eminence",
     naacGrade: "NAAC A Grade",
     location: "Sonipat, Haryana",
