@@ -25,7 +25,7 @@ const UniversityHero = ({ university, onOpenForm }) => {
   const bgImage = campusImg || buildingImg;
 
   return (
-    <div className="min-h-0 sm:min-h-[580px] lg:min-h-[640px] bg-gradient-to-b from-[#021124] via-[#002147] to-[#04162c] text-white pt-28 sm:pt-36 lg:pt-40 pb-12 sm:pb-20 lg:pb-28 relative overflow-hidden font-sans border-b border-white/10 flex items-center">
+    <div className="min-h-0 sm:min-h-[520px] lg:min-h-[660px] bg-gradient-to-b from-[#021124] via-[#002147] to-[#04162c] text-white pt-28 sm:pt-32 lg:pt-36 pb-10 sm:pb-14 lg:pb-16 relative overflow-hidden font-sans border-b border-white/10 flex items-center">
 
       {/* Background Campus Building Architecture Photo (Cinematic Overlay) */}
       {bgImage && (
@@ -51,14 +51,14 @@ const UniversityHero = ({ university, onOpenForm }) => {
           <span>/</span>
           <Link to="/divine/universities" className="hover:text-[#59c28a] transition-colors">Universities</Link>
           <span>/</span>
-          <span className="text-[#59c28a] font-semibold">{name}</span>
+          <span className="text-[#59c28a] font-semibold">{shortName || name}</span>
         </nav>
 
         {/* Hero Grid */}
-        <div className="grid lg:grid-cols-12 gap-8 items-center">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-center">
 
           {/* Left Details */}
-          <div className="lg:col-span-8 space-y-4 sm:space-y-5">
+          <div className="lg:col-span-8 space-y-3.5 sm:space-y-4">
 
             {/* Badges Row */}
             <div className="flex flex-wrap items-center gap-2 sm:gap-2.5">
@@ -102,18 +102,18 @@ const UniversityHero = ({ university, onOpenForm }) => {
 
             {/* University Title & Tagline */}
             <div>
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black font-serif tracking-tight leading-tight text-white mb-2 break-words">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black font-serif tracking-tight leading-tight text-white mb-1.5 break-words">
                 {name}
               </h1>
               {tagline && (
-                <p className="text-slate-300 text-xs sm:text-sm sm:text-base font-light italic">
+                <p className="text-slate-300 text-xs sm:text-sm font-light italic">
                   "{tagline}"
                 </p>
               )}
             </div>
 
             {/* Location & Counselor Guarantee */}
-            <div className="flex flex-wrap items-center gap-y-2 gap-x-4 sm:gap-x-6 text-xs sm:text-sm text-slate-300">
+            <div className="flex flex-wrap items-center gap-y-1.5 gap-x-4 sm:gap-x-6 text-xs sm:text-sm text-slate-300">
               <div className="flex items-center gap-1.5">
                 <MapPin className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-[#59c28a]" />
                 <span>{location}</span>
@@ -126,7 +126,7 @@ const UniversityHero = ({ university, onOpenForm }) => {
 
             {/* Approvals Tags */}
             {approvals && approvals.length > 0 && (
-              <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-1">
+              <div className="flex flex-wrap gap-1.5 sm:gap-2 pt-0.5">
                 {approvals.map((app, idx) => (
                   <span
                     key={idx}
@@ -154,8 +154,8 @@ const UniversityHero = ({ university, onOpenForm }) => {
           </div>
 
           {/* Right Logo Card */}
-          <div className="lg:col-span-4 flex justify-center lg:justify-end mt-4 lg:mt-0">
-            <div className="bg-white rounded-3xl p-3 sm:p-4 shadow-2xl border border-slate-100 flex flex-col items-center justify-center text-center w-full max-w-[170px] sm:max-w-[200px]">
+          {/* <div className="lg:col-span-4 flex justify-center lg:justify-end mt-4 lg:mt-0">
+            <div className="bg-white rounded-3xl p-4 sm:p-5 shadow-2xl border border-slate-100 flex flex-col items-center justify-center text-center w-full max-w-[120px] sm:max-w-[210px] aspect-4/3 sm:aspect-square">
               <img
                 src={logo}
                 alt={name}
@@ -165,11 +165,9 @@ const UniversityHero = ({ university, onOpenForm }) => {
                   e.target.nextSibling.style.display = 'flex';
                 }}
               />
-              <div className="hidden w-full h-full items-center justify-center text-slate-400 font-bold text-xs">
-                <Building2 className="w-10 h-10 text-slate-400" />
-              </div>
+
             </div>
-          </div>
+          </div> */}
 
         </div>
 
