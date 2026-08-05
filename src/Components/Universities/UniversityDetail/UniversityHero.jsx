@@ -1,9 +1,23 @@
 import React from 'react';
-import { Building2, MapPin, Award, ShieldCheck, Calendar, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Building2, MapPin, Award, ShieldCheck, Calendar, ArrowRight, CheckCircle2, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const UniversityHero = ({ university, onOpenForm }) => {
-  const { name, logo, category, badge, naacGrade, location, establishedYear, mode, approvals } = university;
+  const {
+    name,
+    logo,
+    category,
+    badge,
+    naacGrade,
+    location,
+    establishedYear,
+    mode,
+    approvals,
+    nirfRank,
+    rating,
+    reviewsCount,
+    tagline
+  } = university;
 
   return (
     <div className="bg-[#002147] text-white pt-28 pb-14 sm:pb-16 relative overflow-hidden font-sans">
@@ -40,10 +54,24 @@ const UniversityHero = ({ university, onOpenForm }) => {
                 {mode || badge}
               </span>
 
+              {nirfRank && (
+                <span className="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 font-bold text-[11px] flex items-center gap-1.5 border border-amber-400/30">
+                  <Award className="w-3.5 h-3.5" />
+                  {nirfRank}
+                </span>
+              )}
+
               {naacGrade && (
                 <span className="px-3 py-1 rounded-full bg-emerald-500/20 text-[#59c28a] font-bold text-[11px] flex items-center gap-1.5 border border-emerald-400/30">
                   <Award className="w-3.5 h-3.5" />
                   {naacGrade}
+                </span>
+              )}
+
+              {rating && (
+                <span className="px-3 py-1 rounded-full bg-white/10 text-amber-300 font-bold text-[11px] flex items-center gap-1.5 border border-white/10">
+                  <Star className="w-3.5 h-3.5 fill-amber-300 text-amber-300" />
+                  {rating} / 5.0 {reviewsCount && `(${reviewsCount} Reviews)`}
                 </span>
               )}
 
@@ -55,10 +83,17 @@ const UniversityHero = ({ university, onOpenForm }) => {
               )}
             </div>
 
-            {/* University Title */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-serif tracking-tight leading-tight text-white">
-              {name}
-            </h1>
+            {/* University Title & Tagline */}
+            <div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black font-serif tracking-tight leading-tight text-white mb-2">
+                {name}
+              </h1>
+              {tagline && (
+                <p className="text-slate-300 text-sm sm:text-base font-light italic">
+                  "{tagline}"
+                </p>
+              )}
+            </div>
 
             {/* Location & Counselor Guarantee */}
             <div className="flex flex-wrap items-center gap-y-2 gap-x-6 text-xs sm:text-sm text-slate-300">

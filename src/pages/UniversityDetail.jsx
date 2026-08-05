@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { universityDetailData } from '../Data/universityDetailData';
 import { universitiesData } from '../Data/universitiesData';
 import UniversityHero from '../Components/Universities/UniversityDetail/UniversityHero';
 import UniversityOverview from '../Components/Universities/UniversityDetail/UniversityOverview';
 import UniversityCourses from '../Components/Universities/UniversityDetail/UniversityCourses';
+import UniversityHiringPartners from '../Components/Universities/UniversityDetail/UniversityHiringPartners';
 import UniversityAdmissionSteps from '../Components/Universities/UniversityDetail/UniversityAdmissionSteps';
+import UniversityFaqs from '../Components/Universities/UniversityDetail/UniversityFaqs';
 import LeadEnquiryForm from '../Components/reusable/LeadEnquiryForm';
 import { Phone, MessageSquare, ShieldCheck } from 'lucide-react';
 
@@ -13,8 +16,9 @@ const UniversityDetail = () => {
   const [showModalForm, setShowModalForm] = useState(false);
   const [selectedCourseForModal, setSelectedCourseForModal] = useState('');
 
-  // Find matching university
-  const university = universitiesData.find((u) => u.slug === slug);
+  // Primary source: dedicated university detail data repository
+  // Secondary fallback: universitiesData listing array
+  const university = universityDetailData[slug] || universitiesData.find((u) => u.slug === slug);
 
   if (!university) {
     return (
@@ -62,10 +66,16 @@ const UniversityDetail = () => {
             {/* Overview */}
             <UniversityOverview university={university} />
 
-            {/* Offered Courses */}
+            {/* Offered Courses Catalog */}
             <UniversityCourses
               university={university}
               onSelectCourse={handleOpenCourseInquiry}
+            />
+
+            {/* Top Hiring Partners & Recruiters */}
+            <UniversityHiringPartners
+              partners={university.hiringPartners}
+              universityName={university.shortName || university.name}
             />
 
             {/* Admission Steps */}
@@ -76,6 +86,12 @@ const UniversityDetail = () => {
               }}
             />
 
+            {/* Frequently Asked Questions */}
+            <UniversityFaqs
+              faqs={university.faqs}
+              universityName={university.shortName || university.name}
+            />
+
           </div>
 
           {/* Sticky Sidebar */}
@@ -83,7 +99,7 @@ const UniversityDetail = () => {
             
             {/* Lead Form */}
             <LeadEnquiryForm
-              title={`Inquire About ${university.name}`}
+              title={`Inquire About ${university.shortName || university.name}`}
               subtitle="Get official syllabus, fee structure & counselor guidance."
               buttonText="Request Callback"
               courseName={selectedCourseForModal || university.name}
