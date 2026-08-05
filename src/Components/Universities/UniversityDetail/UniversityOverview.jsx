@@ -125,7 +125,8 @@ const UniversityOverview = ({ university, onOpenForm }) => {
           {/* Top Decorative Line */}
           <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#002147] via-[#59c28a] to-[#002147]" />
 
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Top 2-Column Grid: Story & Heading (Left) + Counseling Card (Right, Top-Aligned) */}
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
             {/* Left Content Side (7 Cols) */}
             <div className="lg:col-span-7 space-y-6">
@@ -157,82 +158,39 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                 </p>
               </div>
 
-              {/* Key Fast Facts / Stats Ribbon */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-2">
-                
-                {establishedYear && (
-                  <div className="p-3 sm:p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-center">
-                    <div className="flex items-center gap-1.5 text-slate-500 text-[11px] font-semibold mb-1">
-                      <Calendar className="w-3.5 h-3.5 text-[#59c28a]" />
-                      <span>Established</span>
-                    </div>
-                    <p className="text-base sm:text-lg font-black text-[#002147]">{establishedYear}</p>
-                    <span className="text-[10px] text-slate-400 font-medium">20+ Years Legacy</span>
-                  </div>
-                )}
-
-                <div className="p-3 sm:p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-center">
-                  <div className="flex items-center gap-1.5 text-slate-500 text-[11px] font-semibold mb-1">
-                    <GraduationCap className="w-3.5 h-3.5 text-[#59c28a]" />
-                    <span>Programs</span>
-                  </div>
-                  <p className="text-base sm:text-lg font-black text-[#002147]">80+ Courses</p>
-                  <span className="text-[10px] text-slate-400 font-medium">UG, PG & Certifications</span>
-                </div>
-
-                <div className="p-3 sm:p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-center">
-                  <div className="flex items-center gap-1.5 text-slate-500 text-[11px] font-semibold mb-1">
-                    <Briefcase className="w-3.5 h-3.5 text-[#59c28a]" />
-                    <span>Placements</span>
-                  </div>
-                  <p className="text-base sm:text-lg font-black text-[#002147]">450+ Partners</p>
-                  <span className="text-[10px] text-slate-400 font-medium">Top MNCs & Startups</span>
-                </div>
-
-                <div className="p-3 sm:p-3.5 rounded-2xl bg-slate-50 border border-slate-100 flex flex-col justify-center">
-                  <div className="flex items-center gap-1.5 text-slate-500 text-[11px] font-semibold mb-1">
-                    <Laptop className="w-3.5 h-3.5 text-[#59c28a]" />
-                    <span>Mode</span>
-                  </div>
-                  <p className="text-base sm:text-lg font-black text-[#002147]">100% Online</p>
-                  <span className="text-[10px] text-slate-400 font-medium">Remote Proctored Exams</span>
-                </div>
-
-              </div>
-
             </div>
 
-            {/* Right Trust & Guarantee Card (5 Cols) */}
+            {/* Right Trust & Guarantee Card (5 Cols, Shifted up) */}
             <div className="lg:col-span-5">
-              <div className="bg-gradient-to-br from-[#021124] via-[#002147] to-[#04162c] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden border border-white/10">
+              <div className="bg-gradient-to-br from-[#021124] via-[#002147] to-[#04162c] text-white rounded-3xl p-6 sm:p-7 shadow-2xl relative overflow-hidden border border-white/10">
                 
                 {/* Ambient glow inside card */}
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#59c28a]/20 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
 
-                <div className="relative z-10 space-y-5">
+                <div className="relative z-10 space-y-4">
                   
                   {/* Top Badge & Logo */}
-                  <div className="flex items-center justify-between gap-4 pb-4 border-b border-white/10">
+                  <div className="flex items-center justify-between gap-4 pb-3.5 border-b border-white/10">
                     <div>
                       <span className="text-[10px] font-bold uppercase tracking-widest text-[#59c28a] bg-[#59c28a]/10 px-2.5 py-1 rounded-full border border-[#59c28a]/20">
                         Authorized Admissions
                       </span>
-                      <h3 className="text-lg font-bold text-white mt-1.5">Official Counseling Gateway</h3>
+                      <h3 className="text-base sm:text-lg font-bold text-white mt-1">Official Counseling Gateway</h3>
                     </div>
 
                     {logo && (
-                      <div className="w-14 h-14 bg-white rounded-2xl p-1.5 shadow-lg flex items-center justify-center shrink-0">
+                      <div className="w-12 h-12 bg-white rounded-xl p-1 shadow-lg flex items-center justify-center shrink-0">
                         <img src={logo} alt={name} className="max-h-full max-w-full object-contain" />
                       </div>
                     )}
                   </div>
 
                   {/* Trust Pillars */}
-                  <div className="space-y-3 pt-1">
+                  <div className="space-y-2.5 pt-0.5">
                     
                     <div className="flex items-start gap-3 p-2.5 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
-                      <CheckCircle2 className="w-5 h-5 text-[#59c28a] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#59c28a] shrink-0 mt-0.5" />
                       <div>
                         <h5 className="text-xs font-bold text-slate-100">100% Direct University Admission</h5>
                         <p className="text-[11px] text-slate-300">Enroll directly with official university registration & verified enrollment ID.</p>
@@ -240,7 +198,7 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                     </div>
 
                     <div className="flex items-start gap-3 p-2.5 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
-                      <ShieldCheck className="w-5 h-5 text-[#59c28a] shrink-0 mt-0.5" />
+                      <ShieldCheck className="w-4 h-4 text-[#59c28a] shrink-0 mt-0.5" />
                       <div>
                         <h5 className="text-xs font-bold text-slate-100">Govt. UGC-DEB Degree Equality</h5>
                         <p className="text-[11px] text-slate-300">Degree is 100% equivalent to on-campus degrees for UPSC, Govt. exams & MNCs.</p>
@@ -248,7 +206,7 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                     </div>
 
                     <div className="flex items-start gap-3 p-2.5 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
-                      <Star className="w-5 h-5 text-amber-300 shrink-0 mt-0.5" />
+                      <Star className="w-4 h-4 text-amber-300 shrink-0 mt-0.5" />
                       <div>
                         <h5 className="text-xs font-bold text-slate-100">0% Interest Easy EMI Support</h5>
                         <p className="text-[11px] text-slate-300">Flexible no-cost EMI options starting as low as ₹4,500/month with zero hidden charges.</p>
@@ -258,7 +216,7 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                   </div>
 
                   {/* Quick Action Button */}
-                  <div className="pt-2">
+                  <div className="pt-1">
                     <button
                       type="button"
                       onClick={onOpenForm}
@@ -272,6 +230,57 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                 </div>
 
               </div>
+            </div>
+
+          </div>
+
+          {/* Full-Width Key Fast Facts / Stats Ribbon (Spacious & Responsive) */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 pt-8 border-t border-slate-100 mt-8 w-full">
+            
+            {establishedYear && (
+              <div className="p-4 sm:p-5 rounded-2xl bg-slate-50/80 border border-slate-200/80 hover:border-[#59c28a]/60 hover:bg-emerald-50/15 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+                <div className="flex items-center justify-between gap-2 mb-2">
+                  <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Established</span>
+                  <div className="w-8 h-8 rounded-xl bg-[#59c28a]/10 text-[#1e7e4d] flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Calendar className="w-4 h-4 text-[#59c28a]" />
+                  </div>
+                </div>
+                <p className="text-xl sm:text-2xl font-black text-[#002147] font-serif">{establishedYear}</p>
+                <span className="text-xs text-slate-500 font-medium mt-0.5">20+ Years Academic Legacy</span>
+              </div>
+            )}
+
+            <div className="p-4 sm:p-5 rounded-2xl bg-slate-50/80 border border-slate-200/80 hover:border-[#59c28a]/60 hover:bg-blue-50/15 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Programs</span>
+                <div className="w-8 h-8 rounded-xl bg-blue-500/10 text-blue-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <GraduationCap className="w-4 h-4" />
+                </div>
+              </div>
+              <p className="text-xl sm:text-2xl font-black text-[#002147] font-serif">80+ Courses</p>
+              <span className="text-xs text-slate-500 font-medium mt-0.5">UG, PG & Certifications</span>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-2xl bg-slate-50/80 border border-slate-200/80 hover:border-[#59c28a]/60 hover:bg-amber-50/15 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Placements</span>
+                <div className="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Briefcase className="w-4 h-4" />
+                </div>
+              </div>
+              <p className="text-xl sm:text-2xl font-black text-[#002147] font-serif">450+ Partners</p>
+              <span className="text-xs text-slate-500 font-medium mt-0.5">Top MNCs & Startups</span>
+            </div>
+
+            <div className="p-4 sm:p-5 rounded-2xl bg-slate-50/80 border border-slate-200/80 hover:border-[#59c28a]/60 hover:bg-indigo-50/15 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
+              <div className="flex items-center justify-between gap-2 mb-2">
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Learning Mode</span>
+                <div className="w-8 h-8 rounded-xl bg-indigo-500/10 text-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Laptop className="w-4 h-4" />
+                </div>
+              </div>
+              <p className="text-xl sm:text-2xl font-black text-[#002147] font-serif">100% Online</p>
+              <span className="text-xs text-slate-500 font-medium mt-0.5">Remote Proctored Exams</span>
             </div>
 
           </div>
