@@ -199,34 +199,37 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
 
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-widest text-[#59c28a] bg-[#59c28a]/10 px-2.5 py-1 rounded-full border border-[#59c28a]/20">
-                    Corporate Connect
+                    {placementData?.tagline || "Corporate Connect"}
                   </span>
                   <h3 className="text-lg sm:text-2xl font-bold font-serif tracking-tight text-white mt-2">
-                    Placement Highlights
+                    Key Highlights
                   </h3>
                   <p className="text-slate-300 text-xs sm:text-sm mt-1 font-light leading-relaxed">
-                    Direct corporate access with high ROI career acceleration for working professionals and freshers.
+                    {placementData?.description || "Direct corporate access with high ROI career acceleration for working professionals and freshers."}
                   </p>
                 </div>
 
-                {/* 3 Stat Badges (Ultra-responsive on small screens) */}
+                {/* 3 Dynamic Stat Badges (Loaded directly from University Data) */}
                 <div className="grid grid-cols-3 gap-2 sm:gap-3 py-1 sm:py-2">
-
-                  <div className="p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-center flex flex-col justify-center backdrop-blur-xs">
-                    <p className="text-base sm:text-xl lg:text-2xl font-black text-[#59c28a] leading-tight">450+</p>
-                    <span className="text-[9.5px] sm:text-[11px] text-slate-200 font-semibold mt-0.5 leading-tight">Hiring Partners</span>
-                  </div>
-
-                  <div className="p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-center flex flex-col justify-center backdrop-blur-xs">
-                    <p className="text-base sm:text-xl lg:text-2xl font-black text-white leading-tight">1 Lac+</p>
-                    <span className="text-[9.5px] sm:text-[11px] text-slate-200 font-semibold mt-0.5 leading-tight">Jobs Created</span>
-                  </div>
-
-                  <div className="p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-center flex flex-col justify-center backdrop-blur-xs">
-                    <p className="text-base sm:text-xl lg:text-2xl font-black text-amber-300 leading-tight">100%</p>
-                    <span className="text-[9.5px] sm:text-[11px] text-slate-200 font-semibold mt-0.5 leading-tight">Placement Support</span>
-                  </div>
-
+                  {(placementData?.highlights || placementData?.stats || [
+                    { label: "Hiring Partners", value: "450+" },
+                    { label: "Jobs Created", value: "1 Lac+" },
+                    { label: "Placement Support", value: "100%" }
+                  ]).map((stat, idx) => (
+                    <div 
+                      key={idx}
+                      className="p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-center flex flex-col justify-center backdrop-blur-xs"
+                    >
+                      <p className={`text-base sm:text-xl lg:text-2xl font-black leading-tight ${
+                        idx === 0 ? 'text-[#59c28a]' : idx === 2 ? 'text-amber-300' : 'text-white'
+                      }`}>
+                        {stat.value}
+                      </p>
+                      <span className="text-[9.5px] sm:text-[11px] text-slate-200 font-semibold mt-0.5 leading-tight">
+                        {stat.label}
+                      </span>
+                    </div>
+                  ))}
                 </div>
 
               </div>
