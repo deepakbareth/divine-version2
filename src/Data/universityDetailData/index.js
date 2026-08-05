@@ -23,6 +23,7 @@ import { xibmsAutonomousData } from './xibmsAutonomous';
 export const universityDetailData = {
   "amity-online": amityOnlineData,
   "nmims-cdoe": nmimsOnlineData,
+  "nmims-online": nmimsOnlineData,
   "op-jindal-online": opJindalOnlineData,
   "manipal-online": manipalOnlineData,
   "gla-online": glaOnlineData,

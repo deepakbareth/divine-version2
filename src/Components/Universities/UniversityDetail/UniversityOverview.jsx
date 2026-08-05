@@ -1,31 +1,33 @@
-import React from 'react';
-import { 
-  Award, 
-  Globe, 
-  MapPin, 
-  CheckCircle2, 
-  ShieldCheck, 
-  Building2, 
-  Calendar, 
-  GraduationCap, 
-  Briefcase, 
-  Laptop, 
+import React, { useState } from 'react';
+import {
+  Award,
+  Globe,
+  MapPin,
+  CheckCircle2,
+  ShieldCheck,
+  Building2,
+  Calendar,
+  GraduationCap,
+  Briefcase,
+  Laptop,
   Star,
   Sparkles,
   ArrowRight,
-  ShieldAlert
+  ShieldAlert,
+  ChevronDown
 } from 'lucide-react';
 
 const UniversityOverview = ({ university, onOpenForm }) => {
-  const { 
-    name, 
+  const [isExpanded, setIsExpanded] = useState(false);
+  const {
+    name,
     shortName,
-    aboutTitle, 
-    description, 
-    mode, 
-    naacGrade, 
-    location, 
-    approvals, 
+    aboutTitle,
+    description,
+    mode,
+    naacGrade,
+    location,
+    approvals,
     establishedYear,
     rating,
     reviewsCount,
@@ -112,25 +114,25 @@ const UniversityOverview = ({ university, onOpenForm }) => {
 
   return (
     <section className="py-16 sm:py-20 bg-gradient-to-b from-slate-50/80 via-white to-slate-50/90 font-sans relative overflow-hidden">
-      
+
       {/* Subtle Background Glows */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2 w-3/4 h-80 bg-emerald-500/5 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-500/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
-        
+
         {/* Main 2-Column Institutional Showcase Card */}
         <div className="bg-white rounded-3xl border border-slate-200/90 shadow-xl shadow-slate-200/40 p-6 sm:p-10 lg:p-12 relative overflow-hidden">
-          
+
           {/* Top Decorative Line */}
           <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#002147] via-[#59c28a] to-[#002147]" />
 
           {/* Top 2-Column Grid: Story & Heading (Left) + Counseling Card (Right, Top-Aligned) */}
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-            
+
             {/* Left Content Side (7 Cols) */}
             <div className="lg:col-span-7 space-y-6">
-              
+
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#59c28a]/10 border border-[#59c28a]/25 text-[#1e7e4d] text-xs font-extrabold uppercase tracking-wider">
                 <Sparkles className="w-3.5 h-3.5 text-[#59c28a]" />
@@ -151,11 +153,24 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                 <div className="w-20 h-1 bg-[#59c28a] rounded-full mt-3.5" />
               </div>
 
-              {/* Description Paragraphs */}
-              <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed font-normal text-justify">
-                <p>
-                  {description}
-                </p>
+              {/* Description Paragraphs with Read More / Read Less */}
+              <div className="space-y-3">
+                <div className="text-slate-600 text-sm sm:text-base leading-relaxed font-normal text-justify">
+                  <p className={!isExpanded && description && description.length > 320 ? "line-clamp-4 sm:line-clamp-7" : ""}>
+                    {description}
+                  </p>
+                </div>
+
+                {description && description.length > 320 && (
+                  <button
+                    type="button"
+                    onClick={() => setIsExpanded(!isExpanded)}
+                    className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-[#002147] hover:text-[#2a925e] transition-colors cursor-pointer group pt-1"
+                  >
+                    <span>{isExpanded ? "Read Less" : "Read More"}</span>
+                    <ChevronDown className={`w-4 h-4 text-[#59c28a] transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+                  </button>
+                )}
               </div>
 
             </div>
@@ -163,13 +178,13 @@ const UniversityOverview = ({ university, onOpenForm }) => {
             {/* Right Trust & Guarantee Card (5 Cols, Shifted up) */}
             <div className="lg:col-span-5">
               <div className="bg-gradient-to-br from-[#021124] via-[#002147] to-[#04162c] text-white rounded-3xl p-6 sm:p-7 shadow-2xl relative overflow-hidden border border-white/10">
-                
+
                 {/* Ambient glow inside card */}
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#59c28a]/20 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
 
                 <div className="relative z-10 space-y-4">
-                  
+
                   {/* Top Badge & Logo */}
                   <div className="flex items-center justify-between gap-4 pb-3.5 border-b border-white/10">
                     <div>
@@ -188,7 +203,7 @@ const UniversityOverview = ({ university, onOpenForm }) => {
 
                   {/* Trust Pillars */}
                   <div className="space-y-2.5 pt-0.5">
-                    
+
                     <div className="flex items-start gap-3 p-2.5 rounded-xl bg-white/5 border border-white/5 hover:bg-white/10 transition-colors">
                       <CheckCircle2 className="w-4 h-4 text-[#59c28a] shrink-0 mt-0.5" />
                       <div>
@@ -236,7 +251,7 @@ const UniversityOverview = ({ university, onOpenForm }) => {
 
           {/* Full-Width Key Fast Facts / Stats Ribbon (Spacious & Responsive) */}
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 pt-8 border-t border-slate-100 mt-8 w-full">
-            
+
             {establishedYear && (
               <div className="p-4 sm:p-5 rounded-2xl bg-slate-50/80 border border-slate-200/80 hover:border-[#59c28a]/60 hover:bg-emerald-50/15 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
                 <div className="flex items-center justify-between gap-2 mb-2">
@@ -289,7 +304,7 @@ const UniversityOverview = ({ university, onOpenForm }) => {
 
         {/* Enhanced Statutory Approvals & Accreditations Section */}
         <div className="space-y-6 pt-4">
-          
+
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
               <div className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#002147] mb-1">
@@ -300,7 +315,7 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                 Government & Global Recognitions
               </h3>
             </div>
-            
+
             <p className="text-xs sm:text-sm text-slate-500 max-w-md sm:text-right font-light">
               All degrees awarded by <span className="font-semibold text-slate-700">{shortName || name}</span> hold full statutory entitlement and are legally valid worldwide.
             </p>
@@ -318,13 +333,13 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                   className={`p-4 rounded-2xl bg-gradient-to-b ${meta.color} border shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group`}
                 >
                   <div className="space-y-3">
-                    
+
                     {/* Icon & Verified check */}
                     <div className="flex items-center justify-between">
                       <div className="w-9 h-9 rounded-xl bg-white shadow-xs flex items-center justify-center border border-slate-100 group-hover:scale-110 transition-transform">
                         <IconComp className="w-5 h-5" />
                       </div>
-                      
+
                       <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
                         <CheckCircle2 className="w-3 h-3" />
                         <span>Verified</span>
