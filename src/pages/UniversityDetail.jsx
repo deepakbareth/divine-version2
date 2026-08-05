@@ -50,7 +50,14 @@ const UniversityDetail = () => {
   const scrollToAdmissionDesk = () => {
     const el = document.getElementById('admission-desk');
     if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
+      const headerOffset = 10;
+      const elementPosition = el.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     } else {
       setSelectedCourseForModal('');
       setShowModalForm(true);
@@ -59,7 +66,7 @@ const UniversityDetail = () => {
 
   return (
     <div className="bg-slate-50/60 min-h-screen font-sans">
-      
+
       {/* 1. Luxury University Hero Banner */}
       <UniversityHero
         university={university}
@@ -67,7 +74,10 @@ const UniversityDetail = () => {
       />
 
       {/* 2. About & Institutional Overview & Approvals */}
-      <UniversityOverview university={university} />
+      <UniversityOverview
+        university={university}
+        onOpenForm={scrollToAdmissionDesk}
+      />
 
       {/* 3. Key Institutional Highlights (Bento Grid Section) */}
       <UniversityHighlights
