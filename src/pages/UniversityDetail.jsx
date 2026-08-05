@@ -66,14 +66,14 @@ const UniversityDetail = () => {
         onOpenForm={scrollToAdmissionDesk}
       />
 
-      {/* 2. Key Institutional Highlights (Bento Grid Section) */}
+      {/* 2. About & Institutional Overview & Approvals */}
+      <UniversityOverview university={university} />
+
+      {/* 3. Key Institutional Highlights (Bento Grid Section) */}
       <UniversityHighlights
         highlights={university.highlights}
         universityName={university.shortName || university.name}
       />
-
-      {/* 3. About & Institutional Overview */}
-      <UniversityOverview university={university} />
 
       {/* 4. Academic Programs (Swiper Slider with Category Tabs) */}
       <UniversityProgramsSlider

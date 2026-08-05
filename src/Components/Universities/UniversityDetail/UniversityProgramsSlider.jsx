@@ -1,13 +1,13 @@
 import React, { useState, useRef, useMemo } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
-import { 
-  ArrowRight, 
-  Clock, 
-  IndianRupee, 
-  ChevronLeft, 
-  ChevronRight, 
-  Sparkles, 
+import {
+  ArrowRight,
+  Clock,
+  IndianRupee,
+  ChevronLeft,
+  ChevronRight,
+  Sparkles,
   CheckCircle2,
   BookOpen
 } from 'lucide-react';
@@ -57,13 +57,13 @@ const UniversityProgramsSlider = ({ university, onSelectCourse }) => {
 
     return (
       <section className="py-16 bg-slate-950 text-white font-sans relative overflow-hidden border-t border-slate-800">
-        
+
         {/* Background Ambient Glows */}
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#59c28a]/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#0066b2]/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
+
           {/* Header & Navigation Row */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
             <div>
@@ -108,16 +108,14 @@ const UniversityProgramsSlider = ({ university, onSelectCourse }) => {
                   key={idx}
                   type="button"
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-4 py-2 rounded-xl font-bold text-xs transition-all cursor-pointer flex items-center gap-2 ${
-                    activeCategory === cat
-                      ? 'bg-[#59c28a] text-slate-950 shadow-md scale-102'
-                      : 'bg-white/10 hover:bg-white/15 text-slate-300 border border-white/10'
-                  }`}
+                  className={`px-4 py-2 rounded-xl font-bold text-xs transition-all cursor-pointer flex items-center gap-2 ${activeCategory === cat
+                    ? 'bg-[#59c28a] text-slate-950 shadow-md scale-102'
+                    : 'bg-white/10 hover:bg-white/15 text-slate-300 border border-white/10'
+                    }`}
                 >
                   <span>{cat}</span>
-                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${
-                    activeCategory === cat ? 'bg-slate-950/20 text-slate-950 font-extrabold' : 'bg-white/10 text-slate-400'
-                  }`}>
+                  <span className={`text-[10px] px-1.5 py-0.2 rounded-full ${activeCategory === cat ? 'bg-slate-950/20 text-slate-950 font-extrabold' : 'bg-white/10 text-slate-400'
+                    }`}>
                     {categoryCounts[cat] || 0}
                   </span>
                 </button>
@@ -143,10 +141,10 @@ const UniversityProgramsSlider = ({ university, onSelectCourse }) => {
 
               return (
                 <SwiperSlide key={idx} className="h-auto">
-                  <div className="h-full bg-slate-900/90 rounded-3xl border border-white/10 hover:border-[#59c28a]/60 p-6 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl group">
-                    
+                  <div className="h-full bg-slate-900/90 rounded-3xl border border-white/10 hover:border-[#59c28a]/60 p-6 flex flex-col justify-between transition-all duration-300  hover:shadow-2xl group">
+
                     <div className="space-y-4">
-                      
+
                       {/* Top Chips */}
                       <div className="flex items-center justify-between gap-2 flex-wrap">
                         <span className={`px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider border ${badgeStyle}`}>
@@ -251,7 +249,7 @@ const UniversityProgramsSlider = ({ university, onSelectCourse }) => {
   return (
     <section className="py-16 bg-slate-900 text-white font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-[#59c28a] text-xs font-bold uppercase tracking-wider mb-3 border border-emerald-500/30">
