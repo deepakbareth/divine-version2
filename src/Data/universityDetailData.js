@@ -268,6 +268,48 @@ export const universityDetailData = {
       }
     ],
 
+    // Placement & Career Insights (100% Verified from CollegeSathi)
+    placementData: {
+      title: "Amity Online Placement 2026 – Jobs, Salaries & Hiring Partners",
+      tagline: "Placements & Careers",
+      description: "Amity University Online provides dedicated career support, virtual job fairs, resume workshops, and direct hiring access with 450+ leading enterprises.",
+      highlights: [
+        { label: "Hiring Partners", value: "450+" },
+        { label: "Job Created", value: "1 Lac+" },
+        { label: "Placement Assistance", value: "100%" }
+      ],
+      salaryInsights: [
+        {
+          role: "Management Consultant",
+          category: "Management",
+          salary: "₹6 LPA – ₹8 LPA",
+          yoy: "18% YoY",
+          iconType: "briefcase"
+        },
+        {
+          role: "Business Development Executive",
+          category: "Sales & Strategy",
+          salary: "₹3 LPA – ₹6 LPA",
+          yoy: "26% YoY",
+          iconType: "chart"
+        },
+        {
+          role: "Financial Analyst",
+          category: "Finance & Accounts",
+          salary: "₹4.5 LPA – ₹8 LPA",
+          yoy: "15% YoY",
+          iconType: "trend"
+        },
+        {
+          role: "Marketing Manager",
+          category: "Digital & Brand",
+          salary: "₹5 LPA – ₹10 LPA",
+          yoy: "22% YoY",
+          iconType: "rocket"
+        }
+      ]
+    },
+
     // Hiring Partners (CollegeSathi placement marquee)
     hiringPartners: [
       "Microsoft",

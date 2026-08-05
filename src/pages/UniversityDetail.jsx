@@ -91,10 +91,12 @@ const UniversityDetail = () => {
         onSelectCourse={handleOpenCourseInquiry}
       />
 
-      {/* 5. Top Corporate Recruiters & Hiring Partners */}
+      {/* 5. Placements, Salary Insights & Top Corporate Recruiters */}
       <UniversityHiringPartners
         partners={university.hiringPartners}
         universityName={university.shortName || university.name}
+        placementData={university.placementData}
+        onOpenForm={scrollToAdmissionDesk}
       />
 
       {/* 6. 4-Step Divine Admission Journey */}
