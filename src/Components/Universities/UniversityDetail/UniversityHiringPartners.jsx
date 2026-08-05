@@ -1,14 +1,14 @@
 import React from 'react';
-import { 
-  Building2, 
-  Briefcase, 
-  TrendingUp, 
-  BarChart3, 
-  Rocket, 
-  ArrowUpRight, 
-  CheckCircle2, 
-  Users, 
-  DollarSign, 
+import {
+  Building2,
+  Briefcase,
+  TrendingUp,
+  BarChart3,
+  Rocket,
+  ArrowUpRight,
+  CheckCircle2,
+  Users,
+  DollarSign,
   Sparkles,
   Info
 } from 'lucide-react';
@@ -134,7 +134,7 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
 
   return (
     <section className="py-16 sm:py-20 bg-gradient-to-b from-white via-slate-50/70 to-slate-50 font-sans border-t border-slate-200/80 overflow-hidden relative">
-      
+
       {/* Inline styles for smooth right-to-left marquee animation */}
       <style>{`
         @keyframes marqueeScroll {
@@ -148,7 +148,7 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
         .hiring-marquee-track {
           display: flex;
           width: max-content;
-          animation: marqueeScroll 55s linear infinite;
+          animation: marqueeScroll 65s linear infinite;
         }
         .hiring-marquee-track:hover {
           animation-play-state: paused;
@@ -160,19 +160,19 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
       <div className="absolute bottom-10 right-10 w-96 h-96 bg-[#002147]/5 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 relative z-10">
-        
+
         {/* ========================================================================= */}
         {/* 1. PLACEMENT & SALARY INSIGHTS GRID (Divine Navy & Emerald Theme)         */}
         {/* ========================================================================= */}
         <div className="space-y-6">
-          
+
           {/* Header with Divine Brand Styling */}
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#59c28a]/10 border border-[#59c28a]/25 text-[#1e7e4d] text-xs font-extrabold uppercase tracking-wider mb-3">
               <Sparkles className="w-3.5 h-3.5 text-[#59c28a]" />
               <span>Placements & Careers</span>
             </div>
-            
+
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif font-black text-[#002147] tracking-tight">
               {placementData?.title ? (
                 placementData.title
@@ -187,21 +187,21 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
 
           {/* 2-Column Split: Deep Divine Navy Card + Right Job Roles List */}
           <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-            
+
             {/* LEFT: Premium Divine Navy Placement Highlights Card */}
-            <div className="lg:col-span-5 bg-gradient-to-br from-[#021124] via-[#002147] to-[#041a33] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden flex flex-col justify-between border border-white/10">
-              
+            <div className="lg:col-span-5 bg-gradient-to-br from-[#021124] via-[#002147] to-[#041a33] text-white rounded-3xl p-5 sm:p-7 lg:p-8 shadow-2xl relative overflow-hidden flex flex-col justify-between border border-white/10">
+
               {/* Ambient Divine Glow inside card */}
               <div className="absolute -top-10 -right-10 w-48 h-48 bg-[#59c28a]/20 rounded-full blur-3xl pointer-events-none" />
               <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-blue-500/15 rounded-full blur-3xl pointer-events-none" />
 
-              <div className="relative z-10 space-y-6">
-                
+              <div className="relative z-10 space-y-5 sm:space-y-6">
+
                 <div>
                   <span className="text-[10px] font-bold uppercase tracking-widest text-[#59c28a] bg-[#59c28a]/10 px-2.5 py-1 rounded-full border border-[#59c28a]/20">
                     Corporate Connect
                   </span>
-                  <h3 className="text-xl sm:text-2xl font-bold font-serif tracking-tight text-white mt-2">
+                  <h3 className="text-lg sm:text-2xl font-bold font-serif tracking-tight text-white mt-2">
                     Placement Highlights
                   </h3>
                   <p className="text-slate-300 text-xs sm:text-sm mt-1 font-light leading-relaxed">
@@ -209,22 +209,22 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
                   </p>
                 </div>
 
-                {/* 3 Stat Badges */}
-                <div className="grid grid-cols-3 gap-2.5 sm:gap-3 py-2">
-                  
-                  <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 text-center flex flex-col justify-center backdrop-blur-xs">
-                    <p className="text-xl sm:text-2xl font-black text-[#59c28a]">450+</p>
-                    <span className="text-[11px] text-slate-200 font-semibold mt-0.5 leading-tight">Hiring Partners</span>
+                {/* 3 Stat Badges (Ultra-responsive on small screens) */}
+                <div className="grid grid-cols-3 gap-2 sm:gap-3 py-1 sm:py-2">
+
+                  <div className="p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-center flex flex-col justify-center backdrop-blur-xs">
+                    <p className="text-base sm:text-xl lg:text-2xl font-black text-[#59c28a] leading-tight">450+</p>
+                    <span className="text-[9.5px] sm:text-[11px] text-slate-200 font-semibold mt-0.5 leading-tight">Hiring Partners</span>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 text-center flex flex-col justify-center backdrop-blur-xs">
-                    <p className="text-xl sm:text-2xl font-black text-white">1 Lac+</p>
-                    <span className="text-[11px] text-slate-200 font-semibold mt-0.5 leading-tight">Jobs Created</span>
+                  <div className="p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-center flex flex-col justify-center backdrop-blur-xs">
+                    <p className="text-base sm:text-xl lg:text-2xl font-black text-white leading-tight">1 Lac+</p>
+                    <span className="text-[9.5px] sm:text-[11px] text-slate-200 font-semibold mt-0.5 leading-tight">Jobs Created</span>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-white/5 border border-white/10 text-center flex flex-col justify-center backdrop-blur-xs">
-                    <p className="text-xl sm:text-2xl font-black text-amber-300">100%</p>
-                    <span className="text-[11px] text-slate-200 font-semibold mt-0.5 leading-tight">Placement Support</span>
+                  <div className="p-2.5 sm:p-3.5 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 text-center flex flex-col justify-center backdrop-blur-xs">
+                    <p className="text-base sm:text-xl lg:text-2xl font-black text-amber-300 leading-tight">100%</p>
+                    <span className="text-[9.5px] sm:text-[11px] text-slate-200 font-semibold mt-0.5 leading-tight">Placement Support</span>
                   </div>
 
                 </div>
@@ -232,17 +232,17 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
               </div>
 
               {/* Action Buttons */}
-              <div className="relative z-10 pt-6 space-y-3">
+              <div className="relative z-10 pt-5 sm:pt-6 space-y-2.5 sm:space-y-3">
                 <button
                   type="button"
                   onClick={onOpenForm}
-                  className="w-full py-3.5 px-6 rounded-2xl bg-[#59c28a] hover:bg-[#46aa75] text-slate-950 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg cursor-pointer group active:scale-98"
+                  className="w-full py-3 sm:py-3.5 px-5 sm:px-6 rounded-xl sm:rounded-2xl bg-[#59c28a] hover:bg-[#46aa75] text-slate-950 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg cursor-pointer group active:scale-98"
                 >
                   <span>Get Placement Guidance</span>
                   <ArrowUpRight className="w-4 h-4 text-slate-950 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </button>
 
-                <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-300/80">
+                <div className="flex items-center justify-center gap-1.5 text-[10px] sm:text-[11px] text-slate-300/80 text-center">
                   <Info className="w-3.5 h-3.5 text-[#59c28a] shrink-0" />
                   <span>Salary figures verified from alumni surveys & hiring drives.</span>
                 </div>
@@ -250,46 +250,66 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
 
             </div>
 
-            {/* RIGHT: High-Demand Job Roles & Average Salaries (4 Cards) */}
-            <div className="lg:col-span-7 flex flex-col justify-between gap-3 sm:gap-3.5">
-              {salaryInsights.map((roleItem, idx) => {
-                const iconMeta = getRoleIcon(roleItem.iconType);
-                const IconComponent = iconMeta.icon;
+            {/* RIGHT: High-Demand Job Roles & Average Salaries (Scrollable & Fully Responsive) */}
+            <div className="lg:col-span-7 flex flex-col justify-between">
 
-                return (
-                  <div
-                    key={idx}
-                    className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/85 shadow-sm hover:shadow-md hover:border-[#59c28a]/50 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-between gap-4 group"
-                  >
-                    {/* Left: Icon + Role info */}
-                    <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
-                      <div className={`w-11 h-11 rounded-2xl ${iconMeta.bg} border flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform`}>
-                        <IconComponent className="w-5 h-5" />
+              {/* Header with responsive wrapping and indicator badge */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2 pb-2 px-1">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#59c28a] animate-pulse shrink-0" />
+                  <span className="text-[11.5px] sm:text-xs font-bold uppercase tracking-wider text-[#002147]">
+                    High-Demand Job Roles & Compensation
+                  </span>
+                </div>
+                {salaryInsights.length > 4 && (
+                  <span className="w-fit text-[10px] sm:text-[11px] font-medium text-slate-500 bg-slate-100/95 border border-slate-200/80 px-2.5 py-0.5 rounded-full">
+                    Scroll for more ({salaryInsights.length} Roles)
+                  </span>
+                )}
+              </div>
+
+              {/* Scrollable Role Cards List (Optimized touch & height for mobile, tablet, desktop) */}
+              <div className="overflow-y-auto custom-scrollbar pr-1 sm:pr-2 space-y-2.5 sm:space-y-3 max-h-[320px] sm:max-h-[380px] lg:max-h-[355px] scroll-smooth overscroll-contain">
+                {salaryInsights.map((roleItem, idx) => {
+                  const iconMeta = getRoleIcon(roleItem.iconType);
+                  const IconComponent = iconMeta.icon;
+
+                  return (
+                    <div
+                      key={idx}
+                      className="p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-white border border-slate-200/85 shadow-xs hover:shadow-md hover:border-[#59c28a]/60 hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-between gap-3 sm:gap-4 group"
+                    >
+                      {/* Left: Icon + Role info */}
+                      <div className="flex items-center gap-2.5 sm:gap-4 min-w-0">
+                        <div className={`w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-2xl ${iconMeta.bg} border flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform`}>
+                          <IconComponent className="w-4 h-4 sm:w-5 sm:h-5" />
+                        </div>
+
+                        <div className="min-w-0">
+                          <h4 className="text-xs sm:text-base font-bold text-slate-900 truncate">
+                            {roleItem.role}
+                          </h4>
+                          <p className="text-[10px] sm:text-xs text-slate-500 font-light mt-0.5">
+                            Annual Average Salary
+                          </p>
+                        </div>
                       </div>
 
-                      <div className="min-w-0">
-                        <h4 className="text-sm sm:text-base font-bold text-slate-900 truncate">
-                          {roleItem.role}
-                        </h4>
-                        <p className="text-xs text-slate-500 font-light mt-0.5">
-                          Annual Average Salary
+                      {/* Right: Salary figure + YoY growth badge */}
+                      <div className="text-right shrink-0">
+                        <span className="inline-block px-2 sm:px-2.5 py-0.5 rounded-full bg-[#59c28a]/10 text-[#1e7e4d] border border-[#59c28a]/25 text-[9.5px] sm:text-[10.5px] font-extrabold mb-0.5">
+                          {roleItem.yoy}
+                        </span>
+                        <p className="text-xs sm:text-base font-black text-[#002147]">
+                          {roleItem.salary}
                         </p>
                       </div>
-                    </div>
 
-                    {/* Right: Salary figure + YoY growth badge */}
-                    <div className="text-right shrink-0">
-                      <span className="inline-block px-2.5 py-0.5 rounded-full bg-[#59c28a]/10 text-[#1e7e4d] border border-[#59c28a]/25 text-[11px] font-extrabold mb-1">
-                        {roleItem.yoy}
-                      </span>
-                      <p className="text-sm sm:text-base font-black text-[#002147]">
-                        {roleItem.salary}
-                      </p>
                     </div>
+                  );
+                })}
+              </div>
 
-                  </div>
-                );
-              })}
             </div>
 
           </div>
@@ -301,7 +321,7 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
         {/* 2. RECRUITER BRAND LOGOS MARQUEE                                         */}
         {/* ========================================================================= */}
         <div className="pt-8 border-t border-slate-200/80 space-y-6">
-          
+
           <div className="text-center max-w-2xl mx-auto">
             <h3 className="text-lg sm:text-xl font-serif font-bold text-[#002147]">
               Top Multinational Corporations & Hiring Partners
