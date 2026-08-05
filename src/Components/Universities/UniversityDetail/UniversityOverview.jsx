@@ -261,7 +261,9 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                   </div>
                 </div>
                 <p className="text-xl sm:text-2xl font-black text-[#002147] font-serif">{establishedYear}</p>
-                <span className="text-xs text-slate-500 font-medium mt-0.5">20+ Years Academic Legacy</span>
+                <span className="text-xs text-slate-500 font-medium mt-0.5">
+                  {new Date().getFullYear() - Number(establishedYear)}+ Years Academic Legacy
+                </span>
               </div>
             )}
 
@@ -272,8 +274,10 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                   <GraduationCap className="w-4 h-4" />
                 </div>
               </div>
-              <p className="text-xl sm:text-2xl font-black text-[#002147] font-serif">80+ Courses</p>
-              <span className="text-xs text-slate-500 font-medium mt-0.5">UG, PG & Certifications</span>
+              <p className="text-xl sm:text-2xl font-black text-[#002147] font-serif">
+                {university.programs?.length ? `${university.programs.length}+ Programs` : (university.popularCourses?.length ? `${university.popularCourses.length}+ Courses` : "UG / PG Courses")}
+              </p>
+              <span className="text-xs text-slate-500 font-medium mt-0.5">UG, PG & Specializations</span>
             </div>
 
             <div className="p-4 sm:p-5 rounded-2xl bg-slate-50/80 border border-slate-200/80 hover:border-[#59c28a]/60 hover:bg-amber-50/15 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
@@ -283,8 +287,14 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                   <Briefcase className="w-4 h-4" />
                 </div>
               </div>
-              <p className="text-xl sm:text-2xl font-black text-[#002147] font-serif">450+ Partners</p>
-              <span className="text-xs text-slate-500 font-medium mt-0.5">Top MNCs & Startups</span>
+              <p className="text-xl sm:text-2xl font-black text-[#002147] font-serif">
+                {university.placementData?.highlights?.[1]?.value 
+                  || university.placementData?.highlights?.[0]?.value 
+                  || (university.hiringPartners?.length ? `${university.hiringPartners.length}+ Partners` : "Top Recruiters")}
+              </p>
+              <span className="text-xs text-slate-500 font-medium mt-0.5">
+                {university.placementData?.highlights?.[1]?.label || university.placementData?.highlights?.[0]?.label || "Hiring Partners"}
+              </span>
             </div>
 
             <div className="p-4 sm:p-5 rounded-2xl bg-slate-50/80 border border-slate-200/80 hover:border-[#59c28a]/60 hover:bg-indigo-50/15 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
@@ -294,7 +304,7 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                   <Laptop className="w-4 h-4" />
                 </div>
               </div>
-              <p className="text-xl sm:text-2xl font-black text-[#002147] font-serif">100% Online</p>
+              <p className="text-xl sm:text-2xl font-black text-[#002147] font-serif">{mode || "100% Online"}</p>
               <span className="text-xs text-slate-500 font-medium mt-0.5">Remote Proctored Exams</span>
             </div>
 

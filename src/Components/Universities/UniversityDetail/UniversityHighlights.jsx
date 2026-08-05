@@ -156,7 +156,9 @@ const UniversityHighlights = ({ highlights, universityName }) => {
                 {/* Subtitle / Explanatory Note */}
                 <div className="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between gap-2">
                   <p className="text-xs text-slate-500 font-light leading-normal line-clamp-1 group-hover:text-slate-700 transition-colors">
-                    {config.subtitle}
+                    {item.subtitle || (item.label === "Established In" && item.value && !isNaN(Number(item.value))
+                      ? `${new Date().getFullYear() - Number(item.value)}+ years of academic excellence`
+                      : config.subtitle)}
                   </p>
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#59c28a] shrink-0 opacity-70 group-hover:opacity-100 transition-opacity" />
                 </div>

@@ -62,7 +62,7 @@ const UniversityBottomAdmissionDesk = ({ university, selectedCourse }) => {
               </a>
 
               <a
-                href="https://wa.me/919828477772?text=Hello%20Divine%20Institute,%20I%20want%20information%20regarding%20university%20admission"
+                href={`https://wa.me/919828477772?text=${encodeURIComponent(`Hello Divine Institute, I want information regarding ${universityName} admission.`)}`}
                 target="_blank"
                 rel="noreferrer"
                 className="flex-1 py-3.5 px-6 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-slate-950 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-lg cursor-pointer active:scale-95"

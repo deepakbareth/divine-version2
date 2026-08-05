@@ -153,7 +153,7 @@ const UniversityFaqs = ({ faqs, faqCategories, universityName = "Amity Online" }
                   Call Hotline
                 </a>
                 <a
-                  href="https://wa.me/919828477772?text=Hello%20Divine%20Institute%2C%20I%20have%20questions%20regarding%20Amity%20University%20Online%20admissions."
+                  href={`https://wa.me/919828477772?text=${encodeURIComponent(`Hello Divine Institute, I have questions regarding ${universityName} admissions.`)}`}
                   target="_blank"
                   rel="noreferrer"
                   className="px-3 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#1EBE5D] text-slate-950 text-xs font-bold flex items-center justify-center gap-1.5 transition-all shadow-sm active:scale-95"
