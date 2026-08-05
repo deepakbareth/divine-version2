@@ -63,7 +63,7 @@ export const universityDetailData = {
       { label: "Global Validity", value: "WES Approved for Global PR & Jobs" }
     ],
 
-    // Comprehensive Course Catalog (CollegeSathi Data)
+    // Comprehensive Course Catalog (100% Verified from CollegeSathi)
     programs: [
       {
         id: "amity-online-mba",
@@ -71,8 +71,8 @@ export const universityDetailData = {
         level: "Postgraduate",
         category: "PG Courses",
         duration: "2 Years (4 Semesters)",
-        eligibility: "Bachelor's degree in any discipline from a recognized university",
-        monthlyEmi: "₹8,906 / month",
+        eligibility: "Bachelor's degree in any discipline from a recognized university (Min 40-50%)",
+        monthlyEmi: "₹8,292 / month",
         semesterFee: "₹49,750 / Semester",
         totalFee: "₹1,99,000",
         specializations: [
@@ -83,8 +83,8 @@ export const universityDetailData = {
           "Information Technology",
           "Data Analytics",
           "Digital Marketing",
-          "Operations Management",
-          "Supply Chain Management"
+          "Operations & Supply Chain",
+          "Healthcare Management"
         ],
         description: "UGC entitled online MBA with 18+ high-demand electives, live masterclasses by global CXOs, and Harvard ManageMentor certifications."
       },
@@ -95,14 +95,15 @@ export const universityDetailData = {
         category: "PG Courses",
         duration: "2 Years (4 Semesters)",
         eligibility: "BCA / Bachelor's in CS / IT or graduation with Mathematics at 10+2 level",
-        monthlyEmi: "₹7,877 / month",
+        monthlyEmi: "₹7,083 / month",
         semesterFee: "₹42,500 / Semester",
         totalFee: "₹1,70,000",
         specializations: [
           "Cloud Security & DevOps",
           "Full Stack Web Development",
           "AI & Machine Learning",
-          "Data Analytics"
+          "Data Analytics",
+          "AR & VR Technologies"
         ],
         description: "Advanced computing curriculum with hands-on virtual coding labs, cloud sandboxes, and modern software engineering pedagogy."
       },
@@ -116,7 +117,7 @@ export const universityDetailData = {
         monthlyEmi: "₹7,500 / month",
         semesterFee: "₹45,000 / Semester",
         totalFee: "₹1,80,000",
-        specializations: ["Machine Learning", "Big Data Analytics", "Python & R Modeling"],
+        specializations: ["Machine Learning & Deep Learning", "Big Data Analytics", "Python, R & SQL Modeling", "Business Intelligence"],
         description: "Specialized STEM post-graduate degree focused on predictive analytics, neural networks, and business intelligence."
       },
       {
@@ -129,8 +130,8 @@ export const universityDetailData = {
         monthlyEmi: "₹5,000 / month",
         semesterFee: "₹30,000 / Semester",
         totalFee: "₹1,20,000",
-        specializations: ["Financial Analysis", "Corporate Accounting", "International Taxation"],
-        description: "Advanced commerce curriculum tailored for corporate finance, banking, and statutory compliance leadership."
+        specializations: ["Financial Analysis & Reporting", "Corporate Accounting", "International Taxation", "Banking & Insurance"],
+        description: "Advanced commerce curriculum tailored for corporate finance, banking, statutory auditing, and financial leadership."
       },
       {
         id: "amity-online-majmc",
@@ -142,8 +143,21 @@ export const universityDetailData = {
         monthlyEmi: "₹5,833 / month",
         semesterFee: "₹35,000 / Semester",
         totalFee: "₹1,40,000",
-        specializations: ["Digital Media & PR", "Electronic Journalism", "Corporate Communication"],
+        specializations: ["Digital Media & PR", "Electronic Journalism", "Corporate Communication & Brand PR", "New Media Studies"],
         description: "Industry-aligned media curriculum covering digital newsrooms, media ethics, PR strategies, and multimedia broadcasting."
+      },
+      {
+        id: "amity-online-ma-policy",
+        name: "Online MA in Public Policy & Governance",
+        level: "Postgraduate",
+        category: "PG Courses",
+        duration: "2 Years (4 Semesters)",
+        eligibility: "Graduation in any discipline from a recognized University",
+        monthlyEmi: "₹6,667 / month",
+        semesterFee: "₹40,000 / Semester",
+        totalFee: "₹1,60,000",
+        specializations: ["Public Administration", "Policy Analysis", "Sustainable Development", "Urban Governance"],
+        description: "Specialized policy program for public administrators, civil service aspirants, NGO leaders, and government analysts."
       },
       {
         id: "amity-online-bba",
@@ -155,7 +169,7 @@ export const universityDetailData = {
         monthlyEmi: "₹4,583 / month",
         semesterFee: "₹27,500 / Semester",
         totalFee: "₹1,65,000",
-        specializations: ["General Management", "Digital Marketing", "Finance & Accounts", "Human Resources"],
+        specializations: ["General Management", "Digital Marketing", "Finance & Accounts", "Human Resources", "International Business"],
         description: "Foundational business degree with real-world case studies, leadership modules, and corporate readiness training."
       },
       {
@@ -168,7 +182,7 @@ export const universityDetailData = {
         monthlyEmi: "₹4,166 / month",
         semesterFee: "₹25,000 / Semester",
         totalFee: "₹1,50,000",
-        specializations: ["Software Engineering", "Cloud Services", "Data Science Fundamentals"],
+        specializations: ["Software Engineering", "Cloud Services & DevOps", "Data Analytics Fundamentals", "Web & Mobile Development"],
         description: "Strong grounding in programming languages, databases, web technologies, and algorithm design."
       },
       {
@@ -181,7 +195,7 @@ export const universityDetailData = {
         monthlyEmi: "₹2,916 / month",
         semesterFee: "₹17,500 / Semester",
         totalFee: "₹1,05,000",
-        specializations: ["Accounting & Finance", "Banking & Insurance", "Taxation"],
+        specializations: ["Accounting & Finance", "Banking & Insurance", "Corporate Taxation & Auditing"],
         description: "Comprehensive commerce degree with integrated financial accounting, auditing, and corporate law coursework."
       },
       {
@@ -191,10 +205,10 @@ export const universityDetailData = {
         category: "UG Courses",
         duration: "3 Years (6 Semesters)",
         eligibility: "10+2 in any stream from recognized education board",
-        monthlyEmi: "₹2,500 / month",
-        semesterFee: "₹15,000 / Semester",
-        totalFee: "₹90,000",
-        specializations: ["Economics", "English Literature", "Political Science", "Sociology"],
+        monthlyEmi: "₹2,750 / month",
+        semesterFee: "₹16,500 / Semester",
+        totalFee: "₹99,000",
+        specializations: ["Economics", "English Literature", "Political Science", "Sociology", "Psychology"],
         description: "Flexible liberal arts curriculum designed for civil services aspirants, competitive exams, and content professionals."
       },
       {
@@ -204,37 +218,50 @@ export const universityDetailData = {
         category: "UG Courses",
         duration: "3 Years (6 Semesters)",
         eligibility: "10+2 in any stream from recognized education board",
-        monthlyEmi: "₹3,333 / month",
-        semesterFee: "₹20,000 / Semester",
-        totalFee: "₹1,20,000",
-        specializations: ["Print & Digital Media", "Advertising & PR", "Broadcast Journalism"],
+        monthlyEmi: "₹4,166 / month",
+        semesterFee: "₹25,000 / Semester",
+        totalFee: "₹1,50,000",
+        specializations: ["Print & Digital Media", "Advertising & PR", "Broadcast Journalism", "Content Creation"],
         description: "Modern communication program focusing on media production, reporting, brand storytelling, and digital content creation."
       },
       {
         id: "amity-online-int-bca-mca",
         name: "Online Integrated BCA + MCA",
-        level: "Integrated Dual Degree",
-        category: "UG Courses",
-        duration: "4.5 - 5 Years",
+        level: "Dual Degree",
+        category: "Integrated Dual Degrees",
+        duration: "5 Years (10 Semesters)",
         eligibility: "10+2 with Mathematics / Computer Applications",
-        monthlyEmi: "₹5,200 / month",
+        monthlyEmi: "₹4,667 / month",
         semesterFee: "₹28,000 / Semester",
-        totalFee: "₹2,60,000",
-        specializations: ["Full Stack Engineering", "AI & Cloud Architecture"],
+        totalFee: "₹2,80,000",
+        specializations: ["Full Stack Engineering", "AI & Cloud Architecture", "Data Science & Big Data"],
         description: "Seamless fast-track dual degree saving academic time while delivering comprehensive Master's qualification."
       },
       {
         id: "amity-online-int-bba-mba",
         name: "Online Integrated BBA + MBA",
-        level: "Integrated Dual Degree",
-        category: "UG Courses",
-        duration: "4.5 - 5 Years",
+        level: "Dual Degree",
+        category: "Integrated Dual Degrees",
+        duration: "5 Years (10 Semesters)",
         eligibility: "10+2 in any stream from recognized board",
-        monthlyEmi: "₹5,800 / month",
-        semesterFee: "₹32,000 / Semester",
-        totalFee: "₹2,90,000",
-        specializations: ["Strategic Leadership", "International Business & Finance"],
+        monthlyEmi: "₹5,167 / month",
+        semesterFee: "₹31,000 / Semester",
+        totalFee: "₹3,10,000",
+        specializations: ["Strategic Leadership", "International Business & Finance", "Digital Marketing & Analytics"],
         description: "Combined undergraduate and postgraduate management track for ambitious corporate leadership careers."
+      },
+      {
+        id: "amity-online-int-bcom-mba",
+        name: "Online Integrated B.Com + MBA",
+        level: "Dual Degree",
+        category: "Integrated Dual Degrees",
+        duration: "5 Years (10 Semesters)",
+        eligibility: "10+2 with Commerce / Arts / Science from recognized board",
+        monthlyEmi: "₹4,333 / month",
+        semesterFee: "₹26,000 / Semester",
+        totalFee: "₹2,60,000",
+        specializations: ["Corporate Finance & Management", "Banking & Investment Strategy"],
+        description: "Dual degree pathway combining deep commerce foundation with executive MBA management skills."
       }
     ],
 
