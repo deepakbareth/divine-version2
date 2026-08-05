@@ -5,6 +5,7 @@
 // =========================================================================
 
 import amityLogo from '../assets/universities/amity.jpg';
+import amityBuildingImg from '../assets/universities/universitiesBuildingImg/amity.jpg';
 import chandigarhLogo from '../assets/universities/chandigarh.jpg';
 import glaLogo from '../assets/universities/gla.jpg';
 import gyanLogo from '../assets/universities/gyan.jpg';
@@ -28,6 +29,8 @@ export const universityDetailData = {
     category: "online",
     mode: "100% Online Learning",
     logo: amityLogo,
+    buildingImg: amityBuildingImg,
+    campusImg: amityBuildingImg,
     badge: "UGC-DEB Entitled",
     naacGrade: "NAAC A+ Accredited",
     location: "Noida, Uttar Pradesh",
