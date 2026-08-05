@@ -268,8 +268,8 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
                 )}
               </div>
 
-              {/* Scrollable Role Cards List (Optimized touch & height for mobile, tablet, desktop) */}
-              <div className="overflow-y-auto custom-scrollbar pr-1 sm:pr-2 space-y-2.5 sm:space-y-3 max-h-[320px] sm:max-h-[380px] lg:max-h-[355px] scroll-smooth overscroll-contain">
+              {/* Scrollable Role Cards List (Smooth scroll chaining + bottom shadow padding) */}
+              <div className="overflow-y-auto custom-scrollbar px-1 pt-1 pb-4 pr-1.5 sm:pr-2 space-y-2.5 sm:space-y-3 max-h-[330px] sm:max-h-[385px] lg:max-h-[360px] scroll-smooth">
                 {salaryInsights.map((roleItem, idx) => {
                   const iconMeta = getRoleIcon(roleItem.iconType);
                   const IconComponent = iconMeta.icon;
