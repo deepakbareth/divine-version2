@@ -221,27 +221,27 @@ export const manipalOnlineData = {
     }
   ],
 
-  // Online Manipal Admission Process
+  // Online Manipal Admission Process (CollegeSathi Verified)
   admissionProcess: [
     {
       step: 1,
-      title: "Select Degree & Specialization",
-      description: "Choose your desired UGC-DEB entitled online UG/PG course that matches your career aspirations."
+      title: "Select Your Program",
+      description: "Choose the program that best matches your career goals and academic background."
     },
     {
       step: 2,
-      title: "Submit Application & Documents",
-      description: "Fill in personal and academic details and upload 10th, 12th / Graduation mark sheets with ID proof."
+      title: "Complete Your Application",
+      description: "Visit the website, fill in your details, and submit the application form with the required documents."
     },
     {
       step: 3,
-      title: "Pay Program Fees & Avail 0% EMI",
-      description: "Pay the semester fee securely online or choose flexible zero-cost EMI payment plans."
+      title: "Pay Program Fee",
+      description: "Make a secure payment to confirm your seat. EMI options are available to make enrollment easy and flexible."
     },
     {
       step: 4,
-      title: "Access Coursera & LMS Portal",
-      description: "Receive your student enrollment ID, official email, and immediate access to the Manipal LMS & Coursera Enterprise."
+      title: "Start Learning",
+      description: "Receive your enrollment confirmation and get instant access to the Online Manipal LMS to begin your journey."
     }
   ],
 

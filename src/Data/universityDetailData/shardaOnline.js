@@ -165,27 +165,28 @@ export const shardaOnlineData = {
     }
   },
 
-  // Admission Process (CollegeSathi Verified)
+  // Admission Process (CollegeSathi Verified - Exact from Screenshot)
+  admissionIntro: "To take admission in Sharda University Online, you can directly contact Divine Institute for simple Sharda online registration. Other than that, you can also follow the Sharda University admission process:",
   admissionProcess: [
     {
       step: 1,
-      title: "Fill in the Application Form",
-      description: "Complete the online application by submitting your personal details and academic credentials on the admission portal."
+      title: "Fill in the application form",
+      description: "Complete the application by entering the correct personal details and academic information."
     },
     {
       step: 2,
       title: "Document Verification",
-      description: "Upload scanned copies of required academic certificates, mark sheets, valid government ID proof, and photographs."
+      description: "Upload scanned copies of the needed documents, academic certificates, ID proof, and photographs."
     },
     {
       step: 3,
       title: "Fee Payment",
-      description: "Pay the course fees securely through net banking, debit/credit cards, or choose convenient zero-cost EMI options."
+      description: "Pay the course fee through net banking, credit/debit cards, or through a demand draft."
     },
     {
       step: 4,
-      title: "Wait for Verification & LMS Access",
-      description: "The university verifies your credentials and confirms your admission with student ID and LMS portal login details via email."
+      title: "Wait for Verification",
+      description: "The university will verify your information and confirm your admission via mail."
     }
   ],
 

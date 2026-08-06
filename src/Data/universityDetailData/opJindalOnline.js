@@ -183,27 +183,27 @@ export const opJindalOnlineData = {
     }
   ],
 
-  // OP Jindal Global University Online Admission Process
+  // OP Jindal Global University Online Admission Process (CollegeSathi Verified)
   admissionProcess: [
     {
       step: 1,
-      title: "Program Selection",
-      description: "Explore world-ranked global MBA and Master's programs tailored for corporate leaders."
+      title: "Submit Application",
+      description: "Complete the online application form with your academic and personal details."
     },
     {
       step: 2,
-      title: "Application & SOP Submission",
-      description: "Complete the digital application form and submit your statement of purpose and academic records."
+      title: "Take the JMAT Entrance Test",
+      description: "Eligible applicants may be required to complete the university's 30-Minute online entrance exam."
     },
     {
       step: 3,
-      title: "Eligibility Screening & Offer",
-      description: "Receive formal admission confirmation following profile evaluation by the JGU admissions board."
+      title: "Pay & Block Your Seat",
+      description: "Secure your admission by completing the applicable fee payment, and confirming your seat."
     },
     {
       step: 4,
-      title: "Fee Settlement & Onboarding",
-      description: "Complete fee payment online and receive your student credentials for world-class digital learning."
+      title: "Complete Document Verification",
+      description: "Submit and verify all required academic and identity documents to complete enrollment."
     }
   ],
 

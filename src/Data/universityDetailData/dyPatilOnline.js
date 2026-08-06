@@ -253,27 +253,32 @@ export const dyPatilOnlineData = {
     }
   ],
 
-  // DY Patil Online Admission Process
+  // DY Patil Online Admission Process (CollegeSathi Verified - Exact from Screenshot)
   admissionProcess: [
     {
       step: 1,
-      title: "Choose Your Course",
-      description: "Select from accredited online MBA, BBA, and certificate courses designed for working executives."
+      title: "Register Online",
+      description: "Visit dypatilonline.com, fill in your basic details, and verify your mobile number and email ID to create your account."
     },
     {
       step: 2,
-      title: "Register & Upload Credentials",
-      description: "Complete registration online and upload necessary educational certificates for verification."
+      title: "Select Your Program",
+      description: "Log in, choose your program and specialization, and fill out the application form with all required academic and personal details."
     },
     {
       step: 3,
-      title: "Pay Application & Tuition Fees",
-      description: "Make secure online payment or activate no-cost monthly EMI options."
+      title: "Upload Documents",
+      description: "Submit your academic certificates, government-issued ID proof, photograph, and any other required documents in the prescribed format."
     },
     {
       step: 4,
-      title: "Enrollment & Digital Access",
-      description: "Receive your student PRN number and access the state-of-the-art DPU e-learning platform."
+      title: "Pay Program Fee",
+      description: "Complete your fee payment semester-wise, annually, or in full — through credit card, debit card, net banking, NEFT, or Demand Draft."
+    },
+    {
+      step: 5,
+      title: "Start Learning",
+      description: "Once the university verifies your documents, you will receive a confirmation email with your LMS login credentials and can begin your program immediately."
     }
   ],
 
