@@ -221,6 +221,30 @@ export const manipalOnlineData = {
     }
   ],
 
+  // Online Manipal Admission Process
+  admissionProcess: [
+    {
+      step: 1,
+      title: "Select Degree & Specialization",
+      description: "Choose your desired UGC-DEB entitled online UG/PG course that matches your career aspirations."
+    },
+    {
+      step: 2,
+      title: "Submit Application & Documents",
+      description: "Fill in personal and academic details and upload 10th, 12th / Graduation mark sheets with ID proof."
+    },
+    {
+      step: 3,
+      title: "Pay Program Fees & Avail 0% EMI",
+      description: "Pay the semester fee securely online or choose flexible zero-cost EMI payment plans."
+    },
+    {
+      step: 4,
+      title: "Access Coursera & LMS Portal",
+      description: "Receive your student enrollment ID, official email, and immediate access to the Manipal LMS & Coursera Enterprise."
+    }
+  ],
+
   // Placement & Career Insights (100% Exact from CollegeSathi Screenshot)
   placementData: {
     title: "Manipal Online Placements 2026 – Jobs, Salaries & Hiring Partners",

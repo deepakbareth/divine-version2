@@ -31,6 +31,28 @@ export const lpuDistanceData = {
     { name: "Distance BBA", level: "Undergraduate", category: "UG Courses", duration: "3 Years", eligibility: "10+2 from recognized board", monthlyEmi: "₹2,100 / month", totalFee: "₹50,000", description: "Foundational business degree." },
     { name: "Distance B.Com", level: "Undergraduate", category: "UG Courses", duration: "3 Years", eligibility: "10+2 in Commerce / Arts", monthlyEmi: "₹1,900 / month", totalFee: "₹45,000", description: "Commerce curriculum." }
   ],
+  admissionProcess: [
+    {
+      step: 1,
+      title: "Program Selection",
+      description: "Explore UGC-DEB recognized distance degree programs across management, IT, and arts."
+    },
+    {
+      step: 2,
+      title: "Online Registration",
+      description: "Fill in personal details and upload required academic certificates on LPU e-Connect."
+    },
+    {
+      step: 3,
+      title: "Tuition Fee Payment",
+      description: "Pay your program fee through online banking or convenient installment schemes."
+    },
+    {
+      step: 4,
+      title: "LPU e-Connect Access",
+      description: "Receive your registration number and 24/7 access to the LPU e-Connect learning portal."
+    }
+  ],
   hiringPartners: ["Amazon", "Cognizant", "Capgemini", "Wipro", "Infosys"],
   faqs: [
     { q: "Is LPU Distance recognized by UGC?", a: "Yes. LPU Distance is approved by UGC-DEB and accredited with NAAC A++ Grade." }

@@ -32,6 +32,28 @@ export const xibmsAutonomousData = {
     { name: "Executive PGDM", level: "Postgraduate Diploma", category: "PG Courses", duration: "1 - 2 Years", eligibility: "Graduation with corporate experience", monthlyEmi: "₹3,800 / month", totalFee: "₹38,000", description: "Postgraduate diploma in management." },
     { name: "Advance Diploma in Business Management", level: "Advance Diploma", category: "UG Courses", duration: "1 Year", eligibility: "10+2 / Diploma with work background", monthlyEmi: "₹2,200 / month", totalFee: "₹22,000", description: "Advance 1-year management diploma." }
   ],
+  admissionProcess: [
+    {
+      step: 1,
+      title: "Select Autonomous Executive Track",
+      description: "Choose fast-track management diploma or executive certification matching your career domain."
+    },
+    {
+      step: 2,
+      title: "Submit Work Profile & Documents",
+      description: "Submit resume, academic records, and proof of experience for eligibility assessment."
+    },
+    {
+      step: 3,
+      title: "Enrollment Fee Payment",
+      description: "Complete the course fee payment through one-time payment or flexible installment plans."
+    },
+    {
+      step: 4,
+      title: "Receive Study Kit & Case Studies",
+      description: "Get immediate access to case study materials, online portal, and assignment schedule."
+    }
+  ],
   hiringPartners: ["Reliance Retail", "Aditya Birla", "ICICI Bank", "L&T Infotech"],
   faqs: [
     { q: "Can I complete my course in fast-track mode?", a: "Yes. XIBMS offers flexible fast-track options for working executives with prior industry experience." }

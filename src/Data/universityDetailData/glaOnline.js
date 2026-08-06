@@ -136,6 +136,31 @@ export const glaOnlineData = {
     }
   ],
 
+  // GLA University Online Admission Process (Verified from CollegeSathi 2026)
+  admissionIntro: "GLA University online admission is a fully digital process — there's no need to visit any campus. Candidates can complete it from anywhere in four simple steps, and if you'd rather not go it alone, our academic counsellors can walk you through eligibility, documents, and deadlines for free before you apply.",
+  admissionProcess: [
+    {
+      step: 1,
+      title: "Filling out the Application Form",
+      description: "Complete the application form with accurate details and carefully review it before submission."
+    },
+    {
+      step: 2,
+      title: "Document Submission",
+      description: "Upload the required documents and pay the application fee through the online portal."
+    },
+    {
+      step: 3,
+      title: "Confirmation of Admission",
+      description: "Once the application is processed, you will receive an email confirming your admission."
+    },
+    {
+      step: 4,
+      title: "Payment of Fees",
+      description: "Pay the full tuition fee as per the provisions made in the admission offer letter."
+    }
+  ],
+
   // Placement & Career Insights (100% Verified from CollegeSathi)
   placementData: {
     title: "GLA University Placement Partners & Career Services",

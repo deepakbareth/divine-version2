@@ -33,6 +33,28 @@ export const chandigarhOnlineData = {
     { name: "Online B.Com", level: "Undergraduate", category: "UG Courses", duration: "3 Years", eligibility: "10+2 from recognized board", monthlyEmi: "₹2,900 / month", totalFee: "₹80,000", description: "Commerce curriculum for accounts and banking." },
     { name: "Online BA", level: "Undergraduate", category: "UG Courses", duration: "3 Years", eligibility: "10+2 in any stream", monthlyEmi: "₹2,500 / month", totalFee: "₹70,000", description: "Liberal arts degree for competitive exams." }
   ],
+  admissionProcess: [
+    {
+      step: 1,
+      title: "Choose Your Online Degree",
+      description: "Select from NAAC A+ accredited online programs aligning with your professional goals."
+    },
+    {
+      step: 2,
+      title: "Online Application & Document Upload",
+      description: "Submit candidate profile and upload scanned certificates on the digital admissions portal."
+    },
+    {
+      step: 3,
+      title: "Payment of Course Fees",
+      description: "Pay your semester fees via net banking, credit/debit card, or easy EMI installments."
+    },
+    {
+      step: 4,
+      title: "LMS Activation & Induction",
+      description: "Get official student login credentials and attend the virtual orientation session."
+    }
+  ],
   hiringPartners: ["Google", "Amazon", "Microsoft", "Flipkart", "IBM", "Cognizant"],
   faqs: [
     { q: "Is CU Online degree valid for higher education abroad?", a: "Yes. CU Online holds NAAC A+ accreditation and WES evaluation, valid worldwide." }

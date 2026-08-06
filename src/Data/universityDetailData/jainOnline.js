@@ -31,6 +31,28 @@ export const jainOnlineData = {
     { name: "Online BBA", level: "Undergraduate", category: "UG Courses", duration: "3 Years", eligibility: "10+2 from recognized board", monthlyEmi: "₹4,100 / month", totalFee: "₹1,20,000", description: "Undergraduate business administration program." },
     { name: "Online B.Com", level: "Undergraduate", category: "UG Courses", duration: "3 Years", eligibility: "10+2 with Commerce / Arts", monthlyEmi: "₹3,400 / month", totalFee: "₹95,000", description: "Commerce degree with integrated international accounting." }
   ],
+  admissionProcess: [
+    {
+      step: 1,
+      title: "Select Your Program",
+      description: "Choose from 70+ in-demand electives across Online MBA, MCA, BBA, B.Com, and M.Com."
+    },
+    {
+      step: 2,
+      title: "Submit Online Application",
+      description: "Fill out the registration form with personal and academic details on the Jain portal."
+    },
+    {
+      step: 3,
+      title: "Document Verification & Fee Payment",
+      description: "Upload certificates for verification and complete fee payment via zero-interest EMI."
+    },
+    {
+      step: 4,
+      title: "Commence Learning on LMS",
+      description: "Receive your Jain Student ID and begin attending live sessions and accessing digital study resources."
+    }
+  ],
   hiringPartners: ["Infosys", "Deloitte", "Accenture", "KPMG", "Amazon", "Flipkart"],
   faqs: [
     { q: "How are classes delivered at JAIN Online?", a: "Classes are delivered through a cloud-based LMS with live weekend webinars and 24/7 video replays." }

@@ -183,6 +183,30 @@ export const opJindalOnlineData = {
     }
   ],
 
+  // OP Jindal Global University Online Admission Process
+  admissionProcess: [
+    {
+      step: 1,
+      title: "Program Selection",
+      description: "Explore world-ranked global MBA and Master's programs tailored for corporate leaders."
+    },
+    {
+      step: 2,
+      title: "Application & SOP Submission",
+      description: "Complete the digital application form and submit your statement of purpose and academic records."
+    },
+    {
+      step: 3,
+      title: "Eligibility Screening & Offer",
+      description: "Receive formal admission confirmation following profile evaluation by the JGU admissions board."
+    },
+    {
+      step: 4,
+      title: "Fee Settlement & Onboarding",
+      description: "Complete fee payment online and receive your student credentials for world-class digital learning."
+    }
+  ],
+
   // Placement & Career Insights (100% Verified from CollegeSathi)
   placementData: {
     title: "OP Jindal Online Placement 2026 – Jobs, Salaries & Global Recruiters",

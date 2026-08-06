@@ -181,6 +181,30 @@ export const nmimsOnlineData = {
     }
   ],
 
+  // NMIMS Online Admission Process (Verified from CollegeSathi 2026)
+  admissionProcess: [
+    {
+      step: 1,
+      title: "Select Your Program",
+      description: "Visit the website and choose the program and specialization that best fit your career goals."
+    },
+    {
+      step: 2,
+      title: "Complete Your Application",
+      description: "Fill in your personal and academic details, upload the required documents, and pay the registration fee along with the initial amount."
+    },
+    {
+      step: 3,
+      title: "Pay Program Fee",
+      description: "Pay the NMIMS Application Fees to secure your seat online or demand draft in the name of SVKM's NMIMS to Mumbai."
+    },
+    {
+      step: 4,
+      title: "Start Learning",
+      description: "Receive your student number and login credentials to access the NMIMS Online learning portal and start your program."
+    }
+  ],
+
   // Placement & Career Insights (100% Verified from CollegeSathi)
   placementData: {
     title: "NMIMS Online Career Services - Opportunities & Hiring Partners",

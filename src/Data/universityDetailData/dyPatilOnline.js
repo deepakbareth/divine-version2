@@ -253,6 +253,30 @@ export const dyPatilOnlineData = {
     }
   ],
 
+  // DY Patil Online Admission Process
+  admissionProcess: [
+    {
+      step: 1,
+      title: "Choose Your Course",
+      description: "Select from accredited online MBA, BBA, and certificate courses designed for working executives."
+    },
+    {
+      step: 2,
+      title: "Register & Upload Credentials",
+      description: "Complete registration online and upload necessary educational certificates for verification."
+    },
+    {
+      step: 3,
+      title: "Pay Application & Tuition Fees",
+      description: "Make secure online payment or activate no-cost monthly EMI options."
+    },
+    {
+      step: 4,
+      title: "Enrollment & Digital Access",
+      description: "Receive your student PRN number and access the state-of-the-art DPU e-learning platform."
+    }
+  ],
+
   // FAQs (100% Exact 12 Questions from CollegeSathi FAQ Accordion - Structured in 2 Balanced Categories)
   faqCategories: [
     {

@@ -32,6 +32,28 @@ export const glaDistanceData = {
     { name: "Distance B.Com", level: "Undergraduate", category: "UG Courses", duration: "3 Years", eligibility: "10+2 with Commerce / Arts", monthlyEmi: "₹2,000 / month", totalFee: "₹48,000", description: "Commerce curriculum for accounts and finance." },
     { name: "Diploma in Business Administration", level: "Diploma", category: "UG Courses", duration: "1 Year", eligibility: "10+2 in any stream", monthlyEmi: "₹2,500 / month", totalFee: "₹30,000", description: "Fast-track 1-year business diploma." }
   ],
+  admissionProcess: [
+    {
+      step: 1,
+      title: "Select Your Course",
+      description: "Choose from distance degree and diploma programs tailored for working individuals."
+    },
+    {
+      step: 2,
+      title: "Submit Documents",
+      description: "Upload previous qualification certificates for verification by the admissions team."
+    },
+    {
+      step: 3,
+      title: "Fee Payment",
+      description: "Complete the tuition fee payment through official university channels."
+    },
+    {
+      step: 4,
+      title: "Get Enrollment ID",
+      description: "Receive your registration number and begin your self-paced distance learning journey."
+    }
+  ],
   hiringPartners: ["TCS", "Wipro", "HCL", "Tech Mahindra"],
   faqs: [
     { q: "Is GLA Distance degree valid for government examinations?", a: "Yes. Degrees are approved by UGC-DEB and valid across government recruitments." }

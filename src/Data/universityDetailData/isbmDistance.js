@@ -32,6 +32,28 @@ export const isbmDistanceData = {
     { name: "Distance BA", level: "Undergraduate", category: "UG Courses", duration: "3 Years", eligibility: "10+2 in any stream", monthlyEmi: "₹1,800 / month", totalFee: "₹42,000", description: "Undergraduate arts degree." },
     { name: "Distance B.Com", level: "Undergraduate", category: "UG Courses", duration: "3 Years", eligibility: "10+2 from recognized board", monthlyEmi: "₹1,900 / month", totalFee: "₹45,000", description: "Undergraduate commerce degree." }
   ],
+  admissionProcess: [
+    {
+      step: 1,
+      title: "Select Your Program",
+      description: "Choose from industry-focused diploma, UG, and PG programs designed for professionals."
+    },
+    {
+      step: 2,
+      title: "Application & Verification",
+      description: "Submit the registration form along with your educational mark sheets and ID proof."
+    },
+    {
+      step: 3,
+      title: "Fee Payment",
+      description: "Pay the required registration and course fees via secure digital modes."
+    },
+    {
+      step: 4,
+      title: "Admission Confirmation",
+      description: "Receive student enrollment credentials and study materials to begin coursework."
+    }
+  ],
   hiringPartners: ["Tata Business", "SBI Life", "HDFC Sales", "Kotak"],
   faqs: [
     { q: "What is the admission procedure for ISBM?", a: "Divine Institute provides end-to-end documentation check and university registration assistance." }

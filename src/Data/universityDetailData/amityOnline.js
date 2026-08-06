@@ -253,6 +253,35 @@ export const amityOnlineData = {
     }
   ],
 
+  // Amity Online Admission Process (Verified from CollegeSathi 2026)
+  admissionProcess: [
+    {
+      step: 1,
+      title: "Select Your Program",
+      description: "Choose the program that aligns with your career goals and interests."
+    },
+    {
+      step: 2,
+      title: "Complete Your Application",
+      description: "Fill in your details and submit all required information accurately."
+    },
+    {
+      step: 3,
+      title: "Pay Program Fees",
+      description: "Make a secure, hassle-free payment to proceed."
+    },
+    {
+      step: 4,
+      title: "Submit & Register",
+      description: "Submit your application and complete your enrollment process."
+    },
+    {
+      step: 5,
+      title: "Await Enrollment Details",
+      description: "Receive your enrollment confirmation and further academic guidance."
+    }
+  ],
+
   // Placement & Career Insights (100% Verified from CollegeSathi)
   placementData: {
     title: "Amity Online Placement 2026 – Jobs, Salaries & Hiring Partners",

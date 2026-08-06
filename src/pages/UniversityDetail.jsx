@@ -99,8 +99,9 @@ const UniversityDetail = () => {
         onOpenForm={scrollToAdmissionDesk}
       />
 
-      {/* 6. 4-Step Divine Admission Journey */}
+      {/* 6. Step-by-Step Admission Process */}
       <UniversityAdmissionSteps
+        university={university}
         onStartAdmission={scrollToAdmissionDesk}
       />
 
