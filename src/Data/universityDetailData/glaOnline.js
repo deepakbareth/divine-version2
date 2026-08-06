@@ -193,91 +193,93 @@ export const glaOnlineData = {
     "HCL Technologies"
   ],
 
-  // FAQs (CollegeSathi Verified - Categorized)
+  // FAQs (100% Exact 9 Questions from CollegeSathi FAQ Accordion)
   faqCategories: [
     {
-      category: "About University",
+      category: "Admissions & Programs",
       items: [
         {
           q: "Is GLA Online University entitled by UGC?",
-          a: "Yes. The online courses offered by GLA Online University are entitled by the University Grants Commission (UGC-DEB) and hold NAAC A+ accreditation, confirming high academic standards."
+          a: "Yes. The online courses offered by GLA Online University are entitled by the University Grants Commission (UGC-DEB) and hold NAAC A+ accreditation."
+        },
+        {
+          q: "What programs are offered by GLA Online University?",
+          a: "GLA Online University offers four comprehensive online degree programs: Online MBA, Online MCA, Online BBA, and Online BCA with industry-oriented specializations."
         },
         {
           q: "Is a GLA university online degree equal to a regular degree?",
-          a: "Yes. As per UGC guidelines, a GLA University online degree awarded through a UGC-DEB approved program carries the exact same academic and professional validity as a regular on-campus degree."
+          a: "Yes. As per UGC regulations, an online degree awarded by GLA University holds the exact same legal and academic validity as a regular on-campus degree."
         },
         {
-          q: "What is the academic legacy of GLA University?",
-          a: "GLA University holds 28+ years of academic excellence since its establishment in 1998 in Mathura, Uttar Pradesh, with over 25,000 enrolled students across programs."
+          q: "Can I apply to the GLA University Online PG course from my desktop?",
+          a: "Yes, you can apply and complete the entire admission and learning process 100% digitally from your desktop, laptop, or mobile device from the comfort of your home."
+        },
+        {
+          q: "How do I complete GLA university online admission?",
+          a: "GLA university online admission requires 4 simple steps: 1) Fill the online application form, 2) Upload required educational documents, 3) Receive admission confirmation, and 4) Pay the course fee to confirm your seat."
         }
       ]
     },
     {
-      category: "About Courses & Fees",
+      category: "Fees, Duration & Placements",
       items: [
         {
           q: "What is the GLA university online course fees for MBA, BBA, MCA and BCA?",
-          a: "GLA university online course fees are highly affordable: Online MBA is ₹97,000 total (₹24,250/sem), Online MCA is ₹86,000 total (₹21,500/sem), and Online BBA & BCA are ₹88,500 total (₹14,750/sem each)."
+          a: "The fee structure is: Online MBA is ₹97,000 total (₹24,250/sem), Online MCA is ₹86,000 total (₹21,500/sem), and Online BBA & BCA are ₹88,500 total (₹14,750/sem each)."
         },
         {
-          q: "Does GLA Online provide a no-cost EMI facility?",
-          a: "Yes, GLA Online University offers a 0% interest no-cost EMI facility, allowing students to pay tuition fees in easy monthly installments without financial burden."
+          q: "Does GLA online provides no cost EMI?",
+          a: "Yes, GLA Online University offers a convenient 0% interest no-cost EMI facility, allowing students to pay tuition fees in easy monthly installments."
         },
         {
           q: "What is the duration of GLA university online courses?",
-          a: "GLA University online courses run for 3 years (6 semesters) at the undergraduate level (BBA, BCA) and 2 years (4 semesters) at the postgraduate level (MBA, MCA)."
-        }
-      ]
-    },
-    {
-      category: "About Admission & Exams",
-      items: [
-        {
-          q: "How do I complete GLA university online admission?",
-          a: "GLA university online admission takes four simple steps: 1) Fill out the online application form, 2) Submit required documents, 3) Receive admission confirmation via email, and 4) Pay the tuition fee to confirm your seat."
+          a: "Undergraduate programs (BBA, BCA) have a duration of 3 years (6 semesters), while Postgraduate programs (MBA, MCA) have a duration of 2 years (4 semesters)."
         },
         {
-          q: "How are examinations conducted at GLA Online University?",
-          a: "GLA Online follows a proctored evaluation pattern: 30% weightage for internal continuous assessments (quizzes, assignments) and 70% weightage for term-end 3-hour remote proctored examinations."
-        },
-        {
-          q: "Can I apply to GLA University Online courses from my home/desktop?",
-          a: "Yes, the entire admission and learning process is 100% digital, allowing you to apply and attend classes comfortably from anywhere."
-        }
-      ]
-    },
-    {
-      category: "About Placements",
-      items: [
-        {
-          q: "Does GLA Online University help in student placements?",
-          a: "Yes, students receive dedicated career development and placement support including mock interviews, resume workshops, and recruitment drives with partners like Amazon, Mahindra, HDFC Bank, Tech Mahindra, and Samsung."
+          q: "Does GLA Online University help in the placement of the students?",
+          a: "Yes, GLA Online provides dedicated career services including 1-on-1 mock interviews, resume preparation, industry mentorship, and recruitment drives with top hiring partners like Amazon, Mahindra, HDFC Bank, and Samsung."
         }
       ]
     }
   ],
 
-  // Flat FAQs for Fallback / Search
+  // Flat FAQs for Fallback / Search (Exact 9 from CollegeSathi)
   faqs: [
     {
       q: "Is GLA Online University entitled by UGC?",
-      a: "Yes. The online courses offered by GLA Online University are entitled by UGC-DEB and accredited NAAC A+."
+      a: "Yes. The online courses offered by GLA Online University are entitled by UGC-DEB and hold NAAC A+ accreditation."
     },
     {
       q: "What programs are offered by GLA Online University?",
       a: "GLA Online University offers Online MBA, Online BBA, Online MCA, and Online BCA with specialized career tracks."
     },
     {
-      q: "Does GLA online provide no cost EMI?",
+      q: "Does GLA online provides no cost EMI?",
       a: "Yes, GLA Online University offers a convenient 0% interest no-cost EMI facility."
     },
     {
-      q: "Does GLA Online University help in student placement?",
+      q: "Does GLA Online University help in the placement of the students?",
       a: "Yes, students receive 100% placement assistance and career readiness training with top corporate partners."
+    },
+    {
+      q: "Can I apply to the GLA University Online PG course from my desktop?",
+      a: "Yes, you can apply and complete the entire admission and learning process online from your desktop or mobile device."
+    },
+    {
+      q: "What is the GLA university online course fees for MBA, BBA, MCA and BCA?",
+      a: "Online MBA is ₹97,000, Online MCA is ₹86,000, and Online BBA & BCA are ₹88,500 total."
     },
     {
       q: "Is a GLA university online degree equal to a regular degree?",
       a: "Yes. As per UGC regulations, an online degree carries equal academic and career credibility as a traditional on-campus degree."
+    },
+    {
+      q: "What is the duration of GLA university online courses?",
+      a: "UG programs are 3 years (6 semesters) and PG programs are 2 years (4 semesters)."
+    },
+    {
+      q: "How do I complete GLA university online admission?",
+      a: "Apply online, submit documents, receive email confirmation, and pay fees in 4 simple steps."
     }
   ]
 };

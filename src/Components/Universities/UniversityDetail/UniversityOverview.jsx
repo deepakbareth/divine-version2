@@ -250,7 +250,7 @@ const UniversityOverview = ({ university, onOpenForm }) => {
           </div>
 
           {/* Full-Width Key Fast Facts / Stats Ribbon (Spacious & Responsive) */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 pt-8 border-t border-slate-100 mt-8 w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 pt-8 border-t border-slate-100 mt-8 w-full">
 
             {establishedYear && (
               <div className="p-4 sm:p-5 rounded-2xl bg-slate-50/80 border border-slate-200/80 hover:border-[#59c28a]/60 hover:bg-emerald-50/15 hover:shadow-md hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group">
