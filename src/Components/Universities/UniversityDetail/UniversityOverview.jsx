@@ -288,8 +288,8 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                 </div>
               </div>
               <p className="text-xl sm:text-2xl font-black text-[#002147] font-serif">
-                {university.placementData?.highlights?.[1]?.value 
-                  || university.placementData?.highlights?.[0]?.value 
+                {university.placementData?.highlights?.[1]?.value
+                  || university.placementData?.highlights?.[0]?.value
                   || (university.hiringPartners?.length ? `${university.hiringPartners.length}+ Partners` : "Top Recruiters")}
               </p>
               <span className="text-xs text-slate-500 font-medium mt-0.5">
@@ -332,7 +332,7 @@ const UniversityOverview = ({ university, onOpenForm }) => {
           </div>
 
           {/* Rich 6-Column Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
             {approvalList.map((app, idx) => {
               const meta = getApprovalMeta(app);
               const IconComp = meta.icon;
@@ -347,7 +347,7 @@ const UniversityOverview = ({ university, onOpenForm }) => {
                     {/* Icon & Verified check */}
                     <div className="flex items-center justify-between">
                       <div className="w-9 h-9 rounded-xl bg-white shadow-xs flex items-center justify-center border border-slate-100 group-hover:scale-110 transition-transform">
-                        <IconComp className="w-5 h-5" />
+                        <ShieldCheck className="w-5 h-5" />
                       </div>
 
                       <span className="inline-flex items-center gap-1 text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">

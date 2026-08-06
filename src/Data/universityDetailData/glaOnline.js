@@ -1,8 +1,10 @@
 // =========================================================================
-// GLA UNIVERSITY ONLINE
+// GLA UNIVERSITY ONLINE - Verified from CollegeSathi
+// Source: https://www.collegesathi.com/university/gla-university
 // =========================================================================
 
 import glaLogo from '../../assets/universities/gla.jpg';
+import glaBuildingImg from '../../assets/universities/universitiesBuildingImg/gla.jpg';
 
 export const glaOnlineData = {
   id: "gla-online",
@@ -12,30 +14,271 @@ export const glaOnlineData = {
   category: "online",
   mode: "100% Online Learning",
   logo: glaLogo,
-  badge: "UGC 12-B Status",
-  naacGrade: "NAAC A+ Grade",
-  location: "Mathura, Uttar Pradesh",
+  buildingImg: glaBuildingImg,
+  campusImg: glaBuildingImg,
+  badge: "UGC-DEB Entitled",
+  naacGrade: "NAAC A+ Accredited",
+  location: "Mathura & Noida, Uttar Pradesh",
   establishedYear: "1998",
-  rating: "4.5",
-  reviewsCount: "22",
-  tagline: "Industry-Aligned Degrees with Strong Practical Focus",
+  rating: "4.3",
+  reviewsCount: "73",
+  nirfRank: "NIRF Ranked",
+  tagline: "28+ Years of Academic Legacy with UGC & IACBE Accredited Degrees",
+
+  // CollegeSathi Verified Overview
   aboutTitle: "About GLA University Online",
-  description: "GLA University Online provides accredited online degree courses emphasizing practical industry skills, experiential project work, and flexible weekend learning modules.",
-  approvals: ["UGC-DEB", "AICTE", "NAAC A+", "12-B Status"],
+  description: "GLA University Online is the official digital education wing of GLA University, Mathura, a UGC-recognised institution with 28+ years of academic legacy and NAAC A+ accreditation. Through GLA Online University, learners gain access to campus-standard higher education with 100% online flexibility. Programs like MBA, BBA, BCA, and MCA are built with an industry-first mindset—featuring live interactive sessions, recorded lectures, real-world case studies, startup incubation support, and mentorship from experienced corporate faculty. As per UGC guidelines, GLA University Online degrees carry the exact same academic and legal value as regular on-campus degrees.",
+
+  // Key Accreditations & Approvals (CollegeSathi Verified)
+  approvals: [
+    "UGC-DEB Entitled",
+    "NAAC A+ Accredited",
+    "IACBE Certified",
+    "ACCA Certified",
+    "AIU Certified",
+    "UGC 12-B Status",
+    "NIRF Ranked",
+    "Times Higher Education Ranked"
+  ],
+
+  // Key Highlights (Bento Grid)
   highlights: [
     { label: "Established In", value: "1998" },
-    { label: "Status", value: "UGC 12-B Status" },
-    { label: "Accreditation", value: "NAAC A+ Grade" },
-    { label: "Fee Mode", value: "Budget Friendly with 0% EMI" }
+    { label: "Academic Legacy", value: "28+ Years Heritage" },
+    { label: "Accreditation", value: "NAAC A+ & UGC-DEB" },
+    { label: "Total Enrolled", value: "25,000+ Online Learners" },
+    { label: "National Campuses", value: "Mathura (110-Acres) & Noida" },
+    { label: "Special Recognition", value: "IACBE & ACCA Certified" },
+    { label: "Fee Flexibility", value: "0% Interest No-Cost EMI" },
+    { label: "Exam Pattern", value: "30% Internal + 70% Proctored" }
   ],
+
+  // Comprehensive Course Catalog (100% Verified from CollegeSathi Table)
   programs: [
-    { name: "Online MBA (Multiple Dual Specializations)", level: "Postgraduate", category: "PG Courses", duration: "2 Years", eligibility: "Graduation (min 50%)", monthlyEmi: "₹5,500 / month", totalFee: "₹1,25,000", description: "Management degree with practical corporate projects." },
-    { name: "Online BBA", level: "Undergraduate", category: "UG Courses", duration: "3 Years", eligibility: "10+2 in any stream", monthlyEmi: "₹3,200 / month", totalFee: "₹90,000", description: "Business administration with foundational business tools." },
-    { name: "Online B.Com", level: "Undergraduate", category: "UG Courses", duration: "3 Years", eligibility: "10+2 from recognized board", monthlyEmi: "₹2,600 / month", totalFee: "₹75,000", description: "Commerce degree for financial and accounting roles." },
-    { name: "Online BCA", level: "Undergraduate", category: "UG Courses", duration: "3 Years", eligibility: "10+2 with Maths / Computer", monthlyEmi: "₹3,500 / month", totalFee: "₹95,000", description: "Computer applications and programming skills." }
+    {
+      id: "gla-online-mba",
+      name: "GLA University Online MBA",
+      level: "Postgraduate",
+      category: "PG Courses",
+      duration: "2 Years (4 Semesters)",
+      eligibility: "Bachelor's degree in any discipline from a recognized university with min 50% marks (45% for reserved categories)",
+      monthlyEmi: "₹4,042 / month",
+      semesterFee: "₹24,250 / Semester",
+      annualFee: "₹48,500 / Year",
+      totalFee: "₹97,000",
+      specializations: [
+        "Marketing Management",
+        "Financial Management",
+        "Human Resource Management",
+        "Operations & Supply Chain",
+        "Information Technology",
+        "Banking & Insurance",
+        "International Business"
+      ],
+      description: "IACBE and UGC-entitled Online MBA program designed with real-world case studies, executive mentorship, startup incubation access, and career readiness workshops."
+    },
+    {
+      id: "gla-online-mca",
+      name: "GLA University Online MCA",
+      level: "Postgraduate",
+      category: "PG Courses",
+      duration: "2 Years (4 Semesters)",
+      eligibility: "BCA / B.Sc (IT/CS) or Bachelor's degree with Mathematics at 10+2 / Graduation level (min 50%)",
+      monthlyEmi: "₹3,583 / month",
+      semesterFee: "₹21,500 / Semester",
+      annualFee: "₹43,000 / Year",
+      totalFee: "₹86,000",
+      specializations: [
+        "Cloud Computing & DevOps",
+        "Artificial Intelligence & Machine Learning",
+        "Full Stack Software Engineering",
+        "Cyber Security & Data Protection"
+      ],
+      description: "Advanced application and software engineering curriculum with virtual cloud computing labs, agile project delivery, and live technical assignments."
+    },
+    {
+      id: "gla-online-bba",
+      name: "GLA University Online BBA",
+      level: "Undergraduate",
+      category: "UG Courses",
+      duration: "3 Years (6 Semesters)",
+      eligibility: "10+2 in any stream (Commerce, Science, Arts) from a recognized educational board (min 50% marks)",
+      monthlyEmi: "₹2,458 / month",
+      semesterFee: "₹14,750 / Semester",
+      annualFee: "₹29,500 / Year",
+      totalFee: "₹88,500",
+      specializations: [
+        "General Business Administration",
+        "Digital Marketing & E-Commerce",
+        "Banking & Financial Services",
+        "Human Resource & Talent Management"
+      ],
+      description: "Foundational undergraduate business degree equipping students with managerial acumen, entrepreneurship skills, and startup incubation mentoring."
+    },
+    {
+      id: "gla-online-bca",
+      name: "GLA University Online BCA",
+      level: "Undergraduate",
+      category: "UG Courses",
+      duration: "3 Years (6 Semesters)",
+      eligibility: "10+2 with Mathematics / Computer Applications / Information Technology from a recognized board (min 50%)",
+      monthlyEmi: "₹2,458 / month",
+      semesterFee: "₹14,750 / Semester",
+      annualFee: "₹29,500 / Year",
+      totalFee: "₹88,500",
+      specializations: [
+        "Software Development & Programming",
+        "Database Architecture & SQL",
+        "Web Technologies & App Design",
+        "Data Analytics Fundamentals"
+      ],
+      description: "Comprehensive computing curriculum emphasizing modern programming languages, algorithmic problem solving, and practical industry internships."
+    }
   ],
-  hiringPartners: ["TCS", "Wipro", "Capgemini", "HCL", "Tech Mahindra"],
+
+  // Placement & Career Insights (100% Verified from CollegeSathi)
+  placementData: {
+    title: "GLA University Placement Partners & Career Services",
+    tagline: "Career Support & Top Recruiters",
+    description: "GLA Online University offers a comprehensive 5-pillar career readiness framework including 1-on-1 mock interviews, exclusive job boards, AI resume building, career development workshops, and industrial internships.",
+    highlights: [
+      { label: "Highest Package", value: "₹55 LPA" },
+      { label: "Average Package", value: "₹6.5 LPA" },
+      { label: "Placement Assistance", value: "100%" },
+      { label: "Corporate Partners", value: "300+" }
+    ],
+    salaryInsights: [
+      {
+        role: "Software Development Engineer",
+        category: "Information Technology",
+        salary: "₹6.5 LPA – ₹12 LPA",
+        yoy: "18% YoY",
+        iconType: "rocket"
+      },
+      {
+        role: "Business Analytics Specialist",
+        category: "Management & Strategy",
+        salary: "₹5.5 LPA – ₹9.5 LPA",
+        yoy: "20% YoY",
+        iconType: "chart"
+      },
+      {
+        role: "Marketing & Brand Executive",
+        category: "Digital Marketing",
+        salary: "₹4.5 LPA – ₹8 LPA",
+        yoy: "15% YoY",
+        iconType: "trend"
+      },
+      {
+        role: "Financial Analyst",
+        category: "Finance & Banking",
+        salary: "₹4.5 LPA – ₹7.5 LPA",
+        yoy: "14% YoY",
+        iconType: "briefcase"
+      }
+    ]
+  },
+
+  // Hiring Partners (CollegeSathi Verified)
+  hiringPartners: [
+    "Mahindra",
+    "HDFC Bank",
+    "Amazon",
+    "Tech Mahindra",
+    "TCS",
+    "Wipro",
+    "HP",
+    "Samsung",
+    "Capgemini",
+    "HCL Technologies"
+  ],
+
+  // FAQs (CollegeSathi Verified - Categorized)
+  faqCategories: [
+    {
+      category: "About University",
+      items: [
+        {
+          q: "Is GLA Online University entitled by UGC?",
+          a: "Yes. The online courses offered by GLA Online University are entitled by the University Grants Commission (UGC-DEB) and hold NAAC A+ accreditation, confirming high academic standards."
+        },
+        {
+          q: "Is a GLA university online degree equal to a regular degree?",
+          a: "Yes. As per UGC guidelines, a GLA University online degree awarded through a UGC-DEB approved program carries the exact same academic and professional validity as a regular on-campus degree."
+        },
+        {
+          q: "What is the academic legacy of GLA University?",
+          a: "GLA University holds 28+ years of academic excellence since its establishment in 1998 in Mathura, Uttar Pradesh, with over 25,000 enrolled students across programs."
+        }
+      ]
+    },
+    {
+      category: "About Courses & Fees",
+      items: [
+        {
+          q: "What is the GLA university online course fees for MBA, BBA, MCA and BCA?",
+          a: "GLA university online course fees are highly affordable: Online MBA is ₹97,000 total (₹24,250/sem), Online MCA is ₹86,000 total (₹21,500/sem), and Online BBA & BCA are ₹88,500 total (₹14,750/sem each)."
+        },
+        {
+          q: "Does GLA Online provide a no-cost EMI facility?",
+          a: "Yes, GLA Online University offers a 0% interest no-cost EMI facility, allowing students to pay tuition fees in easy monthly installments without financial burden."
+        },
+        {
+          q: "What is the duration of GLA university online courses?",
+          a: "GLA University online courses run for 3 years (6 semesters) at the undergraduate level (BBA, BCA) and 2 years (4 semesters) at the postgraduate level (MBA, MCA)."
+        }
+      ]
+    },
+    {
+      category: "About Admission & Exams",
+      items: [
+        {
+          q: "How do I complete GLA university online admission?",
+          a: "GLA university online admission takes four simple steps: 1) Fill out the online application form, 2) Submit required documents, 3) Receive admission confirmation via email, and 4) Pay the tuition fee to confirm your seat."
+        },
+        {
+          q: "How are examinations conducted at GLA Online University?",
+          a: "GLA Online follows a proctored evaluation pattern: 30% weightage for internal continuous assessments (quizzes, assignments) and 70% weightage for term-end 3-hour remote proctored examinations."
+        },
+        {
+          q: "Can I apply to GLA University Online courses from my home/desktop?",
+          a: "Yes, the entire admission and learning process is 100% digital, allowing you to apply and attend classes comfortably from anywhere."
+        }
+      ]
+    },
+    {
+      category: "About Placements",
+      items: [
+        {
+          q: "Does GLA Online University help in student placements?",
+          a: "Yes, students receive dedicated career development and placement support including mock interviews, resume workshops, and recruitment drives with partners like Amazon, Mahindra, HDFC Bank, Tech Mahindra, and Samsung."
+        }
+      ]
+    }
+  ],
+
+  // Flat FAQs for Fallback / Search
   faqs: [
-    { q: "How are exams scheduled at GLA Online?", a: "Semester exams are conducted in remote online proctored mode." }
+    {
+      q: "Is GLA Online University entitled by UGC?",
+      a: "Yes. The online courses offered by GLA Online University are entitled by UGC-DEB and accredited NAAC A+."
+    },
+    {
+      q: "What programs are offered by GLA Online University?",
+      a: "GLA Online University offers Online MBA, Online BBA, Online MCA, and Online BCA with specialized career tracks."
+    },
+    {
+      q: "Does GLA online provide no cost EMI?",
+      a: "Yes, GLA Online University offers a convenient 0% interest no-cost EMI facility."
+    },
+    {
+      q: "Does GLA Online University help in student placement?",
+      a: "Yes, students receive 100% placement assistance and career readiness training with top corporate partners."
+    },
+    {
+      q: "Is a GLA university online degree equal to a regular degree?",
+      a: "Yes. As per UGC regulations, an online degree carries equal academic and career credibility as a traditional on-campus degree."
+    }
   ]
 };
+
