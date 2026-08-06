@@ -9,6 +9,7 @@ import isbmLogo from '../assets/universities/isbm.jpg';
 import manipalLogo from '../assets/universities/manipal.jpg';
 import vivekanandaLogo from '../assets/universities/vivekananda.jpg';
 import xibmsLogo from '../assets/universities/xibms.jpg';
+import dpuLogo from '../assets/universities/dpu.jpg';
 
 export const universitiesData = [
   // ==========================================
@@ -65,12 +66,12 @@ export const universitiesData = [
     name: "Online Manipal (Manipal University Jaipur)",
     category: "online",
     logo: manipalLogo,
-    badge: "UGC & AICTE Approved",
+    badge: "UGC-DEB Entitled",
     naacGrade: "NAAC A+ Grade",
     location: "Jaipur, Rajasthan",
-    description: "Online Manipal (MUJ) delivers high-demand career programs with interactive virtual labs, real-world case studies, flexible schedules, and strong placement assistance for working executives.",
-    approvals: ["UGC-DEB", "AICTE", "NAAC A+", "NIRF Top Ranked"],
-    popularCourses: ["Online MBA", "Online MCA", "Online B.Com", "Online BBA"],
+    description: "Online Manipal (MUJ) delivers UGC-entitled online degree programs with 500+ hiring partners, free Coursera enterprise access, and 100% online flexibility.",
+    approvals: ["UGC-DEB", "AICTE", "NAAC A+", "NIRF #58", "WES Recognized"],
+    popularCourses: ["Online MBA", "Online MCA", "Online BBA", "Online BCA"],
     establishedYear: "2011",
     mode: "100% Online Learning"
   },
@@ -94,7 +95,7 @@ export const universitiesData = [
     slug: "dy-patil-online",
     name: "DY Patil Vidyapeeth Online (DPU)",
     category: "online",
-    logo: "https://logo.clearbit.com/dpu.edu.in",
+    logo: dpuLogo,
     badge: "UGC-DEB Approved",
     naacGrade: "NAAC A++ Grade",
     location: "Pune, Maharashtra",

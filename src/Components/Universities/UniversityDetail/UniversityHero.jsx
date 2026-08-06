@@ -39,9 +39,9 @@ const UniversityHero = ({ university, onOpenForm }) => {
       )}
 
       {/* Background Ambient Glows & Grid Pattern */}
-      <div className="absolute top-0 right-1/4 w-72 sm:w-[500px] h-72 sm:h-[500px] bg-[#59c28a]/15 rounded-full blur-[90px] sm:blur-[120px] pointer-events-none" />
+      {/* <div className="absolute top-0 right-1/4 w-72 sm:w-[500px] h-72 sm:h-[500px] bg-[#59c28a]/15 rounded-full blur-[90px] sm:blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 left-10 w-72 sm:w-[500px] h-72 sm:h-[500px] bg-[#0066b2]/20 rounded-full blur-[90px] sm:blur-[140px] pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(#ffffff0d_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none opacity-40" />
+      <div className="absolute inset-0 bg-[radial-gradient(#ffffff0d_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none opacity-40" /> */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
 
@@ -79,18 +79,18 @@ const UniversityHero = ({ university, onOpenForm }) => {
               )}
 
               {naacGrade && (
-                <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-emerald-500/20 text-[#59c28a] font-bold text-[10px] sm:text-[11px] flex items-center gap-1.5 border border-emerald-400/30">
+                <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/10 text-slate-200 font-medium text-[10px] sm:text-[11px] flex items-center gap-1.5 border border-white/10">
                   <Award className="w-3 sm:w-3.5 h-3 sm:h-3.5" />
                   <span>{naacGrade}</span>
                 </span>
               )}
 
-              {rating && (
+              {/* {rating && (
                 <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/10 text-amber-300 font-bold text-[10px] sm:text-[11px] flex items-center gap-1.5 border border-white/10">
                   <Star className="w-3 sm:w-3.5 h-3 sm:h-3.5 fill-amber-300 text-amber-300" />
                   <span>{rating} / 5.0 {reviewsCount && `(${reviewsCount} Reviews)`}</span>
                 </span>
-              )}
+              )} */}
 
               {establishedYear && (
                 <span className="px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full bg-white/10 text-slate-200 font-medium text-[10px] sm:text-[11px] flex items-center gap-1.5 border border-white/10">
@@ -106,14 +106,14 @@ const UniversityHero = ({ university, onOpenForm }) => {
                 {name}
               </h1>
               {tagline && (
-                <p className="text-slate-300 text-xs sm:text-sm font-light italic">
+                <p className="text-slate-100 text-xs sm:text-xl font-light italic">
                   "{tagline}"
                 </p>
               )}
             </div>
 
             {/* Location & Counselor Guarantee */}
-            <div className="flex flex-wrap items-center gap-y-1.5 gap-x-4 sm:gap-x-6 text-xs sm:text-sm text-slate-300">
+            <div className="flex flex-wrap items-center gap-y-1.5 gap-x-4 sm:gap-x-6 text-xs sm:text-xl text-slate-300">
               <div className="flex items-center gap-1.5">
                 <MapPin className="w-3.5 sm:w-4 h-3.5 sm:h-4 text-[#59c28a]" />
                 <span>{location}</span>
@@ -168,7 +168,7 @@ const UniversityHero = ({ university, onOpenForm }) => {
 
             </div>
           </div> */}
-
+          {/*                                                                                               */}
         </div>
 
       </div>
