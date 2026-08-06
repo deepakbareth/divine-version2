@@ -68,7 +68,7 @@ const Footer = () => {
           <div className="lg:col-span-4 flex flex-col space-y-6">
             <div className="text-3xl font-bold tracking-tight text-white flex items-center mt-15 md:mt-0">
               <span className="text-xs font-normal uppercase mr-1 tracking-widest mt-1">The</span>
-              Divine<span className="text-xs font-normal uppercase ml-1 tracking-widest mt-1">Company</span>
+              Divine<span className="text-xs font-normal uppercase ml-1 tracking-widest mt-1">Institute</span>
             </div>
 
             {/* Social Icons */}
