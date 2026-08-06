@@ -10,6 +10,7 @@ import manipalLogo from '../assets/universities/manipal.jpg';
 import vivekanandaLogo from '../assets/universities/vivekananda.jpg';
 import xibmsLogo from '../assets/universities/xibms.jpg';
 import dpuLogo from '../assets/universities/dpu.jpg';
+import shardaLogo from '../assets/universities/sharda.jpg';
 
 export const universitiesData = [
   // ==========================================
@@ -110,7 +111,7 @@ export const universitiesData = [
     slug: "sharda-online",
     name: "Sharda Online University",
     category: "online",
-    logo: "https://logo.clearbit.com/sharda.ac.in",
+    logo: shardaLogo,
     badge: "UGC Recognized",
     naacGrade: "NAAC A+ Grade",
     location: "Greater Noida, Uttar Pradesh",

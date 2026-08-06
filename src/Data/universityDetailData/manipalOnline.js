@@ -221,68 +221,76 @@ export const manipalOnlineData = {
     }
   ],
 
-  // Placement & Career Insights (100% Verified from CollegeSathi)
+  // Placement & Career Insights (100% Exact from CollegeSathi Screenshot)
   placementData: {
-    title: "Online Manipal Placement 2026 – Jobs, Salaries & Hiring Partners",
-    tagline: "Placements & Global Careers",
-    description: "Online Manipal provides comprehensive placement support, resume workshops, mock interview sessions, and exclusive recruitment drives with 500+ top enterprises.",
+    title: "Manipal Online Placements 2026 – Jobs, Salaries & Hiring Partners",
+    tagline: "Placements & Careers",
+    description: "Direct corporate access with high ROI career acceleration for working professionals and freshers.",
     highlights: [
-      { label: "Highest Package", value: "₹24 LPA" },
-      { label: "Average Package", value: "₹7.5 LPA" },
-      { label: "Placement Assistance", value: "100%" },
-      { label: "Hiring Partners", value: "500+" }
+      { label: "Hiring Partners", value: "500+" },
+      { label: "Job Created", value: "20 k+" },
+      { label: "Placement Assistance", value: "100%" }
     ],
     salaryInsights: [
       {
-        role: "Software Development Engineer",
-        category: "Information Technology",
-        salary: "₹7.5 LPA – ₹14 LPA",
-        yoy: "20% YoY",
-        iconType: "rocket"
+        role: "Business Analyst",
+        category: "Annual Average Salary",
+        salary: "₹6 LPA – ₹8 LPA",
+        yoy: "+20% YoY",
+        iconType: "briefcase"
       },
       {
-        role: "Business Analytics Specialist",
-        category: "Analytics & Strategy",
-        salary: "₹6.5 LPA – ₹12 LPA",
-        yoy: "24% YoY",
+        role: "Marketing Manager",
+        category: "Annual Average Salary",
+        salary: "₹6 LPA – ₹9 LPA",
+        yoy: "+18% YoY",
         iconType: "chart"
       },
       {
-        role: "Marketing & Brand Manager",
-        category: "Digital Marketing",
-        salary: "₹5.5 LPA – ₹10 LPA",
-        yoy: "18% YoY",
+        role: "Financial Analyst",
+        category: "Annual Average Salary",
+        salary: "₹5 LPA – ₹7 LPA",
+        yoy: "+15% YoY",
         iconType: "trend"
       },
       {
-        role: "Financial Analyst",
-        category: "Finance & Accounts",
-        salary: "₹5 LPA – ₹9.5 LPA",
-        yoy: "15% YoY",
-        iconType: "briefcase"
+        role: "Software Developer",
+        category: "Annual Average Salary",
+        salary: "₹6 LPA – ₹10 LPA",
+        yoy: "+22% YoY",
+        iconType: "rocket"
       },
       {
-        role: "HR Business Partner",
-        category: "Human Resources",
-        salary: "₹4.5 LPA – ₹8.5 LPA",
-        yoy: "16% YoY",
-        iconType: "briefcase"
+        role: "HR Manager",
+        category: "Annual Average Salary",
+        salary: "₹4 LPA – ₹6 LPA",
+        yoy: "+14% YoY",
+        iconType: "chart"
+      },
+      {
+        role: "Operations Manager",
+        category: "Annual Average Salary",
+        salary: "₹5 LPA – ₹8 LPA",
+        yoy: "+16% YoY",
+        iconType: "chart"
       }
     ]
   },
 
   // Hiring Partners (CollegeSathi placement marquee)
   hiringPartners: [
-    "Amazon",
-    "Dell Technologies",
-    "Accenture",
+    "HP",
+    "IBM",
     "Infosys",
+    "Microsoft",
+    "Accenture",
+    "Wipro",
+    "Dell Technologies",
+    "Amazon",
     "EY",
     "KPMG",
-    "Microsoft",
     "Deloitte",
     "Cognizant",
-    "Wipro",
     "ICICI Bank",
     "American Express",
     "Capgemini",
