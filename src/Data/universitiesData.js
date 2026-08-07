@@ -223,17 +223,17 @@ export const universitiesData = [
   {
     id: "isbm-university",
     slug: "isbm-university",
-    name: "ISBM University",
+    name: "ISBM University (Chhattisgarh)",
     category: "distance",
     logo: isbmLogo,
-    badge: "UGC Recognized",
-    naacGrade: "Approved University",
+    badge: "UGC Recognized & NAAC Accredited",
+    naacGrade: "NAAC Accredited (Grade B++)",
     location: "Gariyaband, Chhattisgarh",
-    description: "ISBM University offers career-oriented distance education programs designed to foster professional knowledge and accessible higher education for students nationwide.",
-    approvals: ["UGC Recognized", "AIU Member"],
-    popularCourses: ["Executive MBA", "Distance BA", "Distance B.Com", "Diploma & Certificate Programs"],
+    description: "ISBM University is a premier research and skill-driven state private university recognized by UGC under Section 2(f), accredited by NAAC (Grade B++), featuring 17+ academic schools and 350+ corporate recruiting partners.",
+    approvals: ["UGC Recognized", "CG-PURC Approved", "NAAC Grade B++", "AICTE", "AIU Member", "BCI", "PCI"],
+    popularCourses: ["MBA", "Executive MBA", "BBA", "MCA", "BCA", "PGDCA", "B.Com", "M.Com", "BA", "B.Lib.I.Sc"],
     establishedYear: "2016",
-    mode: "Distance & Flexible Mode"
+    mode: "Distance & Flexible Study Mode"
   },
 
   // ==========================================

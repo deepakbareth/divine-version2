@@ -48,6 +48,9 @@ export const universityDetailData = {
   "lovely-professional-university-online": lpuOnlineData,
   "lpu": lpuOnlineData,
   "isbm-university": isbmDistanceData,
+  "isbm-distance": isbmDistanceData,
+  "isbm": isbmDistanceData,
+  "isbm-university-chhattisgarh": isbmDistanceData,
   "xibms-jaipur": xibmsAutonomousData,
 };
 
