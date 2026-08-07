@@ -10,7 +10,9 @@ import {
   Users,
   DollarSign,
   Sparkles,
-  Info
+  Info,
+  Laptop,
+  Code
 } from 'lucide-react';
 import SectionHeader from '../../reusable/SectionHeader';
 
@@ -93,6 +95,21 @@ const getRoleIcon = (iconType) => {
       return {
         icon: Rocket,
         bg: 'bg-indigo-500/10 text-indigo-600 border-indigo-200/60'
+      };
+    case 'users':
+      return {
+        icon: Users,
+        bg: 'bg-purple-500/10 text-purple-600 border-purple-200/60'
+      };
+    case 'laptop':
+      return {
+        icon: Laptop,
+        bg: 'bg-amber-500/10 text-amber-600 border-amber-200/60'
+      };
+    case 'code':
+      return {
+        icon: Code,
+        bg: 'bg-cyan-500/10 text-cyan-600 border-cyan-200/60'
       };
     default:
       return {

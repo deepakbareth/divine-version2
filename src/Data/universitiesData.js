@@ -207,17 +207,18 @@ export const universitiesData = [
   {
     id: "lpu-distance",
     slug: "lpu-distance",
-    name: "Lovely Professional University (LPU Distance)",
+    name: "Lovely Professional University (LPU Online & Distance)",
     category: "distance",
     logo: lovelyLogo,
-    badge: "UGC-DEB Approved",
-    naacGrade: "NAAC A++ Grade",
+    badge: "UGC-DEB & NAAC A++",
+    naacGrade: "NAAC A++ Grade (Score 3.68/4.00)",
+    nirfRank: "NIRF #31 in Universities",
     location: "Phagwara, Punjab",
-    description: "LPU Centre for Distance Education delivers affordable, top-rated distance programs with printed study books, dedicated e-portal access, and recognized higher education degrees.",
-    approvals: ["UGC-DEB", "AICTE", "NAAC A++", "NIRF Top 50"],
-    popularCourses: ["Distance MBA", "Distance MCA", "Distance B.Com", "Distance BBA", "Distance MA"],
+    description: "Lovely Professional University (LPU) is a premier NAAC A++ institution ranked #31 in India by NIRF. Offering 100% UGC-entitled online & distance degrees powered by LPU e-Connect LMS with 2,225+ recruiting partners.",
+    approvals: ["UGC-DEB", "AICTE", "NAAC A++ (3.68)", "NIRF #31", "WES Recognized", "THE Ranked"],
+    popularCourses: ["Online MBA", "Online MCA", "Online BBA", "Online BCA", "Online M.Com", "Online M.Sc", "Online MA", "Online BA", "Online Diploma"],
     establishedYear: "2005",
-    mode: "Distance & ODL Mode"
+    mode: "100% Online & ODL Mode"
   },
   {
     id: "isbm-university",

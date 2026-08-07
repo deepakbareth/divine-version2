@@ -15,7 +15,7 @@ import { jainOnlineData } from './jainOnline';
 import { vguOnlineData, vguDistanceData } from './vguOnline';
 import { sgvuDistanceData } from './sgvuDistance';
 import { glaDistanceData } from './glaDistance';
-import { lpuDistanceData } from './lpuDistance';
+import { lpuOnlineData, lpuDistanceData } from './lpuOnline';
 import { isbmDistanceData } from './isbmDistance';
 import { xibmsAutonomousData } from './xibmsAutonomous';
 
@@ -42,7 +42,11 @@ export const universityDetailData = {
   "sgvu-distance": sgvuDistanceData,
   "suresh-gyan-vihar-university-distance-education": sgvuDistanceData,
   "gla-distance": glaDistanceData,
-  "lpu-distance": lpuDistanceData,
+  "lpu-distance": lpuOnlineData,
+  "lpu-online": lpuOnlineData,
+  "lovely-professional-university": lpuOnlineData,
+  "lovely-professional-university-online": lpuOnlineData,
+  "lpu": lpuOnlineData,
   "isbm-university": isbmDistanceData,
   "xibms-jaipur": xibmsAutonomousData,
 };
@@ -62,6 +66,7 @@ export {
   vguDistanceData,
   sgvuDistanceData,
   glaDistanceData,
+  lpuOnlineData,
   lpuDistanceData,
   isbmDistanceData,
   xibmsAutonomousData
