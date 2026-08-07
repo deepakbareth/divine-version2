@@ -52,6 +52,10 @@ export const universityDetailData = {
   "isbm": isbmDistanceData,
   "isbm-university-chhattisgarh": isbmDistanceData,
   "xibms-jaipur": xibmsAutonomousData,
+  "xibms": xibmsAutonomousData,
+  "xibms-mumbai": xibmsAutonomousData,
+  "xaviers-institute-of-business-management-studies": xibmsAutonomousData,
+  "xaviers-institute-of-business-management": xibmsAutonomousData,
 };
 
 // Also export individual datasets for direct modular imports if needed

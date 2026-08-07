@@ -242,17 +242,17 @@ export const universitiesData = [
   {
     id: "xibms-jaipur",
     slug: "xibms-jaipur",
-    name: "Xaviers Institute of Business Management (XIBMS)",
+    name: "Xaviers Institute of Business Management Studies (XIBMS)",
     category: "autonomous",
     logo: xibmsLogo,
-    badge: "Autonomous B-School",
-    naacGrade: "ISO 9001:2015",
-    location: "Jaipur / Multi-City Campus",
-    description: "XIBMS is an autonomous premier management institute specializing in fast-track executive diplomas, certifications, and customized management programs for working executives via distance learning.",
-    approvals: ["Autonomous B-School", "ISO 9001:2015 Certified", "Corporate Executive Partner"],
-    popularCourses: ["Executive MBA", "Executive PGDM", "Advance Diploma in Management", "Certificate Programs"],
+    badge: "ISO 9001:2015 & IAO Accredited",
+    naacGrade: "ISO 9001:2015 International B-School",
+    location: "Mumbai (HQ) / Multi-City Support Centers",
+    description: "XIBMS is a premier ISO 9001:2015 certified and IAO accredited international autonomous business school offering fast-track management degrees, executive diplomas, and 100+ specializations with 450+ corporate recruiting partners.",
+    approvals: ["ISO 9001:2015 Certified", "IAO Fully Accredited", "Distance Learning Council", "ISTE Member", "100+ Specializations"],
+    popularCourses: ["Distance MBA", "Executive MBA", "Global Executive MBA", "Doctorate (DMS)", "PGDM", "BBA / GMS", "Advanced Diploma in Management"],
     establishedYear: "2009",
-    mode: "Distance Executive & Certifications"
+    mode: "Distance Learning & Executive Mode"
   }
 ];
 
