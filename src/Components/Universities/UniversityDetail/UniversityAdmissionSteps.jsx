@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight, ShieldCheck, Sparkles, CheckCircle2 } from 'lucide-react';
+import admissionImg from '../../../assets/universities/contentimgs/admission.jpg';
 
 const defaultAdmissionProcess = [
   {
@@ -40,13 +41,17 @@ const UniversityAdmissionSteps = ({ university, onStartAdmission }) => {
   };
 
   return (
-    <section className="py-16 sm:py-20 bg-[#08101a] text-white font-sans relative overflow-hidden border-t border-slate-800/80">
-      {/* Background ambient branding lighting effects */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#59c28a]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#002147]/40 rounded-full blur-3xl pointer-events-none" />
+    <section className="py-16 sm:py-20 bg-[#020617] text-white font-sans relative overflow-hidden border-t border-slate-800/80">
+      {/* Full Section Background Image with soft blur and deep black tint */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-20 blur-[2px] scale-105 pointer-events-none"
+        style={{ backgroundImage: `url(${admissionImg})` }}
+      />
+      {/* Deep black & dark vignette overlay */}
+      {/* <div className="absolute inset-0 bg-gradient-to-b from-[#020617]/95 via-black/80 to-[#020617]/95 pointer-events-none" /> */}
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header with Divine brand color theme */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div>
@@ -110,7 +115,7 @@ const UniversityAdmissionSteps = ({ university, onStartAdmission }) => {
                 <div>
                   {/* Glowing 3D Emerald Ball Badge */}
                   <div className="mb-5 flex items-center justify-between">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-b from-[#7fe2ac] via-[#59c28a] to-[#207a4a] text-slate-950 font-black text-xl flex items-center justify-center shadow-[0_0_22px_rgba(89,194,138,0.55)] border border-[#a3f3c7]/60 group-hover:scale-105 transition-transform duration-300">
+                    <div className="w-12 h-12 rounded-full bg-gradient-to-b from-[#7fe2ac] via-[#59c28a] to-[#207a4a] text-slate-950 font-black text-xl flex items-center justify-center border border-[#a3f3c7]/60 group-hover:scale-105 transition-transform duration-300">
                       {stepNum}
                     </div>
                     <span className="text-xs font-semibold text-slate-400 uppercase tracking-widest">
@@ -157,7 +162,7 @@ const UniversityAdmissionSteps = ({ university, onStartAdmission }) => {
           <button
             type="button"
             onClick={onStartAdmission}
-            className="py-3 px-6 rounded-xl bg-[#59c28a] hover:bg-[#46aa75] text-slate-950 font-extrabold text-xs uppercase tracking-wider transition-all duration-200 cursor-pointer flex items-center gap-2 shrink-0 shadow-[0_4px_16px_rgba(89,194,138,0.35)] active:scale-95"
+            className="py-3 px-6 rounded-xl bg-[#59c28a] hover:bg-[#46aa75] text-slate-950 font-extrabold text-xs uppercase tracking-wider transition-all duration-200 cursor-pointer flex items-center gap-2 shrink-0  active:scale-95"
           >
             <span>Start Free Consultation</span>
             <ArrowRight className="w-4 h-4" />
