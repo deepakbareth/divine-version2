@@ -180,14 +180,14 @@ export const universitiesData = [
     name: "Suresh Gyan Vihar University (SGVU Distance)",
     category: "distance",
     logo: gyanLogo,
-    badge: "UGC-DEB Approved",
-    naacGrade: "NAAC A Grade",
+    badge: "UGC-DEB & NAAC A+",
+    naacGrade: "NAAC A+ Accredited (3.32/4)",
     location: "Jaipur, Rajasthan",
-    description: "Suresh Gyan Vihar University (SGVU) is a leading NAAC 'A' accredited distance education university in Rajasthan, providing flexible learning modules, regional center support, and recognized degrees.",
-    approvals: ["UGC-DEB", "AICTE", "NAAC A Grade"],
-    popularCourses: ["Distance MBA", "Distance B.Com", "Distance BBA", "Diploma in Management"],
+    description: "Suresh Gyan Vihar University (SGVU) is Rajasthan's first NAAC 'A+' accredited private university offering flexible distance learning programs empowered by the 4-layered Edusphere LMS.",
+    approvals: ["UGC-DEB", "AICTE", "NAAC A+ Grade", "AIU", "WES"],
+    popularCourses: ["Distance MBA (20+ Specializations)", "Distance MCA", "Distance BBA", "Distance BCA", "Distance B.Com", "Distance MA"],
     establishedYear: "2008",
-    mode: "Distance & ODL Mode"
+    mode: "Distance & ODL Mode (Edusphere LMS)"
   },
   {
     id: "gla-distance",
