@@ -162,17 +162,17 @@ export const universitiesData = [
   {
     id: "vgu-jaipur",
     slug: "vgu-jaipur",
-    name: "Vivekananda Global University (VGU Distance)",
-    category: "distance",
+    name: "Vivekananda Global University (VGU Online)",
+    category: "online",
     logo: vivekanandaLogo,
-    badge: "UGC-DEB Approved",
-    naacGrade: "NAAC A+ Grade",
+    badge: "UGC-DEB & NAAC A+",
+    naacGrade: "NAAC A+ Accredited (3.29/4)",
     location: "Jaipur, Rajasthan",
-    description: "Vivekananda Global University (VGU), Jaipur offers accredited distance learning degree programs emphasizing flexible study patterns, printed study materials, and practical skills.",
-    approvals: ["UGC-DEB", "AICTE", "NAAC A+", "Bar Council"],
-    popularCourses: ["Distance MBA", "Distance BBA", "Distance BCA", "Executive Programs"],
+    description: "Vivekananda Global University (VGU), Jaipur offers accredited online degree programs featuring AI-powered lectures, embedded industry certifications (AWS, RedHat, EXIN), and 500+ hiring partners.",
+    approvals: ["UGC-DEB", "AICTE", "NAAC A+", "QS Asia #666", "AIU"],
+    popularCourses: ["Online MBA", "Online MCA", "Online BBA", "Online BCA", "M.Sc Mathematics", "Online MA", "Online BA"],
     establishedYear: "2012",
-    mode: "Distance & ODL Mode"
+    mode: "100% Online & ODL Mode"
   },
   {
     id: "suresh-gyan-vihar",

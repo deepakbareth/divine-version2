@@ -12,7 +12,7 @@ import { dyPatilOnlineData } from './dyPatilOnline';
 import { shardaOnlineData } from './shardaOnline';
 import { chandigarhOnlineData } from './chandigarhOnline';
 import { jainOnlineData } from './jainOnline';
-import { vguDistanceData } from './vguDistance';
+import { vguOnlineData, vguDistanceData } from './vguOnline';
 import { sgvuDistanceData } from './sgvuDistance';
 import { glaDistanceData } from './glaDistance';
 import { lpuDistanceData } from './lpuDistance';
@@ -32,7 +32,10 @@ export const universityDetailData = {
   "chandigarh-online": chandigarhOnlineData,
   "jain-university": jainOnlineData,
   "jain-online": jainOnlineData,
-  "vgu-jaipur": vguDistanceData,
+  "vgu-jaipur": vguOnlineData,
+  "vgu-online": vguOnlineData,
+  "vivekananda-global-university": vguOnlineData,
+  "vivekananda-global-university-online": vguOnlineData,
   "suresh-gyan-vihar": sgvuDistanceData,
   "gla-distance": glaDistanceData,
   "lpu-distance": lpuDistanceData,
@@ -51,6 +54,7 @@ export {
   shardaOnlineData,
   chandigarhOnlineData,
   jainOnlineData,
+  vguOnlineData,
   vguDistanceData,
   sgvuDistanceData,
   glaDistanceData,
