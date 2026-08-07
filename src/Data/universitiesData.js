@@ -11,6 +11,8 @@ import vivekanandaLogo from '../assets/universities/vivekananda.jpg';
 import xibmsLogo from '../assets/universities/xibms.jpg';
 import dpuLogo from '../assets/universities/dpu.jpg';
 import shardaLogo from '../assets/universities/sharda.jpg';
+import jainLogo from '../assets/universities/jain.jpg';
+import lovelyLogo from '../assets/universities/lovely.jpg';
 
 export const universitiesData = [
   // ==========================================
@@ -142,7 +144,7 @@ export const universitiesData = [
     slug: "jain-university",
     name: "Jain University Online (JAIN Online)",
     category: "online",
-    logo: "https://logo.clearbit.com/jainuniversity.ac.in",
+    logo: jainLogo,
     badge: "UGC Approved",
     naacGrade: "NAAC A++ Grade",
     location: "Bengaluru, Karnataka",
@@ -206,7 +208,7 @@ export const universitiesData = [
     slug: "lpu-distance",
     name: "Lovely Professional University (LPU Distance)",
     category: "distance",
-    logo: "https://logo.clearbit.com/lpu.in",
+    logo: lovelyLogo,
     badge: "UGC-DEB Approved",
     naacGrade: "NAAC A++ Grade",
     location: "Phagwara, Punjab",
