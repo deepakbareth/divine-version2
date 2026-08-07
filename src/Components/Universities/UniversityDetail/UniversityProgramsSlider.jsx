@@ -11,6 +11,7 @@ import {
   CheckCircle2,
   BookOpen
 } from 'lucide-react';
+import coursesImg from '../../../assets/universities/contentimgs/courses.jpg';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -56,11 +57,12 @@ const UniversityProgramsSlider = ({ university, onSelectCourse }) => {
     };
 
     return (
-      <section className="py-16 bg-slate-950 text-white font-sans relative overflow-hidden border-t border-slate-800">
-
-        {/* Background Ambient Glows */}
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#59c28a]/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#0066b2]/10 rounded-full blur-3xl pointer-events-none" />
+      <section className="py-16 sm:py-20 bg-[#020617] text-white font-sans relative overflow-hidden border-t border-slate-800/80">
+        {/* Full Section Background Image with soft blur and deep black tint */}
+        <div
+          className="absolute inset-0 bg-cover bg-center opacity-20 blur-[2px] scale-105 pointer-events-none"
+          style={{ backgroundImage: `url(${coursesImg})` }}
+        />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -247,8 +249,14 @@ const UniversityProgramsSlider = ({ university, onSelectCourse }) => {
   if (!popularCourses || popularCourses.length === 0) return null;
 
   return (
-    <section className="py-16 bg-slate-900 text-white font-sans">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 sm:py-20 bg-[#020617] text-white font-sans relative overflow-hidden border-t border-slate-800/80">
+      {/* Full Section Background Image with soft blur and deep black tint */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-20 blur-[2px] scale-105 pointer-events-none"
+        style={{ backgroundImage: `url(${coursesImg})` }}
+      />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
           <div>
