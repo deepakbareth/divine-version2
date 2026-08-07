@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import EnquiryModal from '../../reusable/EnquiryModal';
+import contactBarImg from '../../../assets/universities/contentimgs/contactbar.jpg';
 
 const Footer = () => {
   const [modalConfig, setModalConfig] = useState({
@@ -30,18 +31,22 @@ const Footer = () => {
 
       {/* 1. Floating CTA Banner (Top) */}
       <div className="absolute top-[-50px] left-1/2 -translate-x-1/2 w-[95%] max-w-7xl pb-4 md:pb-0 z-30">
-        <div className="bg-[#1a2b4c] rounded-xl flex flex-col md:flex-row items-center justify-between p-8 md:px-12 md:py-10 shadow-2xl relative overflow-hidden">
-          {/* Subtle background wave patterns (simulated with CSS gradients) */}
-          <div className="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-400 via-transparent to-transparent pointer-events-none"></div>
+        <div className="bg-[#020617] border border-slate-700/80 rounded-2xl flex flex-col md:flex-row items-center justify-between p-8 md:px-12 md:py-10 shadow-2xl relative overflow-hidden group">
+          {/* Full Card Background Image with soft blur and deep black tint */}
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-85 blur-[0px] scale-105 pointer-events-none transition-transform duration-700"
+            style={{ backgroundImage: `url(${contactBarImg})` }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#002147]/90 via-[#0B2545]/85 to-[#020617]/90 pointer-events-none" />
 
-          <h2 className="text-3xl md:text-5xl font-bold text-white z-10 mb-6 md:mb-0">
+          <h2 className="text-3xl md:text-5xl font-bold text-white z-10 mb-6 md:mb-0 relative">
             Get Clarity with Us!
           </h2>
 
-          <div className="flex flex-col sm:flex-row gap-4 z-10">
+          <div className="flex flex-col sm:flex-row gap-4 z-10 relative">
             <button
               onClick={() => openModal("Schedule Your Call Now", "Pick a preferred time and our senior advisor will call you for 1-on-1 counseling.")}
-              className="flex items-center justify-center gap-2 border border-white/70 hover:bg-white hover:text-[#1a2b4c] text-white px-6 py-3 rounded-md transition-all font-medium cursor-pointer"
+              className="flex items-center justify-center gap-2 border border-white/70 hover:bg-white hover:text-[#1a2b4c] text-white px-6 py-3 rounded-xl transition-all font-medium cursor-pointer shadow-md active:scale-95"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
               Schedule Your Call
@@ -49,7 +54,7 @@ const Footer = () => {
 
             <button
               onClick={() => openModal("Connect Now with Academic Advisor", "Speak directly with our counseling desk for instant guidance and admissions help.")}
-              className="flex items-center justify-center gap-2 bg-[#e6192b] hover:bg-red-700 text-white px-6 py-3 rounded-md transition-all font-medium cursor-pointer"
+              className="flex items-center justify-center gap-2 bg-[#e6192b] hover:bg-red-700 text-white px-6 py-3 rounded-xl transition-all font-medium cursor-pointer shadow-md active:scale-95"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
               Let's Talk Now
