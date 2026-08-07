@@ -1,12 +1,19 @@
 import React from 'react';
 import { Phone, MessageSquare, ShieldCheck, CheckCircle2, Award, Sparkles } from 'lucide-react';
 import LeadEnquiryForm from '../../reusable/LeadEnquiryForm';
+import inqueryImg from '../../../assets/universities/contentimgs/inquery.png';
 
 const UniversityBottomAdmissionDesk = ({ university, selectedCourse }) => {
   const universityName = university?.shortName || university?.name || "University";
 
   return (
-    <section id="admission-desk" className="scroll-mt-24 sm:scroll-mt-32 pt-20 sm:pt-28 pb-16 sm:pb-24 bg-[#002147] text-white font-sans relative overflow-hidden">
+    <section id="admission-desk" className="scroll-mt-24 sm:scroll-mt-32 pt-20 sm:pt-28 pb-16 sm:pb-24 bg-[#020617] text-white font-sans relative overflow-hidden border-t border-slate-800/80">
+      {/* Full Section Background Image with soft blur and deep black tint */}
+      <div
+        className="absolute inset-0 bg-cover bg-center opacity-20 blur-[2px] scale-105 pointer-events-none"
+        style={{ backgroundImage: `url(${inqueryImg})` }}
+      />
+
       {/* Ambient background lights */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#59c28a]/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#0066b2]/15 rounded-full blur-3xl pointer-events-none" />
