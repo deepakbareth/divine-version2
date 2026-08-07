@@ -19,16 +19,20 @@ import accentureImg from '../../../assets/universities/companies/accenture.png';
 import amazonImg from '../../../assets/universities/companies/amazon.png';
 import cognizantImg from '../../../assets/universities/companies/cognizant.png';
 import deloitteImg from '../../../assets/universities/companies/deloitte.png';
+import hdfcImg from '../../../assets/universities/companies/hdfc.png';
 import hpImg from '../../../assets/universities/companies/hp.png';
 import ibmImg from '../../../assets/universities/companies/ibm.png';
 import iciciImg from '../../../assets/universities/companies/icici.png';
 import infosysImg from '../../../assets/universities/companies/infosys.png';
+import mahindraImg from '../../../assets/universities/companies/mahindra.png';
 import merceImg from '../../../assets/universities/companies/merce.png';
 import microsoftImg from '../../../assets/universities/companies/microsoft.png';
 import nestleImg from '../../../assets/universities/companies/nestle.png';
 import niitImg from '../../../assets/universities/companies/niit.png';
 import tcsImg from '../../../assets/universities/companies/tcs.png';
+import techMahindraImg from '../../../assets/universities/companies/techmahindra.png';
 import wiproImg from '../../../assets/universities/companies/wipro.png';
+import placementsImg from '../../../assets/universities/contentimgs/Placements.jpg';
 
 // Mapping dictionary with custom scaling for equal visual optical balance
 const COMPANY_CONFIG = {
@@ -38,17 +42,21 @@ const COMPANY_CONFIG = {
   'amazon': { img: amazonImg, scale: 'scale-[1.1] sm:scale-[1.2]' },
   'cognizant': { img: cognizantImg, scale: 'scale-[1.1] sm:scale-[1.2]' },
   'deloitte': { img: deloitteImg, scale: 'scale-[1.15] sm:scale-[1.25]' },
+  'hdfc': { img: hdfcImg, scale: 'scale-[1.15] sm:scale-[1.25]' },
   'hp': { img: hpImg, scale: 'scale-[1.1] sm:scale-[1.2]' },
   'ibm': { img: ibmImg, scale: 'scale-[1.1] sm:scale-[1.2]' },
   'icici': { img: iciciImg, scale: 'scale-[1.2] sm:scale-[1.3]' },
   'icici bank': { img: iciciImg, scale: 'scale-[1.2] sm:scale-[1.3]' },
   'infosys': { img: infosysImg, scale: 'scale-[1.1] sm:scale-[1.2]' },
+  'mahindra': { img: mahindraImg, scale: 'scale-[1.15] sm:scale-[1.25]' },
   'mercedes': { img: merceImg, scale: 'scale-[1.15] sm:scale-[1.25]' },
   'mercedes-benz': { img: merceImg, scale: 'scale-[1.15] sm:scale-[1.25]' },
   'merce': { img: merceImg, scale: 'scale-[1.15] sm:scale-[1.25]' },
   'nestle': { img: nestleImg, scale: 'scale-[1.05] sm:scale-[1.15]' },
   'tcs': { img: tcsImg, scale: 'scale-[1.15] sm:scale-[1.25]' },
   'tata': { img: tcsImg, scale: 'scale-[1.15] sm:scale-[1.25]' },
+  'tech mahindra': { img: techMahindraImg, scale: 'scale-[1.15] sm:scale-[1.25]' },
+  'techmahindra': { img: techMahindraImg, scale: 'scale-[1.15] sm:scale-[1.25]' },
   'wipro': { img: wiproImg, scale: 'scale-[1.1] sm:scale-[1.2]' }
 };
 
@@ -203,11 +211,17 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
           <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
 
             {/* LEFT: Premium Divine Navy Placement Highlights Card */}
-            <div className="lg:col-span-5 bg-gradient-to-br from-[#021124] via-[#002147] to-[#041a33] text-white rounded-3xl p-6 sm:p-7 lg:p-8 shadow-xl relative overflow-hidden flex flex-col justify-between border border-white/10 h-full">
+            <div className="lg:col-span-5 bg-gradient-to-br from-[#021124] to-[#041a33] text-white rounded-3xl p-6 sm:p-7 lg:p-8 shadow-xl relative overflow-hidden flex flex-col justify-between border border-white/10 h-full group">
+
+              {/* Placements Background Image with subtle overlay */}
+              <div
+                className="absolute inset-0 bg-cover bg-center opacity-45 mix-blend-luminosity pointer-events-none"
+                style={{ backgroundImage: `url(${placementsImg})` }}
+              />
 
               {/* Ambient Divine Glow inside card */}
-              <div className="absolute -top-10 -right-10 w-48 h-48 bg-[#59c28a]/20 rounded-full blur-3xl pointer-events-none" />
-              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-blue-500/15 rounded-full blur-3xl pointer-events-none" />
+              {/* <div className="absolute -top-10 -right-10 w-48 h-48 bg-[#59c28a]/20 rounded-full blur-3xl pointer-events-none" />
+              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-blue-500/15 rounded-full blur-3xl pointer-events-none" /> */}
 
               <div className="relative z-10 space-y-5 sm:space-y-6">
 
@@ -218,7 +232,7 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
                   <h3 className="text-lg sm:text-2xl font-bold font-serif tracking-tight text-white mt-2">
                     Key Highlights
                   </h3>
-                  <p className="text-slate-300 text-xs sm:text-sm mt-1 font-light leading-relaxed">
+                  <p className="text-slate-100 text-xs sm:text-sm  mt-1 font-light leading-relaxed">
                     {placementData?.description || "Direct corporate access with high ROI career acceleration for working professionals and freshers."}
                   </p>
                 </div>
@@ -230,22 +244,21 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
                     { label: "Jobs Created", value: "1 Lac+" },
                     { label: "Placement Support", value: "100%" }
                   ];
-                  const gridClass = statsList.length === 4 
-                    ? "grid-cols-2" 
-                    : statsList.length === 3 
-                    ? "grid-cols-3" 
-                    : "grid-cols-2 sm:grid-cols-3";
+                  const gridClass = statsList.length === 4
+                    ? "grid-cols-2"
+                    : statsList.length === 3
+                      ? "grid-cols-3"
+                      : "grid-cols-2 sm:grid-cols-3";
 
                   return (
                     <div className={`grid ${gridClass} gap-2.5 sm:gap-3 py-1`}>
                       {statsList.map((stat, idx) => (
-                        <div 
+                        <div
                           key={idx}
                           className="p-3 rounded-2xl bg-white/5 border border-white/10 text-center flex flex-col justify-center backdrop-blur-xs hover:bg-white/10 transition-colors"
                         >
-                          <p className={`text-lg sm:text-2xl font-black leading-tight ${
-                            idx === 0 ? 'text-[#59c28a]' : idx === 2 ? 'text-amber-300' : 'text-white'
-                          }`}>
+                          <p className={`text-lg sm:text-2xl font-black leading-tight ${idx === 0 ? 'text-[#59c28a]' : idx === 2 ? 'text-amber-300' : 'text-white'
+                            }`}>
                             {stat.value}
                           </p>
                           <span className="text-[10px] sm:text-[11px] text-slate-300 font-medium mt-1 leading-tight">
@@ -270,7 +283,7 @@ const UniversityHiringPartners = ({ partners, universityName, placementData, onO
                   <ArrowUpRight className="w-4 h-4 text-slate-950 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </button>
 
-                <div className="flex items-center justify-center gap-1.5 text-[11px] text-slate-300/80 text-center">
+                <div className="flex items-center justify-center gap-1.5 text-[13px] text-slate-100 text-center">
                   <Info className="w-3.5 h-3.5 text-[#59c28a] shrink-0" />
                   <span>Salary figures verified from alumni surveys & hiring drives.</span>
                 </div>
