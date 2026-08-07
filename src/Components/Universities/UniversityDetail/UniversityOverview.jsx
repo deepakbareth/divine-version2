@@ -16,6 +16,7 @@ import {
   ShieldAlert,
   ChevronDown
 } from 'lucide-react';
+import counsellingImg from '../../../assets/universities/contentimgs/counselling.png';
 
 const UniversityOverview = ({ university, onOpenForm }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -177,11 +178,18 @@ const UniversityOverview = ({ university, onOpenForm }) => {
 
             {/* Right Trust & Guarantee Card (5 Cols, Shifted up) */}
             <div className="lg:col-span-5">
-              <div className="bg-gradient-to-br from-[#021124] via-[#002147] to-[#04162c] text-white rounded-3xl p-6 sm:p-7 shadow-2xl relative overflow-hidden border border-white/10">
+              <div className="bg-gradient-to-br from-[#021124]  to-[#04162c] text-white rounded-3xl p-6 sm:p-7 shadow-2xl relative overflow-hidden border border-white/10 group">
+
+                {/* Counselling Background Image with dark overlay */}
+                <div
+                  className="absolute inset-0 bg-cover bg-center opacity-25 mix-blend-luminosity pointer-events-none transition-transform duration-700 group-hover:scale-105"
+                  style={{ backgroundImage: `url(${counsellingImg})` }}
+                />
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-[#021124] via-[#002147]/85 to-[#021124]/75 pointer-events-none" /> */}
 
                 {/* Ambient glow inside card */}
-                <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#59c28a]/20 rounded-full blur-3xl pointer-events-none" />
-                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl pointer-events-none" />
+                {/* <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#59c28a]/20 rounded-full blur-3xl pointer-events-none" />
+                <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl pointer-events-none" /> */}
 
                 <div className="relative z-10 space-y-4">
 
