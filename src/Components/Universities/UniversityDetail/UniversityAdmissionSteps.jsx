@@ -80,29 +80,35 @@ const UniversityAdmissionSteps = ({ university, onStartAdmission }) => {
             )}
           </div>
 
-          {/* Navigation arrow buttons for slider */}
-          <div className="flex items-center gap-3 shrink-0 self-end md:self-auto">
-            <button
-              onClick={() => scroll('left')}
-              aria-label="Previous step"
-              className="w-11 h-11 rounded-full bg-white/5 border border-white/15 hover:bg-[#59c28a] hover:border-[#59c28a] hover:text-slate-950 text-white flex items-center justify-center transition-all duration-200 cursor-pointer shadow-md active:scale-95"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button
-              onClick={() => scroll('right')}
-              aria-label="Next step"
-              className="w-11 h-11 rounded-full bg-white/5 border border-white/15 hover:bg-[#59c28a] hover:border-[#59c28a] hover:text-slate-950 text-white flex items-center justify-center transition-all duration-200 cursor-pointer shadow-md active:scale-95"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
+          {/* Navigation arrow buttons for slider (Only shown if 4 or more cards) */}
+          {rawSteps.length >= 4 && (
+            <div className="flex items-center gap-3 shrink-0 self-end md:self-auto">
+              <button
+                onClick={() => scroll('left')}
+                aria-label="Previous step"
+                className="w-11 h-11 rounded-full bg-white/5 border border-white/15 hover:bg-[#59c28a] hover:border-[#59c28a] hover:text-slate-950 text-white flex items-center justify-center transition-all duration-200 cursor-pointer shadow-md active:scale-95"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <button
+                onClick={() => scroll('right')}
+                aria-label="Next step"
+                className="w-11 h-11 rounded-full bg-white/5 border border-white/15 hover:bg-[#59c28a] hover:border-[#59c28a] hover:text-slate-950 text-white flex items-center justify-center transition-all duration-200 cursor-pointer shadow-md active:scale-95"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
+          )}
         </div>
 
-        {/* Step Cards Horizontal Scroll Container */}
+        {/* Step Cards: 3 or fewer fit grid, 4+ enable horizontal scroll */}
         <div
           ref={scrollRef}
-          className="flex gap-5 overflow-x-auto pb-4 pt-2 no-scrollbar snap-x snap-mandatory scroll-smooth"
+          className={
+            rawSteps.length >= 4
+              ? "flex gap-5 overflow-x-auto pb-4 pt-2 no-scrollbar snap-x snap-mandatory scroll-smooth"
+              : "grid grid-cols-1 md:grid-cols-3 gap-5 pb-4 pt-2"
+          }
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {rawSteps.map((item, idx) => {
@@ -110,7 +116,11 @@ const UniversityAdmissionSteps = ({ university, onStartAdmission }) => {
             return (
               <div
                 key={idx}
-                className="w-[280px] sm:w-[320px] lg:w-[340px] shrink-0 snap-start bg-[#101b2b]/90 backdrop-blur-md border border-slate-700/60 hover:border-[#59c28a]/60 hover:shadow-[0_10px_30px_rgba(89,194,138,0.2)] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 group"
+                className={
+                  rawSteps.length >= 4
+                    ? "w-[280px] sm:w-[320px] lg:w-[340px] shrink-0 snap-start bg-[#101b2b]/90 backdrop-blur-md border border-slate-700/60 hover:border-[#59c28a]/60 hover:shadow-[0_10px_30px_rgba(89,194,138,0.2)] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 group"
+                    : "w-full bg-[#101b2b]/90 backdrop-blur-md border border-slate-700/60 hover:border-[#59c28a]/60 hover:shadow-[0_10px_30px_rgba(89,194,138,0.2)] rounded-[24px] p-6 sm:p-7 flex flex-col justify-between transition-all duration-300 group"
+                }
               >
                 <div>
                   {/* Glowing 3D Emerald Ball Badge */}
