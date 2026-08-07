@@ -4,6 +4,7 @@
 // =========================================================================
 
 import chandigarhLogo from '../../assets/universities/chandigarh.jpg';
+import chandigarhBuilding from '../../assets/universities/universitiesBuildingImg/chandigarh.jpg';
 
 export const chandigarhOnlineData = {
   id: "chandigarh-online",
@@ -13,6 +14,7 @@ export const chandigarhOnlineData = {
   category: "online",
   mode: "100% Online Learning",
   logo: chandigarhLogo,
+  buildingImg: chandigarhBuilding,
   badge: "UGC-Entitled & NAAC A+",
   naacGrade: "NAAC A+ Grade (Cycle 1)",
   nirfRank: "#19 by NIRF (2025)",
