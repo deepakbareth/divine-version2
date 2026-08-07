@@ -31,6 +31,7 @@ export const universityDetailData = {
   "sharda-online": shardaOnlineData,
   "chandigarh-online": chandigarhOnlineData,
   "jain-university": jainOnlineData,
+  "jain-online": jainOnlineData,
   "vgu-jaipur": vguDistanceData,
   "suresh-gyan-vihar": sgvuDistanceData,
   "gla-distance": glaDistanceData,
